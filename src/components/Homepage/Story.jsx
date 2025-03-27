@@ -93,7 +93,7 @@ const StoryCopy = ({ isOpen, setIsOpen }) => {
               <ReelButton
                 onClick={handleOpen}
                 text="Play"
-                className="magnetic-inner z-10"
+                className="magnetic-inner z-[5]"
               />
             </div>
             <video

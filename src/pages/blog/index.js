@@ -28,7 +28,7 @@ export default function Blogs({ posts, featuredPost, pagination }) {
         <Metadata metadata={metadata}/>
         <WebpageJsonLd metadata={metadata}/>
             <Layout>
-                <Hero title1={"What's"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} />
+                <Hero title1={"What's"} title2={"Buzzing"} para={"At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach - integrating strategic expertise, cutting-edge technology, and data-driven insights to craft campaigns that elevate your brand and drive sustainable growth."} img={img} />
                 {featuredPost && (
                     <FeaturedBlog post={featuredPost} />
                 )}    

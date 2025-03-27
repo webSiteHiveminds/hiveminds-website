@@ -10,21 +10,21 @@ const team = [
   },
   {
     id: 2,
-    name: "Abhishek Upadhya",
-    src: "/assets/images/about/abhishek-updhya.png",
-    designation: "SVP - Digital Innovation & Strategy",
-  },
-  {
-    id: 3,
-    name: "Venu Gopal H G",
-    src: "/assets/images/about/venu-gopal.png",
-    designation: "SVP- Client Success & Operations",
-  },
-  {
-    id: 4,
     name: "Deepti Bhadauria",
     src: "/assets/images/about/deepti-bhadauria.png",
     designation: "Chief Strategy Officer",
+  },
+  {
+    id: 3,
+    name: "Pradeep Saluja",
+    src: "/assets/images/about/pradeep-saluja.png",
+    designation: "Chief Operating Officer",
+  },
+  {
+    id: 4,
+    name: "Kunal Danda",
+    src: "/assets/images/about/kunal-danda.png",
+    designation: "SVP - Client Success",
   },
   {
     id: 5,
@@ -34,46 +34,51 @@ const team = [
   },
   {
     id: 6,
-    name: "Aayush Arora",
-    src: "/assets/images/about/aayush-arora.png",
-    designation: "VP - Client Success",
+    name: "Abhishek Upadhya",
+    src: "/assets/images/about/abhishek-updhya.png",
+    designation: "SVP - Digital Innovation & Strategy",
   },
   {
     id: 7,
+    name: "Venu Gopal H G",
+    src: "/assets/images/about/venu-gopal.png",
+    designation: "SVP- Client Success & Operations",
+  },
+  {
+    id: 8,
     name: "Aparna Thakur",
     src: "/assets/images/about/aparna-thakur.png",
     designation: "SVP - Client Servicing",
   },
   {
-    id: 8,
+    id: 9,
     name: "Vinod Monubol",
     src: "/assets/images/about/vinod-monubol.png",
     designation: "VP - Client Success",
   },
+  
+ 
   {
-    id: 9,
+    id: 10,
+    name: "Aayush Arora",
+    src: "/assets/images/about/aayush-arora.png",
+    designation: "VP - Client Success",
+  },
+ 
+  {
+    id: 11,
     name: "Mohit Grover",
     src: "/assets/images/about/mohit-grover.png",
     designation: "VP - Client Servicing",
   },
+  
   {
-    id: 10,
-    name: "Pradeep Saluja",
-    src: "/assets/images/about/pradeep-saluja.png",
-    designation: "Chief Operating Officer",
-  },
-  {
-    id: 11,
+    id: 12,
     name: "Sikha Agrawalla",
     src: "/assets/images/about/sikha-agrawalla.png",
     designation: "VP - People & Culture",
   },
-  {
-    id: 12,
-    name: "Kunal Danda",
-    src: "/assets/images/about/kunal-danda.png",
-    designation: "SVP - Client Success",
-  },
+  
 ];
 const Leadership = () => {
   return (

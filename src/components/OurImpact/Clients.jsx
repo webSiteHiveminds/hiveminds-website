@@ -173,8 +173,7 @@ export function Clients() {
               Our Platform &<span className="blue-text"> Media Partners</span>
             </h2>
             <p data-para-anim className="content w-[50%] text-center mobile:text-start mobile:w-[90%] tablet:text-left tablet:w-[90%]">
-              Our diverse & growing portfolio spanning from lean startups to
-              household brands - and everything in between
+            Collaboration fuels impact! Our robust network of media partners enables us to amplify ideas, drive meaningful conversations, and foster genuine engagement.
             </p>
           </div>
 

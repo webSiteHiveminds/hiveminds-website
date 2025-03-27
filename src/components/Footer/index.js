@@ -41,9 +41,9 @@ const Footer = () => {
     <footer
       id="footer"
       className="w-screen h-[55vw] bg-transparent tablet:h-full"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      // style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="w-screen h-[55vw] flex flex-col items-center justify-between bg-[#134bd5] pt-[3vw] pb-[2vw] gap-[0.5vw] fixed bottom-0 tablet:h-full tablet:static tablet:pt-20">
+      <div className="w-screen h-[55vw] flex flex-col items-center justify-between bg-[#134bd5] pt-[3vw] pb-[2vw] gap-[0.5vw] tablet:h-full tablet:static tablet:pt-20">
         <div className="w-full flex items-center justify-between gap-[10vw] text-white container-lg tablet:block tablet:space-y-16">
           <div className="w-[30%] h-full flex flex-col items-start justify-start gap-[2vw] tablet:w-full tablet:flex-row">
             <div className="flex flex-col gap-[2vw] tablet:w-3/5">

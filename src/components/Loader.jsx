@@ -1,10 +1,21 @@
 import gsap from "gsap";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import {useLenis} from "lenis/react";
 
 const LoaderHome = () => {
   const gradient = useRef(null);
   const loaderMain = useRef(null);
+  const lenis = useLenis();
+
+//   useEffect(()=>{})
+//   lenis&&lenis.stop()
+
+
+//   setTimeout(()=>{
+// lenis&&lenis.start()
+
+//   },3500)
 
   useEffect(() => {
     const ctx = gsap.context(() => {

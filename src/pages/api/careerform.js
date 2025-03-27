@@ -1,5 +1,6 @@
 import { Resend } from "resend";
-import SODDetails from "@/components/emailtemplate/SODDetails";
+
+import CareerDetails from "@/components/emailtemplate/CareerDetails";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,23 +10,23 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email,phone, city, mode} = req.body;
+    const { name, email, message, terms ,number} = req.body;
      
-    if (!name || !email ) {
+    if (!name || !email) {
       return res.status(400).json({ error: "Required fields missing" });
     }
     const { data, error } = await resend.emails.send({
-      // from: "Acme <onboarding@resend.dev>",
-      // to: ["harshgoyalrss7@gmail.com"],
-      from:"WebForms <school-of-digital@hiveminds.in>",
-      to:["sales@hiveminds.in"],
+    //   from: "Acme <onboarding@resend.dev>",
+    //   to: ["harshgoyalrss7@gmail.com"],
+    from:"WebForms <careers@hiveminds.in>",
+    to:["sales@hiveminds.in"],
       subject: "New Contact Form Submission",
-      react: SODDetails({
+      react: CareerDetails({
         userName: name,
         userEmail: email,
-        userNumber:phone,
-        userCity: city,
-        userMode: mode,
+        userNumber:number,
+        userMessage: message || "No message provided",
+        userConsent: terms ? "Yes" : "No",
       }),
     });
 

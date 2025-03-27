@@ -36,8 +36,8 @@ export default function FloatContact() {
                     height={50}
                     width={50}
                     alt="Whatsapp Icon"
-                    className='absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 opacity-90 -translate-y-1/2 w-[40%] h-full object-contain group-hover:scale-110 duration-300'
-                    src={'/assets/icons/float-contact.png'}
+                    className='absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 opacity-90 -translate-y-1/2 w-[28%] h-full object-contain group-hover:scale-110 duration-300'
+                    src={'/assets/icons/telephone.png'}
                 />
             </Link>
         </div>

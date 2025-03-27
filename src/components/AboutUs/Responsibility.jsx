@@ -16,10 +16,7 @@ const Responsibility = () => {
             Corporate Social <span className="blue-text">Responsibility</span>
           </h2>
           <p className="content w-[70%] text-center fadein mobile:text-left mobile:w-full tablet:text-left">
-            We provide effective strategies that are aligned with your long-term
-            business goals. We promise to deliver high-quality. We provide
-            effective strategies that are aligned with your long-term business
-            goals.
+          Growth isn&apos;t just about numbers—it&apos;s about the positive impact we create. Through our CSR programs, we support education, sustainability, and community well-being, ensuring that our success contributes to a larger purpose.
           </p>
         </div>
         <div className="container-lg grid grid-cols-16 grid-rows-5 gap-[1.2vw] h-[35vw] mobile:grid-cols-2 mobile:grid-rows-none mobile:h-full mobile:gap-4 mobile:pb-10">

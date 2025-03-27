@@ -5,57 +5,57 @@ import gsap from "gsap";
 const features =[
   {
     image:"/assets/images/about/hiveminds-1.png",
-    icon:"/assets/images/about/why-us-1.svg",
+    icon:"/assets/images/about/innovation.png",
     heading:"Innovation"
   },
   {
     image:"/assets/images/about/hiveminds-2.png",
-    icon:"/assets/images/about/why-us-2.svg",
+    icon:"/assets/images/about/collaboration.png",
     heading:"Collaboration"
   },
   {
     image:"/assets/images/about/hiveminds-3.png",
-    icon:"/assets/images/about/why-us-3.svg",
+    icon:"/assets/images/about/skill-growth.png",
     heading:"Skill Growth"
   },
   {
     image:"/assets/images/about/hiveminds-4.png",
-    icon:"/assets/images/about/why-us-4.svg",
+    icon:"/assets/images/about/data-driven.png",
     heading:"Data-Driven"
   },
   {
     image:"/assets/images/about/hiveminds-5.png",
-    icon:"/assets/images/about/why-us-5.svg",
+    icon:"/assets/images/about/recognition.png",
     heading:"Recognition"
   },
   {
     image:"/assets/images/about/hiveminds-6.png",
-    icon:"/assets/images/about/why-us-6.svg",
+    icon:"/assets/images/about/training.png",
     heading:"Training"
   }
 ]
 
 const WhyUs = () => {
   const previewContainerRef = useRef(null);
-  const handleImageHover = (item) => {
-    const { image: imgSrc} = item;
-    const previewContainer = previewContainerRef.current;
-    const currentLastImg = previewContainer.querySelector('img:last-child');
-    if (currentLastImg) {
-      gsap.to(currentLastImg, { duration: 1, bottom: '0%'});
-    }
-    const newImg = document.createElement('img');
-    newImg.src = imgSrc;
-    newImg.style.position = 'absolute';
-    newImg.style.left = '0%';
-    newImg.style.bottom = '-100%';
-    newImg.style.width = '100%';
-    newImg.style.height = '100%';
+  // const handleImageHover = (item) => {
+  //   const { image: imgSrc} = item;
+  //   const previewContainer = previewContainerRef.current;
+  //   const currentLastImg = previewContainer.querySelector('img:last-child');
+  //   if (currentLastImg) {
+  //     gsap.to(currentLastImg, { duration: 1, bottom: '0%'});
+  //   }
+  //   const newImg = document.createElement('img');
+  //   newImg.src = imgSrc;
+  //   newImg.style.position = 'absolute';
+  //   newImg.style.left = '0%';
+  //   newImg.style.bottom = '-100%';
+  //   newImg.style.width = '100%';
+  //   newImg.style.height = '100%';
     
-    newImg.style.objectFit = 'cover';
-    previewContainer.appendChild(newImg);
-    gsap.to(newImg, { duration: 1, left: '0%' });
-  };  
+  //   newImg.style.objectFit = 'cover';
+  //   previewContainer.appendChild(newImg);
+  //   gsap.to(newImg, { duration: 1, left: '0%' });
+  // };  
   return (
     <section className="w-screen h-full pb-[5%] mobile:pb-10" id="why-us">
       <div className="cotainer-lg flex flex-col px-[5vw]">
@@ -78,7 +78,7 @@ const WhyUs = () => {
           </div>
           <div className="w-[55%] flex flex-col  mobile:w-full tablet:w-full">
           {features.map((item,index)=>(  
-            <div key={index} className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5 tablet:gap-[4vw] tablet:mt-[4vw]" onMouseEnter={() => handleImageHover(item)}>
+            <div key={index} className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5 tablet:gap-[4vw] tablet:mt-[4vw]" >
               <span className="w-full h-[1px] bg-black"></span>
               
                 <div  className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3 tablet:gap-[4vw]"  

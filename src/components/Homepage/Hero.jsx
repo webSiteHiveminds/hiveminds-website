@@ -58,6 +58,13 @@ const Hero = () => {
   ];
   const slidesData = [
     {
+    title: "Transforming Potential Into Growth With ",
+    subtitle: "Every Step",
+    description:
+      "",
+    href: "/our-impact",
+  },
+    {
       title: "Data-Backed",
       subtitle: "Growth",
       description:
@@ -77,7 +84,8 @@ const Hero = () => {
       description:
         "Unlocking new orders with innovative strategies tailored to your business goals",
       href: "/our-impact",
-    },
+    }
+   
   ];
 
   useEffect(() => {
@@ -155,7 +163,7 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, [details.length]);
-
+console.log(activeIndex)
   return (
     <section
       id="hero"
@@ -164,9 +172,10 @@ const Hero = () => {
       {/* Left Section */}
       <div className="w-[45%] h-screen flex items-center justify-between container-lg pt-[5vw] pl-[5vw] pr-[2vw]">
         <div className="w-full flex flex-col gap-[2vw] flex-wrap">
-          <h1 ref={headRef} className="heading-1 leading-[1.1] heading hero-heading">
+          <h1 ref={headRef} className="heading-1 leading-[1.1] heading hero-heading pr-[3vw]">
             {slidesData[activeIndex].title}{" "}
             <span className="text-primary">
+              <br/>
               {slidesData[activeIndex].subtitle}
             </span>
           </h1>
@@ -180,7 +189,7 @@ const Hero = () => {
             aria-label="to casestudy"
             href={slidesData[activeIndex].href}
             text="View Case Study"
-            className="button"
+            className={`button ${activeIndex==0 ? "!hidden" : "block"}`}
             ref={buttonRef}
           />
         </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import Contactform from '../Homepage/Contactform';
+
 import LinkButton from '../Button/LinkButton';
+
+import Careerform from './Careerform';
 
 
 const Contact = () => {
@@ -20,12 +22,13 @@ const Contact = () => {
             </p>
             <div className='pt-[4vw] flex flex-col gap-[2vw] w-[50%] mobile:w-full mobile:gap-[5vw] tablet:gap-[3.5vw]'>
            <p data-para-anim className='text-[1.5vw] font-medium mobile:text-[5.5vw] tablet:text-[3vw]'>Don&apos;t see any <span className='text-primary'>job opening</span> that might fit you?</p>
-           <LinkButton btnLink={"/"} btnText={"Send Resume"}/>
+           <LinkButton btnLink={"mailto:ta@hiveminds.in"} btnText={"Send Resume"}/>
+           {/* <Link href={"mailto:ta@hiveminds"}>Send Resume</Link> */}
            </div>
           </div>
 
           <div className="w-[50%] h-full mobile:w-full tablet:w-full">
-            <Contactform />
+            <Careerform />
           </div>
         </div>
 

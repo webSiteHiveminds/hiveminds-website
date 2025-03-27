@@ -21,7 +21,7 @@ const Brochure = () => {
                         </h2>
                         <p data-para-anim className="content w-[70%] !text-white mobile:w-full">
                             Want details on what we have to offer?
-                            Our brochure provides a comprehensive guide on the various Digital Marketing training we have to offer
+                            Our brochure provides a comprehensive guide on the various Digital Marketing trainings we have to offer
                         </p>
                     </div>
 

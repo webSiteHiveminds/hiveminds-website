@@ -69,13 +69,13 @@ const MoreCs = () => {
         <div className="w-full flex pt-[5vw] pb-[3vw] gap-[1vw] mobile:flex-col mobile:gap-[8vw] mobile:pt-[10vw] tablet:gap-[3vw] tablet:py-[7%]">
           {caseStudies.map((study, index) => (
             <Link key={study.id} href={study.link} className={`${index==2?"tablet:hidden":""}`}>
-              <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.5vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw] tablet:h-[45vw] tablet:w-[45vw] tablet:rounded-[3vw]">
+              <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.2vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw] tablet:h-[45vw] tablet:w-[45vw] tablet:rounded-[3vw]">
                 <Image
                   src={study.imgSrc}
                   height={450}
                   width={450}
                   alt={study.title}
-                  className="hover:scale-[1.1] transition-all ease-in-out duration-500 hover:brightness-75 w-full h-full object-cover"
+                  className="hover:scale-[1.1] transition-all ease-in-out duration-500 hover:brightness-75 w-full h-full object-fit"
                 />
                 <div className="absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[1vw] mobile:gap-[2.5vw] mobile:left-[5%]">
                   <p className="text-white text-[2.5vw] font-medium montreal mobile:text-[6.5vw]">

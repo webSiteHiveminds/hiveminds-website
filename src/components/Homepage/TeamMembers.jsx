@@ -51,8 +51,6 @@ const TeamMembersCopy = () => {
         }
       });
     });
-
-    // Cleanup event listeners
     return () => {
       cards.forEach((card) => {
         card.removeEventListener("mouseenter", () => {});
@@ -120,7 +118,7 @@ const TeamMembersCopy = () => {
               />
             </div>
 
-            <div className="team-container mx-auto grid grid-cols-12 items-center justify-center relative gap-[1.2vw]">
+            <div className="team-container mx-auto grid grid-cols-12  w-full items-center justify-center relative gap-[1.2vw]">
              
               <div
                 className={`${styles.card} col-span-3 col-start-1 w-[20vw] h-[20vw] flex items-center relative `}
@@ -152,7 +150,7 @@ const TeamMembersCopy = () => {
                     className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}
                   >
                     <Image
-                      src="/assets/images/homepage/part-2.png"
+                      src="/assets/images/homepage/part-5.png"
                       fill
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
@@ -215,7 +213,7 @@ const TeamMembersCopy = () => {
                     className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}
                   >
                     <Image
-                      src="/assets/images/homepage/part-5.png"
+                      src="/assets/images/homepage/part-2.png"
                       fill
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}

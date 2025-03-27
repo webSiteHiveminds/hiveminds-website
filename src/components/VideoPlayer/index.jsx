@@ -9,7 +9,7 @@ const VideoPlayer = ({ isOpen, onClose, videoSrc, poster }) => {
   const cursorRef = useRef(null);
   const cursorImgRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -93,11 +93,11 @@ const VideoPlayer = ({ isOpen, onClose, videoSrc, poster }) => {
           <source src={videoSrc} type="video/mp4" />
         </video>
         <div
-          className="relative bottom-[10%] cursor-pointer w-[70%] p-4 mx-auto tablet:w-[90%] mobile:w-full mobile:px-4"
+          className="relative bottom-[10%] cursor-pointer w-[70%] p-4 mx-auto z-[10] tablet:w-[90%] mobile:w-full mobile:px-4"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex items-center justify-between w-full">
-            <button onClick={handlePlayPause} className="text-white uppercase w-[7.5%] tablet:w-[14%] mobile:w-[20%] mobile:text-[16px]">
+          <div className="flex items-center justify-between w-full z-[10]">
+            <button onClick={handlePlayPause} className="text-white text-[1.3vw] uppercase w-[7.5%] tablet:w-[14%] mobile:w-[20%] mobile:text-[16px]">
               {isPlaying ? "Pause" : "Play"}
             </button>
             <div
@@ -111,8 +111,8 @@ const VideoPlayer = ({ isOpen, onClose, videoSrc, poster }) => {
                 }}
               />
             </div>
-            <button onClick={handleMuteUnmute} className="text-white uppercase w-[7.5%] tablet:w-[14%] mobile:w-[20%] mobile:text-[16px]">
-              {isMuted ? "Mute" : "Unmute"}
+            <button onClick={handleMuteUnmute} className="text-white uppercase text-[1.3vw] w-[7.5%] tablet:w-[14%] mobile:w-[20%] mobile:text-[16px]">
+              {isMuted ? "Unmute" : "Mute"}
             </button>
           </div>
         </div>

@@ -23,11 +23,7 @@ const FeaturedBlog = ({ post }) => {
             Featured <span className="blue-text"> Blog</span>
           </h2>
           <p className="content w-[60%] text-center fadein mobile:text-left mobile:w-full tablet:text-left tablet:w-[80%]">
-            At HiveMinds, we tackle your most challenging business problems
-            with our specialised digital marketing approach - integrating
-            strategic expertise, cutting-edge technology, and data-driven
-            insights to craft campaigns that elevate your brand and drive
-            sustainable growth.
+          Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships.
           </p>
         </div>
 
