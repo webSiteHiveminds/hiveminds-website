@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Montreal';
+    src: url('/assets/fonts/ppneuemontreal-book.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montreal';
+    src: url('/assets/fonts/ppneuemontreal-medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('/assets/fonts/avenir.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('/assets/fonts/avenir-medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }

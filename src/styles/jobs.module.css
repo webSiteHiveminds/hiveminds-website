@@ -1,0 +1,138 @@
+
+.jobs :global(.kh-card .kh-card-body){
+        width: fit-content !important;
+        font-family: "Avenir"  Arial, Helvetica, sans-serif !important;
+        height: 100% !important;
+        border-radius: 1.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        padding: 2vw;
+        background-color: white;
+        padding: 1vw  2vw !important;
+}
+.jobs :global(.kh-card .kh-job-title){
+    font-size: 1.5vw !important;
+    font-weight: 500 !important;
+    height: 30%;
+}
+.jobs :global(.kh-job-container:hover .kh-job-title){
+    color: rgba(19, 75, 214, 1) !important;
+}
+.jobs :global(.kh-job-container:hover .kh-icon){
+    color: rgba(19, 75, 214, 1) !important;
+}
+.jobs :global(.kh-job-container .kh-icon-lg){
+    font-size: 40px !important;
+    position: absolute !important;
+    top:1vw !important;
+    right:2vw !important
+}
+.jobs :global(.kh-card .kh-text-secondary>div>span){
+   margin: 0.5vw 0px !important;
+
+}
+.jobs :global(.kh-card .kh-text-secondary>div){
+    color: rgba(17, 17, 17, 1) !important;
+}
+
+.jobs :global(.kh-card .kh-font-large){
+    font-size: 1.15vw !important;
+    line-height: 1.2 !important;
+}
+.jobs :global(.kh-card .kh-font-normal){
+    color: rgba(17, 17, 17, 1) !important;
+    font-size: 1.15vw !important;
+    line-height: 1.2 !important;
+}
+.jobs :global(.kh-card .kh-dot){
+    background-color: rgba(17, 17, 17, 0.6) !important;
+    color: rgba(17, 17, 17, 1) !important;
+    margin:  0px 10px !important;
+    width: 8px;
+    height: 8px;
+}
+.jobs :global(.kh-main-container h1){
+    font-size: 2vw !important;
+    line-height: 1.3 !important;
+    padding-top: 1vw !important;
+    font-weight: 500 !important;
+}
+.jobs :global(.kh-text-lowercase ){
+    font-size: 1.5vw !important;
+    line-height: 1.3 !important;
+    font-weight: 500 !important;
+}
+.jobs :global(.kh-job-container:hover.kh-job-card){
+    border-color: rgba(19, 75, 214, 1) !important;   
+}
+
+@media screen and (max-width: 540px){
+    .jobs :global(.kh-card .kh-card-body){
+        border-radius: 3vw;
+        padding: 5vw !important; 
+}
+.jobs :global(.kh-card .kh-job-title){
+    font-size: 4vw !important;
+    font-weight: 500 !important;
+}
+.jobs :global(.kh-job-container .kh-icon-lg){
+    font-size: 50px !important;
+    position: absolute !important;
+    top:2vw !important;
+    right:4vw !important
+}
+.jobs :global(.kh-card .kh-text-secondary>div>span){
+   margin: 1.5vw 0px !important;
+}
+.jobs :global(.kh-card .kh-font-large){
+    font-size: 3.5vw !important;
+}
+.jobs :global(.kh-card .kh-font-normal){
+    font-size: 3.5vw !important;
+}
+.jobs :global(.kh-main-container h1){
+    font-size: 4.5vw !important;
+}
+.jobs :global(.kh-text-lowercase ){
+    font-size: 3.5vw !important;
+}
+
+
+}
+@media screen and (min-width: 540px) and (max-width: 1023px) {
+    .jobs :global(.kh-card .kh-card-body){
+        width: 100% !important;
+        border-radius: 3vw;
+        padding: 2vw 3vw !important; 
+}
+.jobs :global(.kh-card .kh-job-title){
+    font-size: 3vw !important;
+    font-weight: 500 !important;
+}
+.jobs :global(.kh-job-container .kh-icon-lg){
+    font-size: 50px !important;
+    position: absolute !important;
+    top:2vw !important;
+    right:4vw !important
+}
+.jobs :global(.kh-card .kh-text-secondary>div>span){
+   margin: 1vw 0px !important;
+
+}
+.jobs :global(.kh-card .kh-font-large){
+    font-size: 2vw !important;
+}
+.jobs :global(.kh-card .kh-font-normal){
+    font-size: 2vw !important;
+}
+.jobs :global(.kh-main-container h1){
+    font-size: 3.5vw !important;
+    padding-top: 2vw !important;
+    font-weight: 500 !important;
+}
+.jobs :global(.kh-text-lowercase ){
+    font-size: 2.5vw !important;
+}
+}

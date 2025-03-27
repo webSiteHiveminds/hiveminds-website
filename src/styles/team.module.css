@@ -1,0 +1,17 @@
+  .card {
+    perspective: 1000px; 
+  }
+  
+  .cardInner {
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    backface-visibility: hidden;
+  }
+  
+  .cardFront,
+  .cardBack {
+    backface-visibility: hidden;
+  }
+  .cardBack {
+    transform: rotateY(180deg); 
+  }

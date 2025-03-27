@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+Disallow: /_next/static/
+
+# Sitemaps
+Sitemap: https://hiveminds-staging.vercel.app/sitemap.xml
