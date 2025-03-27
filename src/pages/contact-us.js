@@ -32,7 +32,6 @@ const contact = () => {
      <Hero title1={"Contact"} title2={"Us"} para={"At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach integrating strategic expertise."} img={img}/>
      <Locations/>
      <GetinTouch/>
-
     </Layout>
     </>
   )
