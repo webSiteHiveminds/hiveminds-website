@@ -25,7 +25,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [mouseEnabled, setMouseEnabled] = useState(false);
-  // const lenis = useLenis();
+  const lenis = useLenis();
   const lenisRef = useRef();
 
   useEffect(() => {
@@ -58,18 +58,7 @@ export default function App({ Component, pageProps }) {
     }
   }, [mouseEnabled]);
   
-  // useEffect(() => {
-  //   const handleRouteChange = () => {
-  //     if (lenis) {
-  //       lenis.start();
-  //       lenis.scrollTo(0, { immediate: true });
-  //     }
-  //   };
-  //   router.events.on("routeChangeComplete", handleRouteChange);
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChange);
-  //   };
-  // }, [router.events, lenis]);
+
 
   useEffect(() => {
     const handleRouteChange = () => {

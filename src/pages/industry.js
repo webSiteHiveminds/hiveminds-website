@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import img from '../../public/assets/images/industry/industry-hero-img.png';
@@ -20,6 +20,7 @@ const industry = () => {
   headingAnim();
   paraAnim();
   fadeUp();
+   routeChangeTop()
 
 
   return (

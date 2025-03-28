@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
-import React, { useEffect, useState } from 'react'
-import gsap from 'gsap'
+import { fadeIn, fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
+import React, { useState } from 'react'
+
 import Hero from '@/components/ServiceDetail/Hero'
 import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
@@ -27,6 +27,7 @@ const index = () => {
   paraAnim();
   fadeUp();
   fadeIn();
+   routeChangeTop()
 
   return (
     <>

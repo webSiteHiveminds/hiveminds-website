@@ -5,37 +5,10 @@ import { SplitInLineWord, SplitInLine} from "./splitTextUtils";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
+import {useLenis} from "lenis/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-// export function headingBlur() {
-//     useEffect(()=>{
-//         const ctx = gsap.context(()=>{
-//             const headingAnim = document.querySelectorAll(".headinganim");
-//             headingAnim.forEach((headingAnim)=>{
-//                 SplitInLineWord(headingAnim);
-//                 const headingWord = headingAnim.querySelectorAll(".word");
-//                 gsap.from(headingWord,{
-//                     scrollTrigger: {
-//                         trigger: headingWord,
-//                         start: 'top 90%', 
-                        
-                
-//                       },
-//                       opacity: 0,
-//                       yPercent:20,
-//                       filter: 'blur(8px)',
-//                       stagger:0.08,
-//                       duration:1
-//                 });
-//             })
-//         });
-        
-//         return () => ctx.revert();
-//     },[]);
-        
-// }
 export function headingAnim() {
   const router = useRouter();
   useEffect(()=>{
@@ -218,4 +191,21 @@ export function lineAnim() {
     })
     return () => ctx.revert()
   }, []);
+}
+
+export function routeChangeTop(){
+  const router = useRouter();
+    const lenis = useLenis();
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (lenis) {
+        lenis.start();
+        lenis.scrollTo(0, { immediate: true });
+      }
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events, lenis]);
 }

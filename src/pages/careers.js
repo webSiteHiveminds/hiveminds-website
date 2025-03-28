@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React, { useEffect } from 'react'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import img from '../../public/assets/images/careers/careers-hero-img.png'
 import Culture from '@/components/Careers/Culture';
@@ -23,6 +23,7 @@ const careers = () => {
     paraAnim();
     fadeUp();
     fadeIn();
+     routeChangeTop()
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.khConfig = {

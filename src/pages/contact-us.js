@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import Locations from '@/components/Contactpage/Locations'
 import GetinTouch from '@/components/Contactpage/GetinTouch'
 
@@ -23,7 +23,7 @@ const contact = () => {
       paraAnim();
       fadeUp();
       fadeIn();
-     
+     routeChangeTop();
   return (
     <>
     <Metadata metadata={metadata}/>

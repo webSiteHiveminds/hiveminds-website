@@ -14,7 +14,7 @@ import { WebpageJsonLd } from '@/lib/json-ld';
 import { getAllPosts } from '@/lib/blogs';
 import LoaderHome from '../components/Loader';
 import dynamic from 'next/dynamic';
-import { headingAnim } from '@/components/gsapAnimations';
+import { headingAnim, routeChangeTop } from '@/components/gsapAnimations';
 import { useLenis } from 'lenis/react';  // Don't forget to import Lenis
 import { useEffect, useState } from 'react';
 
@@ -56,7 +56,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     // Cleanup the timeout if the component is unmounted before the 3 seconds
     return () => clearTimeout(timeout);
   }, [lenis]);
-
+  routeChangeTop()
   headingAnim();
   // paraAnim()
 

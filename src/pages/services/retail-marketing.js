@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import React, {useState } from 'react'
 
 import Hero from '@/components/ServiceDetail/Hero'
@@ -26,6 +26,7 @@ const index = () => {
   paraAnim();
   fadeUp();
   fadeIn();
+  routeChangeTop()
   
   return (
     <>

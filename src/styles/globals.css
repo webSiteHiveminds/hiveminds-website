@@ -615,6 +615,11 @@ left: 42% !important;
     font-size: 9.2vw;
     line-height: 1.15;
   }
+  .container-lg {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .swiper-scrollbar {
     /* opacity: 0; */
     height: 1.5vw !important;

@@ -31,7 +31,7 @@ const BlogListing = ({ posts, pagination }) => {
   };
 
   return (
-    <section className="w-screen h-full pb-[7%] mobile:pb-[10%]">
+    <section className="w-screen h-full pb-[7%] mobile:pb-[10%]" id="blog-listing">
       <div className="container-lg h-full">
 
         {/* Blog Filter Component */}

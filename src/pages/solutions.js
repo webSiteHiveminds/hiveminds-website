@@ -3,7 +3,7 @@
 
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingAnim, imgAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, imgAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import img from '../../public/assets/images/solutions/solutions-hero-img.png'
@@ -24,6 +24,7 @@ const solutions = () => {
     fadeUp();
     fadeIn();
     imgAnim()
+     routeChangeTop()
     return (
         <>
         <Metadata metadata={metadata}/>

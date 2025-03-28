@@ -145,7 +145,7 @@ const Header = ({ isOpen }) => {
                 <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
                   <Link
                     href={"/about-us"}
-                    className="relative link-line"
+                    className="relative link-line montreal"
                     prefetch={false}
                   >
                     Who We Are
@@ -241,7 +241,7 @@ const Header = ({ isOpen }) => {
                             </Link>
                             <Link href={link.href} className="w-fit">
                               <div className="cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] normal-case">
-                                <span className="relative link-line text-primary">
+                                <span className="relative link-line text-primary font-avenir">
                                   {link.text}
                                 </span>
                                 <svg
@@ -278,7 +278,7 @@ const Header = ({ isOpen }) => {
                   >
                     <Link
                       href={item.href}
-                      className="relative link-line font-avenir"
+                      className="relative link-line"
                       prefetch={false}
                     >
                       {item.label}

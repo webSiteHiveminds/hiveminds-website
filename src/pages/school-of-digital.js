@@ -1,5 +1,5 @@
 import React from 'react'
-import { fadeIn, fadeUp, headingAnim, lineAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, lineAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import Layout from '@/components/Layout';
 import Offer from '@/components/SchoolOfDigital/Offer';
 import Benefit from '@/components/SchoolOfDigital/Benefit';
@@ -26,6 +26,7 @@ const schoolOfDigital = () => {
       fadeUp();
       fadeIn();
       lineAnim();
+       routeChangeTop()
   return (
     <>
     <Metadata metadata={metadata}/>

@@ -6,6 +6,7 @@ import {
   fadeUp,
   headingAnim,
   paraAnim,
+  routeChangeTop,
 } from "@/components/gsapAnimations";
 import Hero from "@/components/Hero";
 import Image from "next/image";
@@ -26,6 +27,7 @@ const ips = () => {
   paraAnim();
   fadeUp();
   fadeIn();
+   routeChangeTop()
   return (
     <>
     <Metadata metadata={metadata}/>

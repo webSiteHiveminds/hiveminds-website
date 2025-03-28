@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingAnim, paraAnim, lineAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, lineAnim, routeChangeTop } from '@/components/gsapAnimations'
 
 import Hero from '@/components/Hero'
 import Leadership from '@/components/AboutUs/Leadership'
@@ -26,6 +26,7 @@ const contact = () => {
   fadeUp();
   fadeIn();
   lineAnim()
+   routeChangeTop()
 
   return (
     <>
