@@ -197,7 +197,7 @@ const CaseStudies = () => {
             </div>
           </div>
         </div>
-        <div className="w-screen h-[70%] rounded-bl-[2vw] rounded-br-[2vw] mobile:rounded-bl-[4vw] mobile:rounded-tr-[4vw] bg-primary absolute top-0 left-0 z-[-1] "></div>
+        <div className="w-screen h-[70%]  mobile:rounded-bl-[4vw] mobile:rounded-tr-[4vw] bg-primary absolute top-0 left-0 z-[-1] "></div>
       </section>
     </>
   );

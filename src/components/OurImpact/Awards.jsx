@@ -54,7 +54,7 @@ const Awards = () => {
       imgSrc: "/assets/images/impact/awards/digies.png",
       awardTitle: "Digies",
       date: "2024",
-      type:"2 (Gold) | 4 (Silver) | 3 (Bronze) )"
+      type:"2 (Gold) | 4 (Silver) | 3 (Bronze)"
     },
     {
       imgSrc: "/assets/images/impact/awards/adgully.png",
@@ -149,7 +149,32 @@ const Awards = () => {
       ) : (
         <>
         <div className="overflow-scroll">
-           <div className="w-fit flex justify-center gap-[3vw]  px-[5vw] mobile:mt-[5vw]">
+           <div className="w-fit flex justify-center gap-[3vw]  px-[5vw] mobile:mt-[8vw]">
+            {mainawards.map((award, id) => (
+              <div key={id} className="w-[50vw] h-auto flex flex-col fadeup rounded-[3vw] overflow-hidden">
+                <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[3vw] overflow-hidden mobile:h-[35vw] ">
+                  <Image
+                    src={award.imgSrc}
+                    alt="award-image"
+                    width={300}
+                    height={300}
+                    className="object-cover w-full h-full "
+                  />
+                </div>
+                <div className="flex flex-wrap items-center justify-start gap-[0.5vw] mt-4 mobile:gap-0">
+                <p className=" text-[1.2vw]  font-semibold tablet:text-[2.5vw] mobile:text-[3.5vw]">
+                  {award.awardTitle} |
+                </p>
+                <p className="text-gray-500  content"> {award.date} | </p>
+                <p className="text-gray-500  content"> {award.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+        <div className="overflow-scroll">
+           <div className="w-fit flex justify-center gap-[3vw]  px-[5vw] mobile:mt-[15vw]">
             {awardsData.map((award, id) => (
               <div key={id} className="w-[50vw] h-auto flex flex-col fadeup rounded-[3vw] overflow-hidden">
                 <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[3vw] overflow-hidden mobile:h-[35vw] ">
@@ -161,10 +186,13 @@ const Awards = () => {
                     className="object-cover w-full h-full "
                   />
                 </div>
-                <p className="mt-4 text-[1.2vw] pl-[0.5vw] font-semibold mobile:text-[4vw]">
-                  {award.awardTitle}
+                <div className="flex flex-wrap items-center justify-start gap-[0.5vw] mt-4 mobile:gap-0">
+                <p className=" text-[1.2vw]  font-semibold tablet:text-[2.5vw] mobile:text-[3.5vw]">
+                  {award.awardTitle} |
                 </p>
-                <p className="text-gray-500 pl-[0.5vw] ">{award.date}</p>
+                <p className="text-gray-500  content"> {award.date} | </p>
+                <p className="text-gray-500  content"> {award.type}</p>
+                </div>
               </div>
             ))}
           </div>

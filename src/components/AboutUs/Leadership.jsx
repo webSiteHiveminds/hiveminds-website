@@ -65,15 +65,15 @@ const team = [
     designation: "VP - Client Success",
   },
  
-  {
-    id: 11,
-    name: "Mohit Grover",
-    src: "/assets/images/about/mohit-grover.png",
-    designation: "VP - Client Servicing",
-  },
+  // {
+  //   id: 11,
+  //   name: "Mohit Grover",
+  //   src: "/assets/images/about/mohit-grover.png",
+  //   designation: "VP - Client Servicing",
+  // },
   
   {
-    id: 12,
+    id: 11,
     name: "Sikha Agrawalla",
     src: "/assets/images/about/sikha-agrawalla.png",
     designation: "VP - People & Culture",
@@ -110,7 +110,7 @@ const Leadership = () => {
             </div>
 
             <div className="mobile:w-screen mobile:overflow-hidden">
-              <div className="flex justify-between flex-wrap w-full h-full py-[2vw] mobile:flex-nowrap mobile:overflow-x-auto mobile:gap-[5vw] tablet:gap-[2.5vw]">
+              <div className="flex gap-[1.5vw] flex-wrap w-full h-full py-[2vw] mobile:flex-nowrap mobile:overflow-x-auto mobile:gap-[5vw] tablet:gap-[2.5vw]">
                 {team.map((team, id) => (
                   <div className="flex flex-col mb-[2vw] gap-[0.5vw] py-[1vw] fadeup mobile:first:pl-[5vw] mobile:last-of-type:pr-[5vw] mobile:gap-4 tablet:gap-[1.5vw]" key={id}>
                     <div className="w-[29.5vw] h-[33vw] rounded-[1.4vw] overflow-hidden bg-black mobile:w-[80vw] mobile:h-[90vw] mobile:rounded-[1.2rem] tablet:w-[43vw] tablet:h-[50vw]">

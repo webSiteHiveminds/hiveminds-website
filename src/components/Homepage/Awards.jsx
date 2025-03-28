@@ -78,17 +78,17 @@ const awards=[
 const AwardCard = ({ img, title, year, category ,key}) => {
   return (
     <>
-      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-[80vw] mobile:h-[25vw] mobile:rounded-[2.5vw] mobile:px-[3vw] tablet:w-[65vw] tablet:h-[20vw]">
+      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-[80vw] mobile:h-[30vw] mobile:rounded-[2.5vw] mobile:px-[3vw] tablet:w-[65vw] tablet:h-[20vw]">
         <div className="flex items-center justify-between gap-[1vw] w-full mobile:gap-[3vw] tablet:gap-[2.5vw]">
           <div className="w-[10vw] h-[8.3vw] relative rounded-[1.1vw] overflow-hidden mobile:w-[20vw] mobile:h-[18vw] tablet:w-[15vw] tablet:h-[15vw]">
             <Image src={img} fill alt="awards-1" className="object-cover" />
           </div>
-          <div className="w-[80%] flex flex-col mobile:flex-col-reverse mobile:gap-[0.5vw]">
-            <p className="text-white text-[1.25vw] font-medium montreal mobile:text-[3.5vw] tablet:text-[2vw] ">
+          <div className="w-[80%] flex flex-col mobile:gap-[0.5vw]">
+            <p className="text-white text-[1.25vw] font-medium montreal mobile:text-[4vw] tablet:text-[2vw] ">
               {title}
             </p>
-            <p className="content-white mobile:!text-[3vw]">{year}</p>
-            <p className="content-white mobile:text-[3.5vw] mobile:w-[90%] mobile:leading-[1.2]">{category}</p>
+            <p className="content-white mobile:!text-[3.5vw]">{year}</p>
+            <p className="content-white mobile:!text-[3.5vw] mobile:w-[90%] mobile:leading-[1.2]">{category}</p>
           </div>
         </div>
       </div>

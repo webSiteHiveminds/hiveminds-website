@@ -62,8 +62,8 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-            <div className="h-[15vw] w-[25vw] relative rounded-[12px] tablet:w-2/5 tablet:h-[35vw] overflow-hidden tablet:mt-[6vw]">
-              <MapComponent location={location} height="250px" />
+            <div className="h-[15vw] w-[25vw] relative rounded-[12px] tablet:w-2/5  tablet:h-[30vw] overflow-hidden tablet:mt-[6vw]">
+              <MapComponent location={location} height="250px"/>
             </div>
           </div>
 

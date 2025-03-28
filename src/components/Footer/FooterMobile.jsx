@@ -84,7 +84,7 @@ const FooterMobile = () => {
                             GURGAON : Spring House Coworking, 4th Floor, JMD Regent Arcade, Haryana 122002
                         </p>
                     </div>
-                    <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden">
+                    <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden ">
                         <MapComponent location={location} height="300px" className="w-full h-full" />
                     </div>
                     <SocialMedia />

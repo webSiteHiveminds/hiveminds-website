@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-const MobileMenu = ({ openMenu }) => {
+const MobileMenu = ({ openMenu, setOpenMenu }) => {
   const [openSection, setOpenSection] = useState(null);
   const toggleSection = (section) => {
     setOpenSection((prev) => (prev === section ? null : section));
@@ -122,9 +122,9 @@ const MobileMenu = ({ openMenu }) => {
                   <ul className="text-lg pt-[3vw] pl-[3vw] pb-[7vw] text-black montreal flex flex-col items-start justify-center gap-[1.5vw]">
                     {section.links.map((link, idx) => (
                       <li key={idx}>
-                      <Link  href={link.href} className="link-line">
+                      <a  href={link.href} className="link-line" onClick={()=>(setOpenMenu(false))}>
                         {link.text}
-                      </Link>
+                      </a>
                       </li>
                     ))}
                   </ul>

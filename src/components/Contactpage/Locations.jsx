@@ -85,7 +85,7 @@ const Locations = () => {
         </div>
       </div>
       <div className="w-full px-[5vw]">
-        <div className="w-[90vw] h-[40vw]  relative rounded-[1.2vw] overflow-hidden mt-[7vw] z-[10] mobile:w-[88vw] mobile:h-[110vw] mobile:rounded-[6vw]">
+        <div className="w-[90vw] h-[40vw]  relative rounded-[1.2vw] overflow-hidden mt-[7vw] z-[10] mobile:w-[88vw] mobile:h-[110vw] mobile:rounded-[6vw] tablet:h-[60vw]">
           <Map location={location} height={"600px"}/>
           {/* <Image
             src={"/assets/images/contactpage/contact-map-image.png"}
