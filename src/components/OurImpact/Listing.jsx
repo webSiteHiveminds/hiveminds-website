@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import CaseStudyCard from "../CaseStudy/CaseStudyCard";
 import { useQueryState } from "next-usequerystate";
-
 import styles from '../Button/styles.module.css'
 
 

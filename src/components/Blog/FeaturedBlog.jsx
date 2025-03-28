@@ -34,7 +34,7 @@ const FeaturedBlog = ({ post }) => {
               className="w-full h-full object-cover"
               alt={featuredImage.altText || "feature blog image"}
               sizes={featuredImage.sizes}
-              width={1080}
+              width={920}
               quality={100}
               height={620}
             />

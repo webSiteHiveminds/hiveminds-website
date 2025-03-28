@@ -38,8 +38,8 @@ const Hero = ({ title1, title2, para, img }) => {
           <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-[#f1f1f1] mobile:bg-white1 image-cover origin-bottom" />
           <Image
             priority={true}
-            width={720}
-            height={800}
+            width={620}
+            height={700}
             src={img}
             placeholder="blur"
             alt="hero-img"

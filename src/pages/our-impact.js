@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
-import { fadeIn, fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import { Clients } from '@/components/OurImpact/Clients'
 import Awards from '@/components/OurImpact/Awards'
 import Hero from '@/components/Hero'
