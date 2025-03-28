@@ -17,10 +17,10 @@ export default function CaseStudyPage({ caseStudies, pagination, industries }) {
     return (
         <>
             <Layout>
+                <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} />
                 <div className='tablet:pt-[12%] mobile:pt-[15%]'>
                     <CaseStudyListing caseStudies={caseStudies} industries={industries} pagination={pagination} />
                 </div>
-                {/* <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} /> */}
             </Layout>
         </>
     );

@@ -10,7 +10,7 @@ const BlogFilter = ({ category, setCategory, year, setYear, clearFilters }) => {
       <div className="flex flex-col">
         <p className="content px-[1vw] py-[0.5vw] mobile:py-[2vw]">Category:</p>
         <Select value={category || ""} onValueChange={setCategory}>
-          <SelectTrigger className="w-[10vw] h-[3.5vw] border-[1.5px] border-black rounded-full tablet:w-[20vw] mobile:w-[80vw]">
+          <SelectTrigger className="w-[10vw] h-[3.5vw] border-[1.5px] mobile:border-[1px] border-black rounded-full tablet:w-[20vw] mobile:w-[40vw]">
             <SelectValue placeholder="Category" />
           </SelectTrigger>
           <SelectContent>
@@ -26,7 +26,7 @@ const BlogFilter = ({ category, setCategory, year, setYear, clearFilters }) => {
       <div className="flex flex-col">
         <p className="content px-[1vw] py-[0.5vw] mobile:py-[2vw]">Year:</p>
         <Select value={year || ""} onValueChange={setYear}>
-          <SelectTrigger className="w-[10vw] h-[3.5vw] border-[1.5px] border-black rounded-full tablet:w-[20vw] mobile:w-[80vw]">
+          <SelectTrigger className="w-[10vw] h-[3.5vw] border-[1.5px] border-black mobile:border-[1px] rounded-full tablet:w-[20vw] mobile:w-[40vw] ">
             <SelectValue placeholder="Select Year" />
           </SelectTrigger>
           <SelectContent>

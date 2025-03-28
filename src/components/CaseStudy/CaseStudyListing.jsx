@@ -3,6 +3,7 @@ import { useQueryState } from "next-usequerystate";
 import CaseStudyFilter from "./CaseStudyFilter";
 import Pagination from "../Pagination";
 import CaseStudyCard from "./CaseStudyCard";
+import CasePagination from "../CasePagination";
 
 const CaseStudyListing = ({ caseStudies, pagination, industries }) => {
   const [industry, setIndustry] = useQueryState("industry");
@@ -27,7 +28,7 @@ const CaseStudyListing = ({ caseStudies, pagination, industries }) => {
   };
 
   return (
-    <section className="w-screen h-full py-[7%] mobile:py-[5%] ">
+    <section className="w-screen h-full py-[7%] mobile:py-[5%] " id="casestudy-listing">
       <div className="container-lg h-full">
 
         <CaseStudyFilter industries={industries} industry={industry} setIndustry={setIndustry} clearFilters={clearFilters} />
@@ -46,7 +47,7 @@ const CaseStudyListing = ({ caseStudies, pagination, industries }) => {
 
         <div>
           {pagination && (
-            <Pagination
+            <CasePagination
               addCanonical={false}
               currentPage={pagination?.currentPage}
               pagesCount={pagination?.pagesCount}

@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const MAX_NUM_PAGES = 5;
 
-const Pagination = ({ pagesCount, currentPage, basePath }) => {
+const CasePagination = ({ pagesCount, currentPage, basePath }) => {
     const path = `${basePath}/`;
 
     const hasPreviousPage = pagesCount > 1 && currentPage > 1;
@@ -29,7 +29,7 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
     return (
         <div className="w-fit font-medium mt-10 bg-white border border-slate-300 rounded-full items-center flex py-1 px-4 mx-auto justify-between gap-4">
             <a className={`${!hasPreviousPage ? 'pointer-events-none opacity-50' : ''}`}
-                href={hasPreviousPage ? `${path}page/${currentPage - 1}#blog-listing` : '#'}
+                href={hasPreviousPage ? `${path}page/${currentPage - 1}#casestudy-listing` : '#'}
                 aria-label="Go to Previous Page"
                 tabIndex={hasPreviousPage ? 0 : -1}
             >
@@ -49,7 +49,7 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
                         </li>
                     ) : (
                         <li key={page} className='text-xl font-medium w-12 h-12 rounded-full flex justify-center items-center overflow-hidden'>
-                            <a className='hover:bg-slate-100 flex w-full h-full items-center justify-center transition-colors duration-300' href={page === 1 ? path : `${path}page/${page}#blog-listing`} aria-label={`Goto Page ${page}`}>
+                            <a className='hover:bg-slate-100 flex w-full h-full items-center justify-center transition-colors duration-300' href={page === 1 ? path : `${path}page/${page}#casestudy-listing`} aria-label={`Goto Page ${page}`}>
                                 <span className='mt-1'>{page}</span>
                             </a>
                         </li>
@@ -58,7 +58,7 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
             </ul>
 
             <a className={`${!hasNextPage ? 'pointer-events-none opacity-50' : ''}`}
-                href={hasNextPage ? `${path}page/${currentPage + 1}#blog-listing` : '#'}
+                href={hasNextPage ? `${path}page/${currentPage + 1}#casestudy-listing` : '#'}
                 aria-label="Go to Next Page"
                 tabIndex={hasNextPage ? 0 : -1}
             >
@@ -70,5 +70,5 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
     );
 };
 
-export default Pagination;
+export default CasePagination;
 

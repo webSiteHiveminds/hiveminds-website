@@ -16,7 +16,7 @@ export default function Blog({ posts, pagination }) {
     return (
         <>
             <Layout>
-                {/* <Hero title1={"What's"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} /> */}
+                <Hero title1={"What's"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} />
                 <div className='pt-[5%] tablet:pt-[12%] mobile:pt-[15%]'>
                     <BlogListing posts={posts} pagination={pagination} />
                 </div>

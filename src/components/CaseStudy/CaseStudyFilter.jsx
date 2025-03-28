@@ -22,6 +22,7 @@ const CaseStudyFilter = ({ industries, industry }) => {
     const activeFilter = () => {
         setOpenFilter((prev) => !prev)
     }
+    // console.log(industries)
 
     return (
         <div className="flex gap-[1vw] pb-[3vw] tablet:items-end mobile:items-start mobile:flex-col">

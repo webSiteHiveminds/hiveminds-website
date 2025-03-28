@@ -163,7 +163,7 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, [details.length]);
-console.log(activeIndex)
+// console.log(activeIndex)
   return (
     <section
       id="hero"

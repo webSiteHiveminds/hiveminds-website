@@ -115,7 +115,7 @@ const Header = ({ isOpen }) => {
   }
   return !isOpen ? (
     <header
-      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
+      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${isHidden ? "-translate-y-[120%]" : "translate-y-0 header-glassmorphism"
         }`}
     >
 
@@ -150,7 +150,7 @@ const Header = ({ isOpen }) => {
                       Who We Are
                     </Link>
                   </li>
-                  <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[100px]" onMouseEnter={entredMouse} onMouseLeave={leaveMouse}>
+                  <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[70px]" onMouseEnter={entredMouse} onMouseLeave={leaveMouse}>
                     <Link
                       href={"#"}
                       className="relative link-line"
