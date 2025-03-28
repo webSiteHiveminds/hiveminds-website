@@ -19,7 +19,6 @@ const metadata={
   }
 export default function Blogs({ caseStudies, pagination, industries }) {
     headingAnim();
-  
     paraAnim();
     fadeUp();
     fadeIn();

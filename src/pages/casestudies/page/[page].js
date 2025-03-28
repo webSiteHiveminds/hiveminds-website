@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import img from "../../../../public/assets/images/services/hero.png";
 import Hero from '@/components/Hero';
 import { getAllCaseStudies, getPagesCount, getPaginatedCaseStudies } from '@/lib/casestudies';
@@ -12,13 +12,15 @@ export default function CaseStudyPage({ caseStudies, pagination, industries }) {
     paraAnim();
     fadeUp();
     fadeIn();
-    // console.log(industries)
+    routeChangeTop();
 
     return (
         <>
             <Layout>
-                <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} />
-                <CaseStudyListing caseStudies={caseStudies} industries={industries} pagination={pagination} />
+                <div className='tablet:pt-[12%] mobile:pt-[15%]'>
+                    <CaseStudyListing caseStudies={caseStudies} industries={industries} pagination={pagination} />
+                </div>
+                {/* <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} /> */}
             </Layout>
         </>
     );

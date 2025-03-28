@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { fadeIn, fadeUp, headingAnim, lineAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, lineAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 
 import { caseStudyPathBySlug, getCaseStudyBySlug, getRecentCaseStudies } from "@/lib/casestudies";
 import Hero from "@/components/CaseStudyDetail/Hero";
@@ -12,14 +12,11 @@ import { WebpageJsonLd } from "@/lib/json-ld";
 
 
 export default function CaseStudyDetail({ caseStudy }) {
-  
-  
-    
     fadeIn();
     fadeUp();
-    // headingAnim();
     lineAnim();
     paraAnim();
+    routeChangeTop();
 
     const {
         content,
