@@ -13,17 +13,30 @@ const awards=[
     year:"2024",
     category:"Innovative Use of Digital Search SEO"
   },
-  {
-    img:"/assets/images/homepage/award2.png",
-    title:"The Jury awards (Flipkart) ",
-    year:"2022",
-    category:"Best media mix category "
-  },
+  
   {
     img:"/assets/images/homepage/award3.png",
     title:"Google Premier Awards  ",
     year:"2024",
     category:"Google premier partner - App growth "
+  },
+  {
+    img:"/assets/images/homepage/award3.png",
+    title:"Emvies ",
+    year:"2024",
+    category:"Best SEO/SEM Campaign"
+  },
+  {
+    img:"/assets/images/homepage/award-1.png",
+    title:"Abby 2024  ",
+    year:"2024",
+    category:"Innovative Use of Paid Search"
+  },
+  {
+    img:"/assets/images/homepage/award2.png",
+    title:"Google agency excellance awards ",
+    year:"2024",
+    category:"Measurement solution"
   },
   {
     img:"/assets/images/homepage/award-1.png",
@@ -56,22 +69,10 @@ const awards=[
     category:"Brand Initiatives - Best use of Quora "
   },
   {
-    img:"/assets/images/homepage/award3.png",
-    title:"Emvies ",
-    year:"2024",
-    category:"Best SEO/SEM Campaign"
-  },
-  {
-    img:"/assets/images/homepage/award-1.png",
-    title:"Abby 2024  ",
-    year:"2024",
-    category:"Innovative Use of Paid Search"
-  },
-  {
     img:"/assets/images/homepage/award2.png",
-    title:"Google agency excellance awards ",
-    year:"2024",
-    category:"Measurement solution"
+    title:"The Jury awards (Flipkart) ",
+    year:"2022",
+    category:"Best media mix category "
   },
 ];
 
@@ -171,7 +172,7 @@ const Awards = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[15%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-white mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] tablet:w-fit tablet:h-fit tablet:p-[2vw] tablet:top-[30%]
+          className={`absolute z-[5] top-[35%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-white mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] tablet:w-fit tablet:h-fit tablet:p-[2vw] tablet:top-[30%]
                 ${
                   activeButton === "next" ? " text-white" : "bg-transparent"
                 } transition-colors duration-300`} // Added background color transition
@@ -198,7 +199,7 @@ const Awards = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[15%] right-[11%]  border border-white overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] tablet:w-fit tablet:h-fit tablet:p-[2vw] tablet:right-[15%] tablet:top-[30%]
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[35%] right-[11%]  border border-white overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] tablet:w-fit tablet:h-fit tablet:p-[2vw] tablet:right-[15%] tablet:top-[30%]
                 ${
                   activeButton === "prev"
                     ? " text-white"

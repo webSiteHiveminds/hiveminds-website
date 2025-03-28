@@ -33,6 +33,13 @@ const MobileHero = () => {
   ];
   const slidesData = [
     {
+      title: "Transforming Potential Into Growth With ",
+      subtitle: "Every Step",
+      description:
+        "",
+      href: "/our-impact",
+    },
+    {
       title: "Data-Backed",
       subtitle: "Growth",
       description:
@@ -157,18 +164,18 @@ const MobileHero = () => {
             >
               {slidesData[activeIndex].title}{" "}
               <span className="text-primary">
-                {slidesData[activeIndex].subtitle}
+               {" "} {slidesData[activeIndex].subtitle}
               </span>
             </h1>
 
             <p ref={paraRef} className="content w-full tracking-wide para tablet:w-[70%]">
-              {slidesData[activeIndex].description}
+               {slidesData[activeIndex].description}
             </p>
 
             <PrimaryButton
               href={slidesData[activeIndex].href}
               text="View Case Study"
-              className="button"
+              className={`button ${activeIndex==0 ? "!hidden" : "block"}`}
               ref={buttonRef}
             />
           </div>

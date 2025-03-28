@@ -25,7 +25,7 @@
   /* z-index: 2; */
 }
 .btn .btnCircle {
-  clip-path: inset(15% calc(100% - 3.55vw) 15% .7vw round 1000px);
+  clip-path: inset(15% calc(100% - 3.55vw) 15% .7vw round 200px);
   position: absolute;
   
   inset: 0px;
@@ -122,7 +122,7 @@
   padding: 0.8vw 1.5vw;
   min-width: 8vw;
   width: fit-content;
-  max-width: 12vw;
+  max-width: 15vw;
   transition: transform 0.7s cubic-bezier(.4,0,0,1); 
 }
 
@@ -175,7 +175,7 @@
 .buttonPlain[data-btn-blue]{
   background-color: #134bd5;
   color: #fff;
-  width: 11vw;
+  /* width: 100%; */
 }
 .buttonPlain[data-btn-blue]::before{
   background-color: #fff;

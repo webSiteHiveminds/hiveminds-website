@@ -20,7 +20,7 @@ const addresses = [
     location: "Mumbai",
     label: "MUMBAI",
     address:
-      "Office no 301 & 302, 3rd Floor, The Eagle's Flight Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047",
+      "Office no 301 & 302, 3rd Floor , The Eagle's Flight Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047",
   },
   {
     location: "Gurgaon",
@@ -54,9 +54,9 @@ const Footer = () => {
                 <div
                   key={loc}
                   onMouseEnter={() => handleMouseEnter(loc)}
-                  className="under-multi-parent"
+                  className="under-multi-parent w-[89%]"
                 >
-                  <span className="content-white under-multi">
+                  <span className="content-white under-multi ">
                     {label} : {address}
                   </span>
                 </div>

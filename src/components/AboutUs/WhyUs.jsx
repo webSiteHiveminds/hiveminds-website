@@ -83,12 +83,12 @@ const WhyUs = () => {
               
                 <div  className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3 tablet:gap-[4vw]"  
                 >
-                    <Image src={item.icon} alt="icons" width={30} height={30} className="w-[3vw] h-[3vw] mobile:w-10 tablet:w-[8vw]" />
+                    <Image src={item.icon} alt="icons" width={30} height={30} className="w-[3vw] h-[3vw] mobile:w-[8vw] mobile:h-[8vw] tablet:w-[8vw] tablet:h-[8vw]" />
                     <p className="text-[1.2vw] mobile:text-[5.1vw] tablet:text-[4vw]">{item.heading}</p>
                   </div>
             </div> 
              ))}
-              <span className="w-full h-[1px] bg-black my-[2vw]"></span>
+              <span className="w-full h-[1px] bg-black my-[2vw] mobile:my-[4vw] tablet:my-[4vw]"></span>
           </div>
         </div>
       </div>

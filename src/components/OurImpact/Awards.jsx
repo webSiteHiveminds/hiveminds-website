@@ -28,6 +28,16 @@ const Awards = () => {
       date: "2024",
     },
     {
+      imgSrc: "/assets/images/impact/awards/abyss-award.png",
+      awardTitle: "Abby 2024",
+      date: "2024",
+    },
+    {
+      imgSrc: "/assets/images/impact/awards/google-award.png",
+      awardTitle: "Google agency excellance awards",
+      date: "2024",
+    },
+    {
       imgSrc: "/assets/images/impact/awards/yt-award.png",
       awardTitle: "Youtube awards",
       date: "2023",
@@ -41,16 +51,6 @@ const Awards = () => {
       imgSrc: "/assets/images/impact/awards/emves.png",
       awardTitle: "Emvies",
       date: "2023",
-    },
-    {
-      imgSrc: "/assets/images/impact/awards/abyss-award.png",
-      awardTitle: "Abby 2024",
-      date: "2024",
-    },
-    {
-      imgSrc: "/assets/images/impact/awards/google-award.png",
-      awardTitle: "Google agency excellance awards",
-      date: "2024",
     },
   ];
 

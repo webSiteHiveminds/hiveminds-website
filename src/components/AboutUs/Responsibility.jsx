@@ -21,22 +21,22 @@ const Responsibility = () => {
         </div>
         <div className="container-lg grid grid-cols-16 grid-rows-5 gap-[1.2vw] h-[35vw] mobile:grid-cols-2 mobile:grid-rows-none mobile:h-full mobile:gap-4 mobile:pb-10">
           <div className="overflow-hidden rounded-2xl col-span-4 row-span-3 mobile:col-span-2 mobile:row-auto mobile:h-[70vw]">
-            <Image src={img1} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+            <Image src={img1} alt="responsibilty-images" placeholder="blur" className="object-fit w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
           <div className="overflow-hidden rounded-2xl col-span-4 row-span-2 row-start-4 mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
             <Image src={img2} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
           <div className="overflow-hidden rounded-2xl col-span-5 row-span-5 mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
-            <Image src={img3} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+            <Image src={img5} alt="responsibilty-images" placeholder="blur" className="object-fit w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
           <div className="overflow-hidden rounded-2xl col-span-3 row-span-2 mobile:col-span-2 mobile:row-auto mobile:h-[70vw]">
-            <Image src={img4} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+            <Image src={img4} alt="responsibilty-images" placeholder="blur" className="object-fit w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
           <div className="overflow-hidden rounded-2xl col-span-3 row-span-3 order-3 mobile:order-last mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
-            <Image src={img5} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+            <Image src={img3} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
           <div className="overflow-hidden rounded-2xl col-span-4 row-span-5 mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
-            <Image src={img6} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+            <Image src={img6} alt="responsibilty-images" placeholder="blur" className="object-fit w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
         </div>
       </section>

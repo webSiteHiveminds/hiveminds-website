@@ -46,58 +46,33 @@ const MobileMenu = ({ openMenu }) => {
               {
                 title: "Services",
                 links: [
-                  {
-                    href: "/services/performance-marketing",
-                    text: "Performance Marketing",
-                  },
-                  {
-                    href: "/services/retail-marketing",
-                    text: "Retail Marketing",
-                  },
-                  {
-                    href: "/services/consumer-insights",
-                    text: "Consumer Insights",
-                  },
-                  {
-                    href: "/services/influencer-marketing",
-                    text: "Influencer Marketing",
-                  },
-                  {
-                    href: "/services/affiliate-marketing",
-                    text: "Affiliate Marketing",
-                  },
-                  { href: "/services/data-analytic", text: "Data & Analytics" },
-                  {
-                    href: "/services/social-media-marketing",
-                    text: "Programatic Advertising",
-                  },
-                  {
-                    href: "/services/search-engine-optimization",
-                    text: "Search Engine Optimization",
-                  },
-                  {
-                    href: "/services/creative-content-management",
-                    text: "Content Management & Creative",
-                  },
-                  {
-                    href: "/services/online-reputation-management",
-                    text: "Online Reputation Management",
-                  },
-                  { href: "/services/branding", text: "Branding Services" },
+                  { text: "Performance Marketing", href: "/services/performance-marketing" },
+                  { text: "Retail Marketing", href: "/services/retail-marketing" },
+                  { text: "Search Engine Optimization", href: "/services/search-engine-optimization" },
+                  { text: "Content Management & Creative", href: "/services/creative-content-management" },
+                  { text: "Online Reputation Management", href: "/services/online-reputation-management" },
+                  { text: "Consumer Insights", href: "/services/consumer-insights" },
+                  { text: "Influencer Marketing", href: "/services/influencer-marketing" },
+                  { text: "Affiliate Marketing", href: "/services/affiliate-marketing" },
+                  { text: "Social Media Marketing", href: "/services/social-media-marketing" },
+                  { text: "Data & Analytics", href: "/services/data-analytic" },
+                  { text: "Branding Services", href: "/services/branding" },
                 ],
               },
 
               {
                 title: "Industries",
                 links: [
-                  { href: "#", text: "FMCG & Beauty" },
-                  { href: "#", text: "Health & Wellness" },
-                  { href: "#", text: "BFSI - Fintech" },
-                  { href: "#", text: "E-Commerce" },
-                  { href: "#", text: "Fashion & Lifestyle" },
-                  { href: "#", text: "Travel & Tourism" },
-                  { href: "#", text: "Telecom & Automobiles" },
-                  { href: "#", text: "Electronics & Consumer Durables" },
+                  { text: "FMCG & Beauty", href: "/industry#fmcg-and-beauty" },
+        { text: "Health & Wellness", href: "/industry#health-and-wellness" },
+        { text: "BFSI - Fintech", href: "/industry#bfsi-fintech" },
+        { text: "E-Commerce", href: "/industry#e-commerce" },
+        { text: "Fashion & Lifestyle", href: "/industry#fashion-and-lifestyle" },
+        { text: "Electronics ", href: "/industry#electronics" },
+        { text: "Consumer Durables", href: "/industry#consumer-durables" },
+        { text: "Telecom", href: "/industry#telecom" },
+        { text: "Automobiles", href: "/industry#automobiles" },
+        { text: "Travel & Tourism", href: "/industry#travel-and-tourism" },
                 ],
               },
             ].map((section, index) => (
@@ -176,6 +151,11 @@ const MobileMenu = ({ openMenu }) => {
 
           <Link href={"/careers"} className="link-line" prefetch={false}>
             Careers
+          </Link>
+          <div className="w-full h-[1px] bg-black/20"></div>
+
+          <Link href={"/contact-us"} className="link-line" prefetch={false}>
+            Partner With Us
           </Link>
         </div>
       </section>

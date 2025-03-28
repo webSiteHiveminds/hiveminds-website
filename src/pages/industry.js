@@ -45,7 +45,7 @@ const industry = () => {
           <section className='w-screeen h-full pb-[5vw] mobile:pb-[15%] mobile:pt-[5%]'>
             <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[4vw]'>
               {industries.map((item, index) => (
-                <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:justify-start mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[155vw] mobile:pb-[10vw] tablet:flex-col tablet:h-[75vw] tablet:px-[3vw] tablet:my-[6vw] ">
+                <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:justify-start mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[155vw] mobile:pb-[10vw] tablet:flex-col tablet:h-[75vw] tablet:px-[3vw] tablet:my-[6vw] " id={item.id}>
                   <div className='w-[45%] mobile:w-full tablet:w-3/5'>
                     <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw] mobile:rounded-[3.5vw]' />
                   </div>
@@ -72,6 +72,7 @@ export default industry
 
 const industries = [
   {
+    id:"fmcg-and-beauty",
     img: "/assets/images/industry/fmcg-and-beauty.png",
     title1: " FMCG & ",
     title2: "Beauty",
@@ -79,6 +80,7 @@ const industries = [
    
   },
   {
+    id:"health-and-wellness",
     img: "/assets/images/industry/health-and-wellness.png",
     title1: " Health and",
     title2: "Wellness",
@@ -86,6 +88,7 @@ const industries = [
    
   },
   {
+    id:"bfsi-fintech",
     img: "/assets/images/industry/bfsi-fintech.png",
     title1: " BFSI -",
     title2: "Fintech",
@@ -93,6 +96,7 @@ const industries = [
    
   },
   {
+    id:"e-commerce",
     img: "/assets/images/industry/e-commerce.png",
     title1: " E-",
     title2: "commerce",
@@ -100,6 +104,7 @@ const industries = [
    
   },
   {
+    id:"fashion-and-lifestyle",
     img: "/assets/images/industry/fashion-and-lifestyle.png",
     title1: " Fashion & ",
     title2: " Lifestyle",
@@ -107,30 +112,35 @@ const industries = [
    
   },
   {
+    id:"electronics",
     img: "/assets/images/industry/electronics.png",
     title1: " Electronics",
     title2: "",
     para: "For electronics brands, HiveMinds delivers dynamic digital strategies that optimize every touchpoint—from discovery to conversion. Our advanced analytics and creative prowess drive superior engagement, ensuring brands stand out and achieve robust growth in the fast-paced electronics market.",
    
   }, {
+    id:"consumer-durables",
     img: "/assets/images/industry/consumer-durables.png",
     title1: " Consumer ",
     title2: " Durables",
     para: "In the consumer durables sector, we fuse creative innovation with data-driven strategies to build lasting brand impact. Our tailored campaigns enhance customer experiences, boost conversions, and foster loyalty, positioning brands for sustainable growth in a competitive marketplace.",
   },
   {
+    id:"telecom",
     img: "/assets/images/industry/telecom.png",
     title1: " Telecom",
     title2: " ",
     para: "We transform telecom marketing by integrating innovative performance strategies, targeted paid advertising, and dynamic social media campaigns. Our solutions boost customer acquisition and engagement, securing a dominant digital presence and driving superior ROI for telecom brands.",
   },
   {
+    id:"automobiles",
     img: "/assets/images/industry/automobiles.png",
     title1: " Automobiles",
     title2: " ",
     para: "In the automobile sector, we fuel brand performance with strategic paid advertising, performance marketing, and impactful social media boosting. Our tailored campaigns drive consumer engagement and conversions, enabling automotive brands to accelerate growth and dominate the digital arena.",
   },
   {
+    id:"travel-and-tourism",
     img: "/assets/images/industry/travel-and-tourism.png",
     title1: " Travel &",
     title2: " Tourism",

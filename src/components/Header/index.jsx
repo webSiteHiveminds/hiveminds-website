@@ -17,34 +17,34 @@ const Header = ({ isOpen }) => {
   const headerRef = useRef();
   const services = [
     { name: "Performance Marketing", href: "/services/performance-marketing" },
-    { name: "SEO", href: "/services/search-engine-optimization" },
     { name: "Retail Marketing", href: "/services/retail-marketing" },
+    { name: "Search Engine Optimization", href: "/services/search-engine-optimization" },
     { name: "Creative & Content", href: "/services/creative-content-management" },
     { name: "ORM", href: "/services/online-reputation-management" },
     { name: "Consumer Insights", href: "/services/consumer-insights" },
     { name: "Influencer Marketing", href: "/services/influencer-marketing" },
     { name: "Affiliate Marketing", href: "/services/affiliate-marketing" },
-    { name: "Branding & Programatic Ads", href: "/services/branding" },
+    { name: "Social Media Marketing", href: "/services/social-media-marketing" },
     { name: "Data Analysis", href: "/services/data-analytic" },
-    { name: "Social Media", href: "/services/social-media-marketing" },
+    { name: "Branding & Programatic Ads", href: "/services/branding" },
   ];
   const industries = [
-    "FMCG & Beauty",
-    "Health & Wellness",
-    "BFSI - Fintech",
-    "E-Commerce",
-    "Fashion & Lifestyle",
-    "Electronics",
-    "Consumer Durables",
-    "Telecom",
-    "Automobiles",
-    "Travel & Tourism",
+    { name: "FMCG & Beauty", href: "/industry#fmcg-and-beauty" },
+        { name: "Health & Wellness", href: "/industry#health-and-wellness" },
+        { name: "BFSI - Fintech", href: "/industry#bfsi-fintech" },
+        { name: "E-Commerce", href: "/industry#e-commerce" },
+        { name: "Fashion & Lifestyle", href: "/industry#fashion-and-lifestyle" },
+        { name: "Electronics ", href: "/industry#electronics" },
+        { name: "Consumer Durables", href: "/industry#consumer-durables" },
+        { name: "Telecom", href: "/industry#telecom" },
+        { name: "Automobiles", href: "/industry#automobiles" },
+        { name: "Travel & Tourism", href: "/industry#travel-and-tourism" },
   ];
   const links = [
     {
       href: "/solutions",
       imgSrc: solutionImg,
-      text: "Solutions",
+      text: "SOLUTIONS"
     },
     {
       href: "/our-ips",
@@ -54,7 +54,7 @@ const Header = ({ isOpen }) => {
     {
       href: "/school-of-digital",
       imgSrc: digitalImg,
-      text: "School of Digital",
+      text: "SCHOOL OF DIGITAL",
     },
   ];
   const menuItems = [
@@ -188,14 +188,14 @@ const Header = ({ isOpen }) => {
                         <ul className="flex flex-col p-2 mt-2 px-0 rounded-[0.5vw] normal-case top-full pointer-events-auto">
                           {industries.map((industry, index) => (
                             <li key={index} className="py-1 content">
-                              <Link
-                                href="#"
-                                prefetch={false}
-                                className="link-line"
-                              >
-                                {industry}
-                              </Link>
-                            </li>
+                            <Link
+                              href={industry.href}
+                              prefetch={false}
+                              className="link-line"
+                           >
+                              {industry.name}
+                            </Link>
+                          </li>
                           ))}
                         </ul>
                       </div>
@@ -218,7 +218,7 @@ const Header = ({ isOpen }) => {
                               />
                             </Link>
                             <Link href={link.href} className="w-fit">
-                              <div className="cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]">
+                              <div className="cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] normal-case">
                                 <span className="relative link-line text-primary">
                                   {link.text}
                                 </span>
@@ -269,7 +269,7 @@ const Header = ({ isOpen }) => {
               <PlainButton
                 aria-label="to contact us"
                 link={"/contact-us"}
-                text={"Work with us"}
+                text={"Partner with us"}
                 data-btn-blue
               />
             </div>
