@@ -13,6 +13,8 @@ const Header = ({ isOpen }) => {
   const lenis = useLenis();
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobileWidth , setIsMobileWidth] = useState(false)
+
   const [openMenu, setOpenMenu] = useState(false);
   const headerRef = useRef();
   const services = [
@@ -64,6 +66,14 @@ const Header = ({ isOpen }) => {
   ];
 
   useEffect(() => {
+
+    if(globalThis.innerWidth>1024){
+
+      setIsMobileWidth(false)
+    }
+    else{
+      setIsMobileWidth(true)
+    }
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -94,12 +104,24 @@ const Header = ({ isOpen }) => {
     }
   }, [openMenu, lenis]);
 
+  const entredMouse = ()=>{
+
+    setOpenMenu(true)
+  }
+
+  const leaveMouse = ()=>{
+
+    setOpenMenu(false)
+  }
   return !isOpen ? (
     <header
       className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${
         isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
-      } ${openMenu ? "!translate-y-0" : ""}`}
+      }`}
     >
+
+     {!mobileWidth?(<>
+     
       <div className={``}>
         <div
           className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
@@ -129,7 +151,7 @@ const Header = ({ isOpen }) => {
                     Who We Are
                   </Link>
                 </li>
-                <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
+                <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]" onMouseEnter={entredMouse}>
                   <Link
                     href={"#"}
                     className="relative link-line"
@@ -152,19 +174,19 @@ const Header = ({ isOpen }) => {
                     />
                   </svg>
 
-                  <div className="w-[97.5vw] left-[-53vw] bg-white h-0  top-[4.5vw] px-[3vw]  overflow-hidden rounded-[1.5vw] absolute group-hover:h-[40vw]  ease-in-out transition-all duration-700 block bgblur ">
+                  <div className={`w-[97.5vw] left-[-52vw] bg-white h-0  top-[4.5vw] px-[3vw]  overflow-hidden rounded-[1.5vw] absolute group-hover:h-[40vw]  ease-in-out transition-all duration-500 block bgblur ${openMenu?"h-[40vw]":"h-0"} `} onMouseLeave={leaveMouse}>
                     <div className="py-[5vw] flex justify-between gap-[2vw]">
                       <div>
                         <Link
                           href="/services"
                           prefetch={false}
-                          className="uppercase text-primary link-line text-[1.2vw]"
+                          className="uppercase text-primary link-line text-[1.2vw] font-avenir"
                         >
                           Services
                         </Link>
-                        <ul className="flex flex-col p-2 mt-2 px-0 rounded-[0.5vw] normal-case top-full pointer-events-auto">
+                        <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir ">
                           {services.map((service, index) => (
-                            <li key={index} className="py-1 content">
+                            <li key={index} className=" content ">
                               <Link
                                 href={service.href}
                                 prefetch={false}
@@ -181,13 +203,13 @@ const Header = ({ isOpen }) => {
                         <Link
                           href="/industry"
                           prefetch={false}
-                          className="uppercase text-primary link-line text-[1.2vw]"
+                          className="uppercase text-primary link-line text-[1.2vw] font-avenir"
                         >
                           Industries
                         </Link>
-                        <ul className="flex flex-col p-2 mt-2 px-0 rounded-[0.5vw] normal-case top-full pointer-events-auto">
+                        <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir">
                           {industries.map((industry, index) => (
-                            <li key={index} className="py-1 content">
+                            <li key={index} className=" content">
                             <Link
                               href={industry.href}
                               prefetch={false}
@@ -256,7 +278,7 @@ const Header = ({ isOpen }) => {
                   >
                     <Link
                       href={item.href}
-                      className="relative link-line"
+                      className="relative link-line font-avenir"
                       prefetch={false}
                     >
                       {item.label}
@@ -286,7 +308,13 @@ const Header = ({ isOpen }) => {
           </div>
         </div>
       </div>
+     
+     </>):(<>
       <MobileMenu openMenu={openMenu} />
+     
+     </>)
+     
+    } 
     </header>
   ) : (
     <></>

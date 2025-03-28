@@ -8,12 +8,12 @@ const CareerDetails = ({ userName, userEmail,userCompany, userNumber, userMessag
     <Html>
       <Head />
       <Preview>
-        Someone just filled Contact Details on HiveMinds Website.
+        Someone just filled Career Details on HiveMinds Website.
       </Preview>
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={"https://hiveminds-staging.vercel.app/logo.png"}
+            src={"https://hiveminds-website.vercel.app/logo.png"}
             width="140"
             height="40"
             alt="Logo"
@@ -21,7 +21,7 @@ const CareerDetails = ({ userName, userEmail,userCompany, userNumber, userMessag
           />
           <Text style={paragraph}>Hi,</Text>
           <Text style={paragraph}>
-            You have a new contact form submission on the HiveMinds website.
+            You have a new Career form submission on the HiveMinds website.
             <br />
             Below are the details.
           </Text>
@@ -49,7 +49,7 @@ const CareerDetails = ({ userName, userEmail,userCompany, userNumber, userMessag
             </Row>
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://hiveminds-staging.vercel.app/contact-us">Contact Page.</Link>
+            This form is submitted from <Link href="https://hiveminds-website.vercel.app/careers">Contact Page.</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />

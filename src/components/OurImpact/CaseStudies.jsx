@@ -1,8 +1,9 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../Button/styles.module.css";
 import Link from "next/link";
 import industry from "@/pages/industry";
+import useLenis from "lenis/react";
 import {
   Select,
   SelectContent,
@@ -126,6 +127,7 @@ const caseStudiesData = [
 
 ];
 
+
 const CaseStudyCard = ({ imgSrc, title, description, link }) => {
   return (
     <div className="w-[32%] fadeup group blog-link mobile:w-[90vw] tablet:w-[48%] tablet:h-full">
@@ -185,6 +187,10 @@ const CaseStudyCard = ({ imgSrc, title, description, link }) => {
 const CaseStudies = () => {
   const [selectedIndustry, setSelectedIndustry] = useState("");
   const [filteredCaseStudies, setFilteredCaseStudies] = useState(caseStudiesData);
+ 
+  const lenis = useLenis({
+    prevent: (node) => node.id === '[data-radix-select-viewport]',
+  });
 
   const handleFilter = () => {
     const filtered = caseStudiesData.filter(
@@ -209,14 +215,14 @@ const CaseStudies = () => {
           </p>
         </div>
         <div className="flex gap-[1vw] pb-[3vw] tablet:items-end mobile:items-end">
-          <div className="flex flex-col">
+          <div data-lenis-prevent className="flex flex-col">
             <p className="content px-[1vw] py-[0.5vw] mobile:py-[3vw]">Filters:</p>
             <Select value={selectedIndustry} onValueChange={setSelectedIndustry}>
               <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 border-[1.5px] border-black rounded-full mobile:w-[40vw] mobile:rounded-[9vw] mobile:border-[1px] ">
                 <SelectValue placeholder="All Indutries" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
+              <SelectContent data-lenis-prevent id="modal">
+                <SelectGroup data-lenis-prevent id="modal">
                   <SelectItem value="E-Commerce">E-Commerce</SelectItem>
                   <SelectItem value="BFSI-Fintech">BFSI-Fintech</SelectItem>
                   <SelectItem value="Travel & Tourism">Travel & Tourism</SelectItem>

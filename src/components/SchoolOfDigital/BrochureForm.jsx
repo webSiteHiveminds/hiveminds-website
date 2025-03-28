@@ -8,6 +8,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import gsap from "gsap";
 import {
   Select,
   SelectContent,
@@ -22,7 +23,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
 import styles from "../Button/styles.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
@@ -35,6 +36,9 @@ const formSchema = z.object({
 
 export default function BrochureForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const [submitted, setisSubmitted] = useState(false);
+  const [notsubmitted , setisNotSubmitted] = useState(false);
+
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -57,13 +61,37 @@ export default function BrochureForm() {
         headers: { "Content-Type": "application/json" },
       });
       if (!res.ok) throw new Error("Failed to send message");
+      setisSubmitted(true);
+      setTimeout(() => {
+        setisSubmitted(false);
+      }, 7000);
       form.reset();
     } catch (error) {
+      setisNotSubmitted(true)
+      setTimeout(() => {
+        setisNotSubmitted(false);
+      }, 7000);
       console.log(error);
     } finally {
       setIsLoading(false);
     }
   };
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (submitted||notsubmitted) {
+        gsap.from(".form-submission", {
+          opacity: 0,
+          duration: 1.5,
+        });
+        gsap.to(".form-submission", {
+          opacity: 0,
+          duration: 1.5,
+          delay: 4,
+        });
+      }
+    });
+    return () => ctx.revert();
+  });
 
   return (
     <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein bg-white mobile:rounded-[4.5vw] mobile:py-[7vw] mobile:bg-[#F2F2F2] tablet:rounded-[3vw] tablet:px-[4vw]">
@@ -202,6 +230,20 @@ export default function BrochureForm() {
               </FormItem>
             )}
           />
+            {submitted && (
+            <div className="fixed top-0 left-0 flex justify-center pt-[4vw] w-screen h-screen z-[9999] mobile:pt-[15vw] tablet:pt-[7vw] form-submission ">
+              <div className="w-fit h-fit px-[3vw] py-[1vw] rounded-[0.5vw] mobile:rounded-[1.5vw] tablet:rounded-[1vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[1.5vw] tablet:text-[2.2vw]  text-white bg-green-500">
+                form submitted
+              </div>
+            </div>
+          )}
+            {notsubmitted && (
+            <div className="fixed top-0 left-0 flex justify-center pt-[4vw] w-screen h-screen z-[9999] mobile:pt-[15vw] tablet:pt-[7vw] form-submission ">
+              <div className="w-fit h-fit px-[3vw] py-[1vw] rounded-[0.5vw] mobile:rounded-[1.5vw] tablet:rounded-[1vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[1.5vw] tablet:text-[2.2vw]  text-white bg-red-500">
+                form is not submitted
+              </div>
+            </div>
+          )}
 
           {/* Submit */}
           <div className="pt-[2vw]">

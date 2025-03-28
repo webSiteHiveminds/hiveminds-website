@@ -13,7 +13,7 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={"https://hiveminds-staging.vercel.app/logo.png"}
+            src={"https://hiveminds-website.vercel.app/logo.png"}
             width="140"
             height="40"
             alt="Logo"
@@ -59,7 +59,7 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
             </Row>
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://hiveminds-staging.vercel.app/contact-us">Contact Page.</Link>
+            This form is submitted from <Link href="https://hiveminds-website.vercel.app/contact-us">Contact Page.</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />

@@ -21,6 +21,9 @@ body {
 .montreal {
   font-family: "Montreal";
 }
+.font-avenir{
+  font-family: var(--font-body);
+}
 .heading-1 {
   font-size: 5.74vw;
   font-weight: 500;
