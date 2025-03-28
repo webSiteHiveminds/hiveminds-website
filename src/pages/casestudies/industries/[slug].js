@@ -20,8 +20,6 @@ export default function Blogs({ industry, industries }) {
   fadeUp();
   fadeIn();
 
-//   console.log(industries);
-
 const metadata={
   title:`HiveMinds Case Studies | Transforming Growth in ${industry.name}`,
   metaDescription:`Discover how HiveMinds drives success in the ${industry.name} sector. Explore case studies showcasing data-driven marketing strategies that boost growth, engagement, and ROI for leading brands.`,
@@ -31,20 +29,19 @@ const metadata={
   date_modified: "2025-03-21T00:00",
 }
 
-
   return (
     <>
     <Metadata metadata={metadata}/>
     <WebpageJsonLd metadata={metadata}/>
       <Layout>
-        <Hero
+        {/* <Hero
           title1={"Our Case"}
           title2={"Studies"}
           para={
             "Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."
           }
           img={img}
-        />
+        /> */}
         <IndustryCsListing  industries={industries} industry={industry} />  
         <MoreCs/>             
       </Layout>
