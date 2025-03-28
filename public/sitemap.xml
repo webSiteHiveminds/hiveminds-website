@@ -4,462 +4,442 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
 <url>
-  <loc>https://hiveminds-staging.vercel.app/</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/about-us</loc>
-  <lastmod>2025-03-21T11:20:43+00:00</lastmod>
+  <loc>https://www.hiveminds.in/about-us</loc>
+  <lastmod>2025-03-28T13:36:59+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services</loc>
-  <lastmod>2025-03-21T11:20:43+00:00</lastmod>
+  <loc>https://www.hiveminds.in/index</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/performance-marketing</loc>
-  <lastmod>2025-03-21T11:20:43+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services</loc>
+  <lastmod>2025-03-28T13:37:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/search-engine-optimization</loc>
-  <lastmod>2025-03-21T11:20:44+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/performance-marketing</loc>
+  <lastmod>2025-03-28T13:37:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/retail-marketing</loc>
-  <lastmod>2025-03-21T11:20:44+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/retail-marketing</loc>
+  <lastmod>2025-03-28T13:37:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/creative-content-management</loc>
-  <lastmod>2025-03-21T11:20:44+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/search-engine-optimization</loc>
+  <lastmod>2025-03-28T13:37:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/online-reputation-management</loc>
-  <lastmod>2025-03-21T11:20:44+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/creative-content-management</loc>
+  <lastmod>2025-03-28T13:37:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/consumer-insights</loc>
-  <lastmod>2025-03-21T11:20:44+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/online-reputation-management</loc>
+  <lastmod>2025-03-28T13:37:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/influencer-marketing</loc>
-  <lastmod>2025-03-21T11:20:45+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/consumer-insights</loc>
+  <lastmod>2025-03-28T13:37:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/affiliate-marketing</loc>
-  <lastmod>2025-03-21T11:20:45+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/influencer-marketing</loc>
+  <lastmod>2025-03-28T13:37:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/branding</loc>
-  <lastmod>2025-03-21T11:20:45+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/affiliate-marketing</loc>
+  <lastmod>2025-03-28T13:37:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/data-analytic</loc>
-  <lastmod>2025-03-21T11:20:45+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/social-media-marketing</loc>
+  <lastmod>2025-03-28T13:37:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/services/social-media-marketing</loc>
-  <lastmod>2025-03-21T11:20:45+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/data-analytic</loc>
+  <lastmod>2025-03-28T13:37:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/industry</loc>
-  <lastmod>2025-03-21T11:20:46+00:00</lastmod>
+  <loc>https://www.hiveminds.in/services/branding</loc>
+  <lastmod>2025-03-28T13:37:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/solutions</loc>
-  <lastmod>2025-03-21T11:20:46+00:00</lastmod>
+  <loc>https://www.hiveminds.in/industry</loc>
+  <lastmod>2025-03-28T13:37:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/our-ips</loc>
-  <lastmod>2025-03-21T11:20:46+00:00</lastmod>
+  <loc>https://www.hiveminds.in/solutions</loc>
+  <lastmod>2025-03-28T13:37:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/school-of-digital</loc>
-  <lastmod>2025-03-21T11:20:47+00:00</lastmod>
+  <loc>https://www.hiveminds.in/our-ips</loc>
+  <lastmod>2025-03-28T13:37:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/our-impact</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/school-of-digital</loc>
+  <lastmod>2025-03-28T13:37:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/our-impact</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/careers</loc>
-  <lastmod>2025-03-21T11:20:48+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/contact-us</loc>
-  <lastmod>2025-03-21T11:20:48+00:00</lastmod>
+  <loc>https://www.hiveminds.in/careers</loc>
+  <lastmod>2025-03-28T13:37:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/bigbasket</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/contact-us</loc>
+  <lastmod>2025-03-28T13:37:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/dominos</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/bigbasket</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/flydubai</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/dominos</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/max-life</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/flydubai</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/flipkart-healthplus</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/max-life</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog?category=Blog</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/flipkart-healthplus</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog?category=pr</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog?category=Blog</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/2024-seo-updates-all-bundled-together-for-you-to-glance</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog?category=pr</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/how-to-setup-google-business-profile-for-better-online-presence-in-2023</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/top-9-seo-trends-in-2025</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/decoding-attribution-windows</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/2024-seo-updates-all-bundled-together-for-you-to-glance</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/murfai</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/how-to-setup-google-business-profile-for-better-online-presence-in-2023</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hiveminds.in/blog/decoding-attribution-windows</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hiveminds.in/casestudies/murfai</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/parachute-advansed</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/parachute-advansed</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/saffola-honey</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/saffola-honey</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/digit</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/digit</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/saffola-triumph</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/saffola-triumph</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/crompton</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/crompton</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/bajaj-seasonal</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/bajaj-seasonal</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/hiveminds-ecommerce-conclave-2023</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/indian-social-media-case-studies</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/hiveminds-ecommerce-conclave-2023</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/building-a-foundation-for-success</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/indian-social-media-case-studies</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/screen-size-and-programatic-ads</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/building-a-foundation-for-success</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/ola-mapping-a-new-course-for-gps-advertising</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/screen-size-and-programatic-ads</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/hiveminds-ecommerce-conclave-2024</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/ola-mapping-a-new-course-for-gps-advertising</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/google-ends-continuous-scroll</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/hiveminds-ecommerce-conclave-2024</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/retail-through-consumers-eyes</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/google-ends-continuous-scroll</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/page/2</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://hiveminds-staging.vercel.app/blog/storytelling-in-digital-age</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/travel-tourism</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/metaverse-and-ecommerce-game-changer-or-just-a-hype</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/international</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/the-ai-era-navigating-digital-discovery-and-brand-growth</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/health-wellness</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/republic-day-campaigns</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/fmcg-beauty</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/short-video-apps-ad-investment-hesitation</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/fashion-lifestyle</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/ecommerce-the-high-cost-of-missing-early-trends</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/electronics-consumer-durables</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/the-new-dawn-of-women-entrepreneurship-in-india</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/e-commerce</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/building-a-bootstrapped-startup</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/industries/bfsi-fintech</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/blog/page/1</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/retail-through-consumers-eyes</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/travel-tourism</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/storytelling-in-digital-age</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/international</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/metaverse-and-ecommerce-game-changer-or-just-a-hype</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/health-wellness</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/the-ai-era-navigating-digital-discovery-and-brand-growth</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/fmcg-beauty</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/republic-day-campaigns</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/fashion-lifestyle</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/short-video-apps-ad-investment-hesitation</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/electronics-consumer-durables</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/ecommerce-the-high-cost-of-missing-early-trends</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/e-commerce</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/the-new-dawn-of-women-entrepreneurship-in-india</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/industries/bfsi-fintech</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/blog/building-a-bootstrapped-startup</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/page/2</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/page/3</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/page/4</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/gha-discovery</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/gha-discovery</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/skillmatics</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/skillmatics</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/dr-agarwal</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/dr-agarwal</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/protinex</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/protinex</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/sugar-fit</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/sugar-fit</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/nivea-efficiency-surge</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/nivea-efficiency-surge</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/nivea</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/nivea</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/pidilite-consumer-surge</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/pidilite-consumer-surge</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/pidilite-wd40</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/pidilite-wd40</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/sugar-free</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/sugar-free</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/jockey</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/jockey</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/fastrack</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/fastrack</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/tanishq-skinn-fragnance</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/tanishq-skinn-fragnance</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/tanishq</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/tanishq</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/morphy-richards</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/morphy-richards</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/crompton-heater</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/crompton-heater</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/bajaj-core</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/bajaj-core</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/bajaj-aircooler</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/bajaj-aircooler</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/titan-clocks</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/titan-clocks</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/dominos-app-efficiency</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/dominos-app-efficiency</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/instapay</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
+  <loc>https://www.hiveminds.in/casestudies/instapay</loc>
+  <lastmod>2025-03-28T13:37:38+00:00</lastmod>
   <priority>0.41</priority>
 </url>
-<url>
-  <loc>https://hiveminds-staging.vercel.app/casestudies/page/1</loc>
-  <lastmod>2025-03-21T11:21:34+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
+
 
 
 </urlset>
