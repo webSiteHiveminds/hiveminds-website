@@ -4,4 +4,4 @@ Allow: /
 Disallow: /_next/static/
 
 # Sitemaps
-Sitemap: https://hiveminds-staging.vercel.app/sitemap.xml
+Sitemap: https://www.hiveminds.in/sitemap.xml
