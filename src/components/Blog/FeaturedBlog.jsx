@@ -23,7 +23,7 @@ const FeaturedBlog = ({ post }) => {
             Featured <span className="blue-text"> Blog</span>
           </h2>
           <p className="content w-[60%] text-center fadein mobile:text-left mobile:w-full tablet:text-left tablet:w-[80%]">
-          Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships.
+            From digital transformations to market trends, dive into insights that empower businesses to innovate and grow. Discover expert analysis, case studies, and thought-provoking discussions designed to keep you informed and inspired
           </p>
         </div>
 
@@ -35,6 +35,7 @@ const FeaturedBlog = ({ post }) => {
               alt={featuredImage.altText || "feature blog image"}
               sizes={featuredImage.sizes}
               width={1080}
+              quality={100}
               height={620}
             />
             <span className="px-[1.5vw] py-[0.7vw] content bg-white rounded-full absolute top-[5%] left-[5%] leading-[1] mobile:py-[2.5vw] mobile:px-[5vw] tablet:px-[3vw] tablet:py-[1.5vw]">{categories[0].name}</span>
@@ -46,10 +47,10 @@ const FeaturedBlog = ({ post }) => {
               </h2>
               <p className="fadein content">{formatDate(date)}</p>
             </div>
-            <div 
+            <div
               className="fadeup w-[90%] content mobile:w-full mobile:text-[4.5vw] tablet:text-[2.4vw]"
-              dangerouslySetInnerHTML={{__html:excerpt}}
-              />
+              dangerouslySetInnerHTML={{ __html: excerpt }}
+            />
             <PrimaryButton href={postPathBySlug(slug)} text={"View details"} className="fadein" />
           </div>
         </div>
