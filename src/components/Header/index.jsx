@@ -210,13 +210,13 @@ const Header = ({ isOpen }) => {
                         <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir">
                           {industries.map((industry, index) => (
                             <li key={index} className=" content">
-                            <Link
+                            <a
                               href={industry.href}
                               prefetch={false}
                               className="link-line"
                            >
                               {industry.name}
-                            </Link>
+                            </a>
                           </li>
                           ))}
                         </ul>

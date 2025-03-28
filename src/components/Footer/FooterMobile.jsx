@@ -53,9 +53,9 @@ const FooterMobile = () => {
                                 <ul className="text-[4vw] pt-[3vw] pb-[7vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[2vw]">
                                     {section.links.map((link, idx) => (
                                         <li key={idx}>
-                                            <Link className="link-line" href={link.href}>
+                                            <a className="link-line" href={link.href}>
                                                 {link.label}
-                                            </Link>
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>

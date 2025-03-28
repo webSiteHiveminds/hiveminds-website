@@ -40,10 +40,10 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-screen h-[55vw] bg-transparent tablet:h-full"
+      className="w-screen h-full bg-transparent tablet:h-full"
       // style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="w-screen h-[55vw] flex flex-col items-center justify-between bg-[#134bd5] pt-[3vw] pb-[2vw] gap-[0.5vw] tablet:h-full tablet:static tablet:pt-20">
+      <div className="w-screen h-full flex flex-col items-center justify-between bg-[#134bd5] pt-[3vw] pb-[2vw] gap-[0.5vw] tablet:h-full tablet:static tablet:pt-20">
         <div className="w-full flex items-center justify-between gap-[10vw] text-white container-lg tablet:block tablet:space-y-16">
           <div className="w-[30%] h-full flex flex-col items-start justify-start gap-[2vw] tablet:w-full tablet:flex-row">
             <div className="flex flex-col gap-[2vw] tablet:w-3/5">
@@ -76,9 +76,9 @@ const Footer = () => {
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {expertiseLinks.links.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="link-line">
+                      <a href={item.href} className="link-line">
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -90,9 +90,9 @@ const Footer = () => {
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {solutionsLinks.links.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="link-line">
+                      <a href={item.href} className="link-line">
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -104,9 +104,9 @@ const Footer = () => {
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {industriesLinks.links.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="link-line">
+                      <a href={item.href} className="link-line">
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>

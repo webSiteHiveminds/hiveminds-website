@@ -11,46 +11,74 @@ const Awards = () => {
       setMobileWidth(true);
     }
   }, []);
+  const mainawards = [
+    {
+      imgSrc: "/assets/images/impact/awards/emvies.png",
+      awardTitle: "EMVIEs",
+      date: "2025",
+      type:"2 (Bronze)"
+    },
+    {
+      imgSrc: "/assets/images/impact/awards/abbys.png",
+      awardTitle: "ABBYs",
+      date: "2024",
+      type:"2 (Bronze)"
+    },
+    {
+      imgSrc: "/assets/images/impact/awards/google-agency.png",
+      awardTitle: "Google Agency Excellence Awards",
+      date: "2024",
+      type:"1 (Gold)"
+    },
+  ]
   const awardsData = [
     {
-      imgSrc: "/assets/images/impact/awards/image.png",
-      awardTitle: "DG+",
-      date: "2024",
+      imgSrc: "/assets/images/impact/awards/ima.png",
+      awardTitle: "IMA",
+      date: "2025",
+      type:"1 (Gold) | 1 (Bronze)"
     },
     {
-      imgSrc: "/assets/images/impact/awards/im-award.png",
-      awardTitle: "Indian Marketing Awards",
+      imgSrc: "/assets/images/impact/awards/dg-plus.png",
+      awardTitle: "DigiPlus",
       date: "2024",
+      type:"4 (Silver) | 1 (Bronze)"
     },
     {
-      imgSrc: "/assets/images/impact/awards/maddies-award.png",
-      awardTitle: "The Maddies",
+      imgSrc: "/assets/images/impact/awards/maddies.png",
+      awardTitle: "Maddies",
       date: "2024",
+      type:"1 (Gold) | 3 (Silver) | 2 (Bronze)"
     },
     {
-      imgSrc: "/assets/images/impact/awards/abyss-award.png",
-      awardTitle: "Abby 2024",
+      imgSrc: "/assets/images/impact/awards/digies.png",
+      awardTitle: "Digies",
       date: "2024",
+      type:"2 (Gold) | 4 (Silver) | 3 (Bronze) )"
     },
     {
-      imgSrc: "/assets/images/impact/awards/google-award.png",
-      awardTitle: "Google agency excellance awards",
+      imgSrc: "/assets/images/impact/awards/adgully.png",
+      awardTitle: "Addgully Finxx",
       date: "2024",
+      type:"3 (Gold) "
     },
     {
-      imgSrc: "/assets/images/impact/awards/yt-award.png",
-      awardTitle: "Youtube awards",
+      imgSrc: "/assets/images/impact/awards/amazon-ads.png",
+      awardTitle: "Amazon Ads",
       date: "2023",
+      type:"2 (Bronze)"
     },
     {
-      imgSrc: "/assets/images/impact/awards/bs-award.png",
-      awardTitle: "Brand Storyz 2023",
+      imgSrc: "/assets/images/impact/awards/premier.png",
+      awardTitle: "Google Premier",
       date: "2023",
+      type:"2 (Gold)"
     },
     {
-      imgSrc: "/assets/images/impact/awards/emves.png",
-      awardTitle: "Emvies",
+      imgSrc: "/assets/images/impact/awards/iamai.png",
+      awardTitle: "IAMAI",
       date: "2023",
+      type:"1 (Silver) | 1 (Bronze)"
     },
   ];
 
@@ -73,6 +101,28 @@ const Awards = () => {
       {/* Awards List */}
       {!mobileWidth ? (
         <>
+         <div className="container-lg flex flex-wrap justify-center gap-[3vw] mb-[5vw]">
+            {mainawards.map((award, id) => (
+              <div key={id} className="w-[20vw] h-auto flex flex-col fadeup tablet:w-[43vw]">
+                <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[1.2vw] overflow-hidden tablet:h-[25vw] tablet:rounded-[3vw]">
+                  <Image
+                    src={award.imgSrc}
+                    alt="award-image"
+                    width={300}
+                    height={300}
+                    className="object-cover w-full h-full "
+                  />
+                </div>
+                <div className="flex flex-wrap items-center justify-center gap-[0.5vw] mt-4">
+                <p className=" text-[1.2vw]  font-semibold tablet:text-[2.5vw]">
+                  {award.awardTitle} |
+                </p>
+                <p className="text-gray-500  content"> {award.date} | </p>
+                <p className="text-gray-500  content"> {award.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="container-lg flex flex-wrap justify-center gap-[3vw]">
             {awardsData.map((award, id) => (
               <div key={id} className="w-[20vw] h-auto flex flex-col fadeup tablet:w-[43vw]">
@@ -85,10 +135,13 @@ const Awards = () => {
                     className="object-cover w-full h-full "
                   />
                 </div>
-                <p className="mt-4 text-[1.2vw] pl-[0.5vw] font-semibold tablet:text-[2.5vw]">
-                  {award.awardTitle}
+                <div className="flex flex-wrap items-center justify-center gap-[0.5vw] mt-4">
+                <p className=" text-[1.2vw]  font-semibold tablet:text-[2.5vw]">
+                  {award.awardTitle} |
                 </p>
-                <p className="text-gray-500 pl-[0.5vw] content">{award.date}</p>
+                <p className="text-gray-500  content"> {award.date} | </p>
+                <p className="text-gray-500  content"> {award.type}</p>
+                </div>
               </div>
             ))}
           </div>
