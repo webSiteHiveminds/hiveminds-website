@@ -13,7 +13,7 @@ const Header = ({ isOpen }) => {
   const lenis = useLenis();
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [mobileWidth , setIsMobileWidth] = useState(false)
+  const [mobileWidth, setIsMobileWidth] = useState(false)
 
   const [openMenu, setOpenMenu] = useState(false);
   const headerRef = useRef();
@@ -22,7 +22,7 @@ const Header = ({ isOpen }) => {
     { name: "Retail Marketing", href: "/services/retail-marketing" },
     { name: "Search Engine Optimization", href: "/services/search-engine-optimization" },
     { name: "Creative & Content", href: "/services/creative-content-management" },
-    { name: "ORM", href: "/services/online-reputation-management" },
+    { name: "Online Reputation Management", href: "/services/online-reputation-management" },
     { name: "Consumer Insights", href: "/services/consumer-insights" },
     { name: "Influencer Marketing", href: "/services/influencer-marketing" },
     { name: "Affiliate Marketing", href: "/services/affiliate-marketing" },
@@ -32,15 +32,15 @@ const Header = ({ isOpen }) => {
   ];
   const industries = [
     { name: "FMCG & Beauty", href: "/industry#fmcg-and-beauty" },
-        { name: "Health & Wellness", href: "/industry#health-and-wellness" },
-        { name: "BFSI - Fintech", href: "/industry#bfsi-fintech" },
-        { name: "E-Commerce", href: "/industry#e-commerce" },
-        { name: "Fashion & Lifestyle", href: "/industry#fashion-and-lifestyle" },
-        { name: "Electronics ", href: "/industry#electronics" },
-        { name: "Consumer Durables", href: "/industry#consumer-durables" },
-        { name: "Telecom", href: "/industry#telecom" },
-        { name: "Automobiles", href: "/industry#automobiles" },
-        { name: "Travel & Tourism", href: "/industry#travel-and-tourism" },
+    { name: "Health & Wellness", href: "/industry#health-and-wellness" },
+    { name: "BFSI - Fintech", href: "/industry#bfsi-fintech" },
+    { name: "E-Commerce", href: "/industry#e-commerce" },
+    { name: "Fashion & Lifestyle", href: "/industry#fashion-and-lifestyle" },
+    { name: "Electronics ", href: "/industry#electronics" },
+    { name: "Consumer Durables", href: "/industry#consumer-durables" },
+    { name: "Telecom", href: "/industry#telecom" },
+    { name: "Automobiles", href: "/industry#automobiles" },
+    { name: "Travel & Tourism", href: "/industry#travel-and-tourism" },
   ];
   const links = [
     {
@@ -67,11 +67,11 @@ const Header = ({ isOpen }) => {
 
   useEffect(() => {
 
-    if(globalThis.innerWidth>1024){
+    if (globalThis.innerWidth > 1024) {
 
       setIsMobileWidth(false)
     }
-    else{
+    else {
       setIsMobileWidth(true)
     }
     const handleScroll = () => {
@@ -104,123 +104,123 @@ const Header = ({ isOpen }) => {
     }
   }, [openMenu, lenis]);
 
-  const entredMouse = ()=>{
+  const entredMouse = () => {
 
     setOpenMenu(true)
   }
 
-  const leaveMouse = ()=>{
+  const leaveMouse = () => {
 
     setOpenMenu(false)
   }
   return !isOpen ? (
     <header
-      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${
-        isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
-      }`}
+      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
+        }`}
     >
 
-     {!mobileWidth?(<>
-     
-      <div className={``}>
-        <div
-          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
-          ref={headerRef}
-        >
-          <Link href={"/"}>
-            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
-              <Image
-                src="/assets/icons/logo.svg"
-                width={200}
-                height={100}
-                alt="hiveminds-logo"
-                quality={100}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </Link>
-          <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
-            <div>
-              <ul className="flex items-center justify-between gap-[1.5vw]">
-                <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
-                  <Link
-                    href={"/about-us"}
-                    className="relative link-line montreal"
-                    prefetch={false}
-                  >
-                    Who We Are
-                  </Link>
-                </li>
-                <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]" onMouseEnter={entredMouse}>
-                  <Link
-                    href={"#"}
-                    className="relative link-line"
-                    prefetch={false}
-                  >
-                    What We do
-                  </Link>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-3 w-3 group-hover:rotate-[-180deg] ease-in-out transition-all duration-700 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+      {!mobileWidth ? (<>
 
-                  <div className={`w-[97.5vw] left-[-52vw] bg-white h-0  top-[4.5vw] px-[3vw]  overflow-hidden rounded-[1.5vw] absolute group-hover:h-[40vw]  ease-in-out transition-all duration-500 block bgblur ${openMenu?"h-[40vw]":"h-0"} `} onMouseLeave={leaveMouse}>
-                    <div className="py-[5vw] flex justify-between gap-[2vw]">
-                      <div>
-                        <Link
-                          href="/services"
-                          prefetch={false}
-                          className="uppercase text-primary link-line text-[1.2vw] font-avenir"
-                        >
-                          Services
-                        </Link>
-                        <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir ">
-                          {services.map((service, index) => (
-                            <li key={index} className=" content ">
-                              <Link
-                                href={service.href}
-                                prefetch={false}
-                                className="link-line"
-                              >
-                                {service.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <span className="bg-black h-[32vw] w-[1px] " />
-                      <div>
-                        <Link
-                          href="/industry"
-                          prefetch={false}
-                          className="uppercase text-primary link-line text-[1.2vw] font-avenir"
-                        >
-                          Industries
-                        </Link>
-                        <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir">
-                          {industries.map((industry, index) => (
-                            <li key={index} className=" content">
-                            <a
-                              href={industry.href}
-                              prefetch={false}
-                              className="link-line"
-                           >
-                              {industry.name}
-                            </a>
-                          </li>
-                          ))}
-                        </ul>
-                      </div>
+        <div className={`relative`}>
+          <div
+            className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
+            ref={headerRef}
+          >
+            <Link href={"/"}>
+              <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
+                <Image
+                  src="/assets/icons/logo.svg"
+                  width={200}
+                  height={100}
+                  alt="hiveminds-logo"
+                  quality={100}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </Link>
+            <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
+              <div>
+                <ul className="flex items-center justify-between gap-[1.5vw]">
+                  <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
+                    <Link
+                      href={"/about-us"}
+                      className="relative link-line"
+                      prefetch={false}
+                    >
+                      Who We Are
+                    </Link>
+                  </li>
+                  <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[100px]" onMouseEnter={entredMouse} onMouseLeave={leaveMouse}>
+                    <Link
+                      href={"#"}
+                      className="relative link-line"
+                      prefetch={false}
+                    >
+                      What We do
+                    </Link>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-3 w-3 group-hover:rotate-[-180deg] ease-in-out transition-all duration-700 "
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+
+                    {/* Dropdown */}
+                    <nav className={`w-[98vw] bg-white h-0 top-[4.5vw] left-0 -translate-x-[52.5%] px-[3vw] overflow-hidden rounded-[1.5vw] absolute group-hover:h-[40vw]  ease-in-out transition-all duration-500 ${openMenu ? "h-[40vw]" : "h-[0vw]"} `}>
+                      <div className="py-[5vw] flex justify-between gap-[2vw]">
+                        <div>
+                          <Link
+                            href="/services"
+                            prefetch={false}
+                            className="uppercase text-primary link-line text-[1.2vw] font-avenir"
+                          >
+                            Services
+                          </Link>
+                          <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir ">
+                            {services.map((service, index) => (
+                              <li key={index} className=" content ">
+                                <Link
+                                  href={service.href}
+                                  prefetch={false}
+                                  className="link-line"
+                                >
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <span className="bg-black h-[32vw] w-[1px] " />
+                        <div>
+                          <Link
+                            href="/industry"
+                            prefetch={false}
+                            className="uppercase text-primary link-line text-[1.2vw] font-avenir"
+                          >
+                            Industries
+                          </Link>
+                          <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir">
+                            {industries.map((industry, index) => (
+                              <li key={index} className=" content">
+                                <a
+                                  href={industry.href}
+                                  prefetch={false}
+                                  className="link-line"
+                                >
+                                  {industry.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
 
                       <div className="flex gap-[2vw]">
                         {links.map((link, index) => (
@@ -269,7 +269,7 @@ const Header = ({ isOpen }) => {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </nav>
                 </li>
                 {menuItems.map((item, index) => (
                   <li
