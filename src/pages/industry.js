@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import img from '../../public/assets/images/industry/industry-hero-img.png';
@@ -20,7 +20,8 @@ const industry = () => {
   headingAnim();
   paraAnim();
   fadeUp();
-  fadeIn();
+
+
   return (
     <>
     <Metadata metadata={metadata}/>
@@ -46,7 +47,8 @@ const industry = () => {
             <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[4vw]'>
               {industries.map((item, index) => (
                 <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:justify-start mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[155vw] mobile:pb-[10vw] tablet:flex-col tablet:h-[75vw] tablet:px-[3vw] tablet:my-[6vw] " id={item.id}>
-                  <div className='w-[45%] mobile:w-full tablet:w-3/5'>
+                  <div className='w-[45%] mobile:w-full tablet:w-3/5 relative'>
+                
                     <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw] mobile:rounded-[3.5vw]' />
                   </div>
                   <div className='w-[50%] mobile:w-full mobile:mt-[7vw] tablet:w-full mobile:pl-[2vw] '>

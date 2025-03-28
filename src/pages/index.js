@@ -51,7 +51,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     // Start Lenis scroll after 3 seconds
     const timeout = setTimeout(() => {
       lenis&&lenis.start();
-    }, 3000);
+    }, 2000);
 
     // Cleanup the timeout if the component is unmounted before the 3 seconds
     return () => clearTimeout(timeout);
