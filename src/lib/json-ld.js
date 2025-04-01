@@ -105,8 +105,8 @@ export function ImageObjectJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    '@id': `${homepage}/assets/images/seo/homepage.png`,
-    url: `${homepage}/assets/images/seo/homepage.png`,
+    '@id': `${homepage}/assets/seo/homepage.png`,
+    url: `${homepage}/assets/seo/homepage.png`,
     width: "1920",
     height: "1016",
     inLanguage: "en-US"
@@ -162,7 +162,7 @@ export function LocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "HiveMinds Innovative Market Solutions Pvt Ltd",
-    "image": `https://hiveminds-staging.vercel.app/seo/logo.png`,
+    "image": `https://www.hiveminds.in/seo/logo.png`,
     "@id": "",
     "url": `${homepage}`,
     "telephone": "080 4680 1708",
@@ -194,83 +194,6 @@ export function LocalBusiness() {
         "closes": "06:30"
       }
     ]
-  };
-
-  return (
-    <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-  />
-  );
-}
-
-export function AuthorJsonLd({ author = {} }) {
-  const { name, avatar, description } = author;
-  const path = authorPathByName(name);
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: name,
-    image: avatar?.url,
-    url: `${homepage}/${path}`,
-    description: description,
-  };
-
-  return (
-    <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-  />
-  );
-}
-
-export function JobpostingJsonLd({ job }) {
-  // const { homepage = '', faviconPath = '/favicon.ico' } = config;
-  const { title, seo, date, jobFields } = job
-
-  const jsonLd = {
-    "@context": "https://schema.org/",
-    "@type": "JobPosting",
-    "title": title,
-    "description": `${seo.metaDesc}`,
-    "identifier": {
-      "@type": "PropertyValue",
-      "name": "Hiveminds",
-      "value": { title },
-    },
-    "hiringOrganization": {
-      "@type": "Organization",
-      "name": "Hiveminds",
-      "sameAs": homepage,
-      logo: {
-        "@type": "ImageObject",
-        url: `${homepage}/${faviconPath}`,
-      }
-    },
-    "industry": "Digital Marketing Agency",
-    "employmentType": jobFields.jobType,
-    "datePosted": date,
-    "validThrough": date,
-    "jobLocation": {
-      "@type": "Place",
-      address: {
-        "@type": 'PostalAddress',
-        streetAddress: '7th Floor, Global Tech Park, 11,',
-        addressLocality: 'O Shaughnessy Rd, Langford Town, Langford Gardens',
-        addressRegion: 'Bengaluru, Karnataka 560025',
-        addressCountry: 'India',
-      },
-    },
-    "baseSalary": {
-      "@type": "MonetaryAmount",
-      "currency": "INR",
-      "value": {
-        "@type": "QuantitativeValue",
-        "value": jobFields.ctcRange,
-        "unitText": "YEAR"
-      }
-    }
   };
 
   return (

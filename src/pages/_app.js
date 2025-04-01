@@ -58,8 +58,6 @@ export default function App({ Component, pageProps }) {
     }
   }, [mouseEnabled]);
   
-
-
   useEffect(() => {
     const handleRouteChange = () => {
       document.body.style.backgroundColor = "#fafafa";
