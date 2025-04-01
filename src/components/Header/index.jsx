@@ -212,7 +212,6 @@ const Header = ({ isOpen }) => {
                               <li key={index} className=" content">
                                 <a
                                   href={industry.href}
-                                  prefetch={false}
                                   className="link-line"
                                 >
                                   {industry.name}
@@ -235,10 +234,8 @@ const Header = ({ isOpen }) => {
                               <Image
                                 src={link.imgSrc}
                                 placeholder="blur"
-                                width={300}
-                                height={300}
                                 alt={link.text}
-                                className="hover:scale-[1.2] object-cover transition-all duration-500 ease-in-out"
+                                className="hover:scale-[1.2] object-cover h-full w-full transition-all duration-500 ease-in-out"
                               />
                             </Link>
                             <Link href={link.href} className="w-fit">

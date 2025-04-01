@@ -1,15 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import Link from "next/link";
-
-
+import service1 from "../../../public/assets/images/homepage/services/Digital-Brand-building.png";
+import service2 from "../../../public/assets/images/homepage/services/Grow-D2C-Revenue.png";
+import service3 from "../../../public/assets/images/homepage/services/Drive-Organic-Revenue.png";
+import service4 from "../../../public/assets/images/homepage/services/App-Marketing-Solutions.png";
+import service5 from "../../../public/assets/images/homepage/services/Accelerate-Ecommerce-Growth.png";
+import service6 from "../../../public/assets/images/homepage/services/Demand-Generation.png";
+import service7 from "../../../public/assets/images/homepage/services/Maximise-Retention.png";
 
 const services = [
     {
         id: 1,
         slug:"#digital-brand-building",
-        img: "/assets/images/homepage/services/Digital-Brand-building.png",
+        img: service1,
         title: "Digital Brand Building",
         para: "Transform your digital identity with strategic brand positioning. We leverage data-driven insights to craft compelling narratives, create memorable brand experiences, and establish a powerful online presence that resonates with your target audience.",
         link:"/solutions#solution-details"
@@ -17,7 +21,7 @@ const services = [
     {
         id: 2,
         slug:"#d2c-revenue",
-        img: "/assets/images/homepage/services/Grow-D2C-Revenue.png",
+        img: service2,
         title: "Grow D2C Revenue ",
         para: "Unlock direct-to-consumer potential through precision marketing. Our approach combines advanced targeting, personalized customer journeys, and optimized conversion strategies to drive sustainable revenue growth and maximize customer lifetime value",
         link:"#"
@@ -25,7 +29,7 @@ const services = [
     {
         id: 3,
         slug:"#organic-revenue",
-        img: "/assets/images/homepage/services/Drive-Organic-Revenue.png",
+        img: service3,
         title: "Drive Organic Revenue",
         para: "Elevate your organic performance with intelligent marketing solutions. We deploy cutting-edge SEO strategies, content optimization, and data-powered insights to increase visibility, attract high-intent customers, and naturally boost your revenue streams.",
         link:"#"
@@ -33,7 +37,7 @@ const services = [
     {
         id: 4,
         slug:"#app-marketing",
-        img: "/assets/images/homepage/services/App-Marketing-Solutions.png",
+        img: service4,
         title: "App Marketing Solutions",
         para: "Accelerate app growth and user acquisition through comprehensive marketing strategies. From user onboarding to retention optimization, we deploy targeted campaigns that increase downloads, enhance engagement, and drive meaningful app interactions.",
         link:"#"
@@ -41,7 +45,7 @@ const services = [
     {
         id: 5,
         slug:"#ecommerce-growth",
-        img: "/assets/images/homepage/services/Accelerate-Ecommerce-Growth.png",
+        img: service5,
         title: "Accelerate Ecommerce Growth",
         para: "Scale your online retail potential with our integrated ecommerce marketing approach. We combine technological innovation, data analytics, and strategic marketing to optimize conversion rates, enhance customer experience, and drive exponential revenue growth.",
         link:"#"
@@ -49,7 +53,7 @@ const services = [
     {
         id: 6,
         slug:"#demand-generation",
-        img: "/assets/images/homepage/services/Demand-Generation.png",
+        img: service6,
         title: "Demand Generation",
         para: "Generate high-quality leads and create a robust pipeline of potential customers. Our data-driven demand generation strategies leverage sophisticated targeting, multi-channel approaches, and intelligent content marketing to attract and nurture valuable prospects.",
         link:"#"
@@ -57,7 +61,7 @@ const services = [
     {
         id: 7,
         slug:"#maximizing-retention",
-        img: "/assets/images/homepage/services/Maximise-Retention.png",
+        img: service7,
         title: "Maximise Retention",
         para: "Transform customers into loyal brand advocates through intelligent retention strategies. We utilize advanced analytics, personalized engagement tactics, and predictive modeling to reduce churn, increase customer lifetime value, and build lasting customer relationships.",
         link:"#"
@@ -301,6 +305,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter , slug}) => {
                 src={service.img}
                 alt={service.title}
                 fill
+                placeholder="blur"
                 className="absolute inset-0 z-0 object-cover w-full h-full"
             />
 
@@ -350,7 +355,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter , slug}) => {
     );
 };
 
-const ServicesCopy = () => {
+const Solutions = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -391,4 +396,4 @@ const ServicesCopy = () => {
     );
 };
 
-export default ServicesCopy;
+export default Solutions;

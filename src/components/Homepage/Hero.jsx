@@ -11,7 +11,7 @@ import img5 from '../../../public/assets/images/homepage/hero-flydubai-img1.png'
 import img6 from '../../../public/assets/images/homepage/hero-flydubai-img2.png'
 
 const Hero = () => {
- 
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeDetail, setActiveDetail] = useState(0);
   const headRef = useRef(null);
@@ -22,17 +22,17 @@ const Hero = () => {
     {
       src1: img1,
       src2: img2,
-      link:"/casestudies/bigbasket"
+      link: "/casestudies/bigbasket"
     },
     {
       src1: img3,
       src2: img4,
-      link:"/casestudies/dominos",
+      link: "/casestudies/dominos",
     },
     {
       src1: img5,
       src2: img6,
-      link:"/casestudies/flydubai",
+      link: "/casestudies/flydubai",
     },
   ];
 
@@ -40,52 +40,45 @@ const Hero = () => {
     {
       num1: "2.35x",
       para1: "Growth in installs",
-      // num2: "430K + ",
       para2: "Expanding Horizons in Non-Metro Cities.",
     },
     {
       num1: " 500K+",
       para1: "New Orders in 12 Months",
-      // num2: "1.90x",
       para2: "Success Through Influencer Power",
     },
     {
       num1: "67%",
       para1: "Increase in Brand Searches",
-      // num2: "5.90x",
       para2: "New Routes Soar to Success",
     },
   ];
   const slidesData = [
     {
-    title: "Transforming Potential Into Growth With ",
-    subtitle: "Every Step",
-    description:
-      "",
-    href: "/our-impact",
-  },
+      title: "Transforming Potential Into Growth With ",
+      subtitle: "Every Step",
+      description: "",
+      href: "/our-impact",
+    },
     {
       title: "Data-Backed",
       subtitle: "Growth",
-      description:
-        "Expert-driven, Tech-powered, Data-optimized growth for lean startups to household brands",
+      description: "Expert-driven, Tech-powered, Data-optimized growth for lean startups to household brands",
       href: "/our-impact",
     },
     {
       title: "Optimise, Engage,",
       subtitle: "Convert",
-      description:
-        "Helping brands stand out with impactful campaigns and strategies",
+      description: "Helping brands stand out with impactful campaigns and strategies",
       href: "/our-impact",
     },
     {
       title: "Clicks That",
       subtitle: "Convert",
-      description:
-        "Unlocking new orders with innovative strategies tailored to your business goals",
+      description: "Unlocking new orders with innovative strategies tailored to your business goals",
       href: "/our-impact",
     }
-   
+
   ];
 
   useEffect(() => {
@@ -97,8 +90,8 @@ const Hero = () => {
         duration: 3.5,
       })
         .to(headRef.current, {
-          opacity:0,
-          delay:1,
+          opacity: 0,
+          delay: 1,
           // maskPosition:"-50% 100%",
           duration: 0.5,
         })
@@ -121,7 +114,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slidesData.length);
-    }, 5000); 
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [slidesData.length]);
@@ -159,11 +152,11 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDetail((prevIndex) => (prevIndex + 1) % details.length);
-    }, 6000); 
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [details.length]);
-// console.log(activeIndex)
+  // console.log(activeIndex)
   return (
     <section
       id="hero"
@@ -175,7 +168,7 @@ const Hero = () => {
           <h1 ref={headRef} className="heading-1 leading-[1.1] heading hero-heading pr-[3vw]">
             {slidesData[activeIndex].title}{" "}
             <span className="text-primary">
-              <br/>
+              <br />
               {slidesData[activeIndex].subtitle}
             </span>
           </h1>
@@ -189,7 +182,7 @@ const Hero = () => {
             aria-label="to casestudy"
             href={slidesData[activeIndex].href}
             text="View Case Study"
-            className={`button ${activeIndex==0 ? "!hidden" : "block"}`}
+            className={`button ${activeIndex == 0 ? "!hidden" : "block"}`}
             ref={buttonRef}
           />
         </div>
@@ -198,8 +191,8 @@ const Hero = () => {
       {/* Right Section - Infinite Marquee Gallery */}
       <div className="w-[55vw] h-screen overflow-hidden flex flex-col items-end relative">
         <div className="Marquee-container relative top-0">
-          
-          {Array(2) 
+
+          {Array(2)
             .fill(images)
             .flat()
             .map((imageSet, index) => (
@@ -207,11 +200,11 @@ const Hero = () => {
                 key={index}
                 className="w-[55vw] h-fit flex gap-[0.9vw] gallery-block relative"
               >
-            
+
                 <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link} prefetch={false}>
                     <Image
-                      loading="lazy"
+                      priority={index === 0 ? true : false}
                       src={imageSet.src1}
                       placeholder="blur"
                       className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
@@ -223,14 +216,14 @@ const Hero = () => {
                 <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link} prefetch={false}>
                     <Image
-                      loading="lazy"
+                      priority={index === 0 ? true : false}
                       src={imageSet.src2}
                       placeholder="blur"
                       className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
                       alt="gallery image"
                     />
                   </Link>
-                 
+
                 </div>
               </div>
             ))}
@@ -250,7 +243,7 @@ const Hero = () => {
             <span className="h-[4.5vw] w-[1px] bg-black"></span>
 
             <div className="flex flex-col items-center w-[50%]">
-             
+
 
               <p className="content !leading-[1] content-para">
                 {details[activeDetail].para2}

@@ -5,7 +5,6 @@ import Awards from '@/components/Homepage/Awards';
 import Story from '@/components/Homepage/Story';
 import TeamMembers from '@/components/Homepage/TeamMembers';
 import { Clients2 } from '@/components/Homepage/Clients2';
-import Services from '@/components/Homepage/Solutions';
 import MobileHero from '@/components/Homepage/MobileHero';
 import Metadata from '@/components/Metadata';
 import { getHomePageCaseStudies } from '@/lib/casestudies';
@@ -17,6 +16,7 @@ import dynamic from 'next/dynamic';
 import { headingAnim, routeChangeTop } from '@/components/gsapAnimations';
 import { useLenis } from 'lenis/react';  // Don't forget to import Lenis
 import { useEffect, useState } from 'react';
+import Solutions from '@/components/Homepage/Solutions';
 
 const BlogComponent = dynamic(() => import("@/components/Homepage/Blogs"));
 const CaseStudyComponent = dynamic(() => import("@/components/Homepage/CaseStudies"));
@@ -68,7 +68,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Services />
+        <Solutions />
         <Clients2 />
         <CaseStudyComponent caseStudies={stickyCaseStudies} />
         <TeamMembers />
