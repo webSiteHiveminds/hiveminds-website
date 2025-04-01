@@ -35,8 +35,7 @@ const MobileHeroSwiper = () => {
   ];
 
   return (
-    <div>
-      <div className="w-[92vw] h-fit overflow-hidden">
+      <div className="w-full h-fit overflow-hidden">
         <Swiper
           ref={swiperRef}
           loop={true}
@@ -45,6 +44,7 @@ const MobileHeroSwiper = () => {
             delay: 0,
             disableOnInteraction: false,
           }}
+
           allowTouchMove={false}
           modules={[FreeMode, Autoplay ]}
           freeMode={true}
@@ -80,24 +80,24 @@ const MobileHeroSwiper = () => {
                       src={image.src1}
                       placeholder="blur"
                       fill
-                      loading="lazy"
                       alt="casestudy"
                       className="object-cover group-hover:brightness-75 transition-all duration-500 ease-in-out"
                     />
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                 </Link>
               </SwiperSlide>
               <SwiperSlide>
                 <Link href={image.link} prefetch={false}>
-                  <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
+                  <div className="relative w-full mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
                     <Image
                       src={image.src2}
                       placeholder="blur"
-                      loading="lazy"
                       fill
                       alt="casestudy"
                       className="object-cover group-hover:brightness-75 transition-all duration-500 ease-in-out"
                     />
+                    <div class="swiper-lazy-preloader"></div>
                   </div>
                 </Link>
               </SwiperSlide>
@@ -105,7 +105,6 @@ const MobileHeroSwiper = () => {
           ))}
         </Swiper>
       </div>
-    </div>
   );
 };
 

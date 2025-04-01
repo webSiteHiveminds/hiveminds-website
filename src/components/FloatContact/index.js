@@ -1,27 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function FloatContact() {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    }
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    }
 
     return (
         <div className="fixed bottom-3 right-3 h-fit w-fit fadeup group z-[10] bg-white/50 backdrop-blur-sm rounded-full overflow-hidden">
             <Link
+                prefetch={false}
                 className="w-full h-full"
-           
                 aria-label="Connect With Us"
                 href="/contact-us"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
             >
                 <Image
                     width={120}
