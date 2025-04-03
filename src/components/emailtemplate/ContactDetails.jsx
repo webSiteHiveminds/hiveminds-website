@@ -1,7 +1,7 @@
 import React from "react";
 import { Body, Column, Container, Head, Hr, Html, Img, Link, Preview, Row, Section, Text } from "@react-email/components";
 
-const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessage, userService }) => {
+const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessage, userService, pageUrl }) => {
 
   return (
     <Html>
@@ -54,7 +54,7 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
             </Row>
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://www.hiveminds.in/contact-us">Contact Page.</Link>
+            This form is submitted from <Link href={pageUrl}>{pageUrl}</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />

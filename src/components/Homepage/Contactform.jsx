@@ -35,6 +35,7 @@ const formSchema = z.object({
   services: z.string().min(1, { message: "Please select a service." }),
   message: z.string().optional(),
   terms: z.boolean().refine((val) => val, { message: "You must agree to terms."}),
+  pageURL: z.string(),
 });
 
 export default function ContactForm() {
@@ -54,6 +55,7 @@ export default function ContactForm() {
       services: "",
       message: "",
       terms: false,
+      pageURL: typeof window !== 'undefined' ? window.location.href : '',
     },
   });
 
