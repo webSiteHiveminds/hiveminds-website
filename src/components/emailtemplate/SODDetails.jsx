@@ -2,7 +2,6 @@ import React from "react";
 import { Body, Column, Container, Head, Hr, Html, Img, Link, Preview, Row, Section, Text } from "@react-email/components";
 
 const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
-  // const selectedServices = Object.keys(userService).filter(service => userService[service]);
 
   return (
     <Html>
@@ -13,7 +12,7 @@ const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={"https://hiveminds-website.vercel.app/logo.png"}
+            src={"https://www.hiveminds.in/logo.png"}
             width="140"
             height="40"
             alt="Logo"
@@ -54,7 +53,7 @@ const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
           
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://hiveminds-website.vercel.app/school-of-digital">Contact Page.</Link>
+            This form is submitted from <Link href="https://www.hiveminds.in/school-of-digital">Contact Page.</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />
