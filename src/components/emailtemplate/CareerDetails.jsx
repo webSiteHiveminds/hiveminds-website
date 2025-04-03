@@ -1,8 +1,7 @@
 import React from "react";
 import { Body, Column, Container, Head, Hr, Html, Img, Link, Preview, Row, Section, Text } from "@react-email/components";
 
-const CareerDetails = ({ userName, userEmail,userCompany, userNumber, userMessage, userService }) => {
-  // const selectedServices = Object.keys(userService).filter(service => userService[service]);
+const CareerDetails = ({ userName, userEmail, userNumber, userMessage }) => {
 
   return (
     <Html>
@@ -38,18 +37,13 @@ const CareerDetails = ({ userName, userEmail,userCompany, userNumber, userMessag
               <Column style={columnHead}>Number</Column>
               <Column style={columnText}>{userNumber}</Column>
             </Row>
-           
-
-            {/* Only show the "Other" service details if provided */}
-           
-
             <Row style={row}>
               <Column style={columnHead}>Message</Column>
               <Column style={columnText}>{userMessage}</Column>
             </Row>
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://hiveminds-website.vercel.app/careers">Contact Page.</Link>
+            This form is submitted from <Link href="https://hiveminds-website.vercel.app/careers">Careers Page.</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />
