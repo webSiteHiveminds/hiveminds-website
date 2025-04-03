@@ -30,22 +30,19 @@ import { useEffect, useState } from "react";
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
-  email: z.string().email({ message: "Invalid email address." }),
-  number: z.string().min(10, {
-    message: "Contact number must be at least 10 digits.",
-  }),
+  number: z.string().min(10, { message: "Contact number must be at least 10 digits."}),
   company: z.string().min(2, { message: "Company name is required." }),
   services: z.string().min(1, { message: "Please select a service." }),
   message: z.string().optional(),
-  terms: z.boolean().refine((val) => val, {
-    message: "You must agree to receive communication.",
-  }),
+  terms: z.boolean().refine((val) => val, { message: "You must agree to terms."}),
 });
 
 export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
-  const [submitted, setisSubmitted] = useState(false);
-  const [notsubmitted , setisNotSubmitted] = useState(false);
+  const [submitted, setIsSubmitted] = useState(false);
+  const [notsubmitted, setIsNotSubmitted] = useState(false);
+  const [blockedDomains, setBlockedDomains] = useState([]);
+  const [domainsLoaded, setDomainsLoaded] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -60,7 +57,41 @@ export default function ContactForm() {
     },
   });
 
+  // Load blocked domains from public folder
+  useEffect(() => {
+    const fetchBlockedDomains = async () => {
+      try {
+        const response = await fetch("/BlockedDomains.json");
+        const data = await response.json();
+        // Extract the first value from each object and convert to lowercase
+        const domains = data.map((item) => {
+          const domainValue = Object.values(item)[0];
+          return typeof domainValue === "string" ? domainValue.toLowerCase() : "";
+        }).filter(Boolean);
+        setBlockedDomains(domains);
+      } catch (err) {
+        console.error("Error loading blocked domains:", err);
+      } finally {
+        setDomainsLoaded(true);
+      }
+    };
+    fetchBlockedDomains();
+  }, []);
+
   const onSubmit = async (data) => {
+    // Ensure blocked domains have been loaded
+    if (!domainsLoaded) {
+      form.setError("email", { type: "manual", message: "Please wait until the page is fully loaded." });
+      return;
+    }
+
+    // Extract domain from the email and check against blocked domains
+    const emailDomain = data.email.split("@")[1]?.toLowerCase();
+    if (!emailDomain || blockedDomains.includes(emailDomain)) {
+      form.setError("email", { type: "manual", message: "Enter a business email." });
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -72,25 +103,25 @@ export default function ContactForm() {
         },
       });
       if (!res.ok) throw new Error("Failed to send message");
-      setisSubmitted(true);
+      setIsSubmitted(true);
       setTimeout(() => {
-        setisSubmitted(false);
+        setIsSubmitted(false);
       }, 7000);
-
       form.reset();
     } catch (error) {
-      setisNotSubmitted(true)
+      setIsNotSubmitted(true);
       setTimeout(() => {
-        setisNotSubmitted(false);
+        setIsNotSubmitted(false);
       }, 7000);
       console.log(error);
     } finally {
       setIsLoading(false);
     }
   };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
-      if (submitted||notsubmitted) {
+      if (submitted || notsubmitted) {
         gsap.from(".form-submission", {
           opacity: 0,
           duration: 1.5,
@@ -103,7 +134,7 @@ export default function ContactForm() {
       }
     });
     return () => ctx.revert();
-  });
+  }, [submitted, notsubmitted]);
 
   return (
     <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein">
@@ -137,13 +168,15 @@ export default function ContactForm() {
                   <Input
                     placeholder="Email Address *"
                     {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw] tablet:rounded-[1.5vw]"
+                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
+
+          {/* Phone Number */}
           <FormField
             control={form.control}
             name="number"
@@ -154,7 +187,7 @@ export default function ContactForm() {
                     placeholder="Phone number *"
                     type="number"
                     {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw] tablet:rounded-[1.5vw]"
+                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -172,7 +205,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="Company Name *"
                     {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw] tablet:rounded-[1.5vw]"
+                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -190,27 +223,25 @@ export default function ContactForm() {
                   <FormControl>
                     <SelectTrigger
                       aria-label="services dropdown"
-                      className="w-full h-[4vw] drop-shadow-none border  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw]  tablet:h-[8vw] tablet:rounded-[1.5vw]"
+                      className="w-full h-[4vw] drop-shadow-none border shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw] tablet:h-[8vw] tablet:rounded-[1.5vw]"
                     >
-                      <SelectValue placeholder="Services" />
+                      <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectLabel>Services Offered</SelectLabel>
-                      <SelectItem value="performance-marketing">
-                        Performance Marketing
-                      </SelectItem>
-                      <SelectItem value="seo">
-                        Search Engine Optimization
-                      </SelectItem>
-                      <SelectItem value="branding">Branding</SelectItem>
-                      <SelectItem value="influencer">
-                        Influencer Marketing
-                      </SelectItem>
-                      <SelectItem value="orm">
-                        Online Reputation Management
-                      </SelectItem>
+                      <SelectLabel><b>Services Offered</b></SelectLabel>
+                      <SelectItem value="performance-marketing">Performance Marketing</SelectItem>
+                      <SelectItem value="retail-marketing">Retail Marketing</SelectItem>
+                      <SelectItem value="seo">Search Engine Optimization</SelectItem>
+                      <SelectItem value="orm">Online Reputation Management</SelectItem>
+                      <SelectItem value="content-management-creative">Content Management & Creative</SelectItem>
+                      <SelectItem value="consumer-insights">Consumer Insights</SelectItem>
+                      <SelectItem value="influencer-marketing">Influencer Marketing</SelectItem>
+                      <SelectItem value="affiliate-marketing">Affiliate Marketing</SelectItem>
+                      <SelectItem value="social-media-marketing">Social Media Marketing</SelectItem>
+                      <SelectItem value="data-analytics">Data & Analytics</SelectItem>
+                      <SelectItem value="branding">Branding Services</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
@@ -250,26 +281,27 @@ export default function ContactForm() {
                     onCheckedChange={field.onChange}
                     className="mobile:mt-[2vw] tablet:mt-[2vw]"
                   />
-                  <span className="text-[1.1vw] text-black/70  capitalize mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">
-                    Sign me up to receive future marketing communications
-                    regarding Hiveminds.
+                  <span className="text-[1.1vw] text-black/70 capitalize mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">
+                    Sign me up to receive future marketing communications regarding Hiveminds.
                   </span>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
+
+          {/* Submission Status */}
           {submitted && (
-            <div className="fixed top-0 left-0 flex justify-center pt-[4vw] w-screen h-screen z-[9999] mobile:pt-[15vw] tablet:pt-[7vw] form-submission ">
-              <div className="w-fit h-fit px-[3vw] py-[1vw] rounded-[0.5vw] mobile:rounded-[1.5vw] tablet:rounded-[1vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[1.5vw] tablet:text-[2.2vw]  text-white bg-green-500">
-                form submitted
+            <div className="fixed top-0 left-0 flex justify-center pt-[4vw] w-screen h-screen z-[9999] mobile:pt-[15vw] tablet:pt-[7vw] form-submission">
+              <div className="w-fit h-fit px-[3vw] py-[1vw] rounded-[0.5vw] mobile:rounded-[1.5vw] tablet:rounded-[1vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[1.5vw] tablet:text-[2.2vw] text-white bg-green-500">
+                Form submitted successfully!
               </div>
             </div>
           )}
-            {notsubmitted && (
-            <div className="fixed top-0 left-0 flex justify-center pt-[4vw] w-screen h-screen z-[9999] mobile:pt-[15vw] tablet:pt-[7vw] form-submission ">
-              <div className="w-fit h-fit px-[3vw] py-[1vw] rounded-[0.5vw] mobile:rounded-[1.5vw] tablet:rounded-[1vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[1.5vw] tablet:text-[2.2vw]  text-white bg-red-500">
-                form is not submitted
+          {notsubmitted && (
+            <div className="fixed top-0 left-0 flex justify-center pt-[4vw] w-screen h-screen z-[9999] mobile:pt-[15vw] tablet:pt-[7vw] form-submission">
+              <div className="w-fit h-fit px-[3vw] py-[1vw] rounded-[0.5vw] mobile:rounded-[1.5vw] tablet:rounded-[1vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[1.5vw] tablet:text-[2.2vw] text-white bg-red-500">
+                Please try again later.
               </div>
             </div>
           )}
@@ -289,27 +321,23 @@ export default function ContactForm() {
                       viewBox="0 0 10 10"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`${styles.btnIcon} `}
+                      className={`${styles.btnIcon}`}
                     >
                       <path
-                        data-v-f4363f2a
                         fillRule="evenodd"
                         clipRule="evenodd"
-                        d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z"
+                        d="M0 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 0L4.125 0.875L7.625 4.375L0 4.375L0 5.625Z"
                         className={`${styles.btnPath}`}
                       />
                       <path
-                        data-v-f4363f2a
                         fillRule="evenodd"
                         clipRule="evenodd"
-                        d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z"
+                        d="M0 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 0L4.125 0.875L7.625 4.375L0 4.375L0 5.625Z"
                         className={`${styles.btnPath}`}
                       />
                     </svg>
                   </div>
-                  <span
-                    className={`${styles.btnText}  !ml-[-1vw] mobile:!ml-[-2vw] mobile:!mt-[0.5vw]`}
-                  >
+                  <span className={`${styles.btnText} !ml-[-1vw] mobile:!ml-[-2vw] mobile:!mt-[0.5vw]`}>
                     {isLoading ? "Submitting..." : "Submit"}
                   </span>
                 </div>

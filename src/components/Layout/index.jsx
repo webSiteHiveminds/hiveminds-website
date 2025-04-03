@@ -15,6 +15,7 @@ const Layout = ({ children, isOpen }) => {
       setMobileWidth(true);
     }
   }, []);
+  
   return (
     <>
       <Header isOpen={isOpen} />

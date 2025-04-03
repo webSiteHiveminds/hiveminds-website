@@ -40,7 +40,6 @@ const Contact = ({ title1, title2, para }) => {
               </div>
             </div>
           </div>
-
           <div className="w-[50%] h-full mobile:w-full tablet:w-full">
             <ContactForm />
           </div>
