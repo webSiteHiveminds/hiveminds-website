@@ -33,7 +33,7 @@ const contact = () => {
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
-        <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds—a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={img} />
+        <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds, a unit of Madison World - a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={img} />
         <Leadership />
         <WhyUs />
         <Life />
