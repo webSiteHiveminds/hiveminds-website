@@ -76,7 +76,7 @@ export default function App({ Component, pageProps }) {
       <ImageObjectJsonLd />
       <DefaultSeo {...nextSeoConfig} />
 
-      <ReactLenis root options={{ lerp: 0.07, autoRaf: false }} ref={lenisRef}>
+      <ReactLenis root options={{ lerp: 0.07, autoRaf: false}} ref={lenisRef}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
           <LazyMotion features={domAnimation}>
             <AnimatePresence mode="wait">

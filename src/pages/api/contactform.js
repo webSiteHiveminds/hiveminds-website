@@ -19,6 +19,7 @@ export default async function handler(req, res) {
       // to: ["harshgoyalrss7@gmail.com"],
       from:"WebForms <contact@hiveminds.in>",
       to:["sales@hiveminds.in"],
+      // to: ["hitesh@weareenigma.com"],
       subject: "New Contact Form Submission",
       react: ContactDetails({
         userName: name,

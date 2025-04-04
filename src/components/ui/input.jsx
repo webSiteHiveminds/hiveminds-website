@@ -15,7 +15,7 @@ const Input = React.forwardRef(({ className, type, placeholderIcon, ...props }, 
       <input
         type={type}
         className={cn(
-          "flex h-[2.2vw] w-full bg-white px-2 drop-shadow-md shadow-inner py-1 pl-[1.2vw] mobile:pl-[9vw] text-[1vw] mobile:text-[4vw] mobile:h-[10vw] tablet:h-[5vw] tablet:text-[2.3vw] tablet:pl-[5vw] transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-neutral-950 placeholder:text-[#1C1B1A] focus-visible:outline focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-200 dark:file:text-neutral-50 dark:placeholder:text-neutral-400 dark:focus-visible:ring-neutral-300",
+          "flex h-[2.2vw] w-full bg-white px-2 drop-shadow-md shadow-inner py-1 pl-[1.2vw] mobile:pl-[9vw] text-[1vw] mobile:text-[4vw] mobile:h-[10vw] tablet:h-[5vw] tablet:text-[2.3vw] tablet:pl-[2vw] transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-neutral-950 placeholder:text-[#1C1B1A] focus-visible:outline focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-200 dark:file:text-neutral-50 dark:placeholder:text-neutral-400 dark:focus-visible:ring-neutral-300",
           className
         )}
         ref={ref}

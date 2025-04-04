@@ -1,23 +1,8 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
+import { Controller, useForm } from "react-hook-form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import gsap from "gsap";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -26,38 +11,54 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
 import styles from "../Button/styles.module.css";
 import { useEffect, useState } from "react";
+import { MultiSelect } from "@/components/ui/multi-select";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
-  number: z.string().min(10, { message: "Contact number must be at least 10 digits."}),
+  number: z.string().regex(/^\d{10,15}$/, { message: "Phone number must be 10-15 digits." }),
   company: z.string().min(2, { message: "Company name is required." }),
-  services: z.string().min(1, { message: "Please select a service." }),
+  services: z.array(z.string()).min(1, { message: "Please select at least one service." }),
   message: z.string().optional(),
-  terms: z.boolean().refine((val) => val, { message: "You must agree to terms."}),
+  terms: z.boolean().refine((val) => val, { message: "You must agree to terms." }),
   pageURL: z.string(),
 });
 
-export default function ContactForm() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [submitted, setIsSubmitted] = useState(false);
-  const [notsubmitted, setIsNotSubmitted] = useState(false);
-  const [blockedDomains, setBlockedDomains] = useState([]);
-  const [domainsLoaded, setDomainsLoaded] = useState(false);
+const servicesList = [
+  { value: "performance-marketing", label: "Performance Marketing" },
+  { value: "retail-marketing", label: "Retail Marketing" },
+  { value: "seo", label: "Search Engine Optimization" },
+  { value: "online-reputation-management", label: "Online Reputation Management" },
+  { value: "content-management-creative", label: "Content Management & Creative" },
+  { value: "consumer-insights", label: "Consumer Insights" },
+  { value: "influencer-marketing", label: "Influencer Marketing" },
+  { value: "affiliate-marketing", label: "Affiliate Marketing" },
+  { value: "social-media-marketing", label: "Social Media Marketing" },
+  { value: "data-analytics", label: "Data & Analytics" },
+  { value: "branding-services", label: "Branding Services" },
+];
 
+export default function ContactForm() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      company: "",
       number: "",
-      services: "",
+      company: "",
+      services: [],
       message: "",
       terms: false,
       pageURL: typeof window !== 'undefined' ? window.location.href : '',
     },
   });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitted, setIsSubmitted] = useState(false);
+  const [notsubmitted, setIsNotSubmitted] = useState(false);
+  const [blockedDomains, setBlockedDomains] = useState([]);
+  const [domainsLoaded, setDomainsLoaded] = useState(false);
+  const { control, handleSubmit } = form;
 
   // Load blocked domains from public folder
   useEffect(() => {
@@ -81,13 +82,11 @@ export default function ContactForm() {
   }, []);
 
   const onSubmit = async (data) => {
-    // Ensure blocked domains have been loaded
     if (!domainsLoaded) {
       form.setError("email", { type: "manual", message: "Please wait until the page is fully loaded." });
       return;
     }
 
-    // Extract domain from the email and check against blocked domains
     const emailDomain = data.email.split("@")[1]?.toLowerCase();
     if (!emailDomain || blockedDomains.includes(emailDomain)) {
       form.setError("email", { type: "manual", message: "Enter a business email." });
@@ -96,26 +95,29 @@ export default function ContactForm() {
 
     setIsLoading(true);
 
+    const formattedData = {
+      ...data,
+      services: data.services.join(", "),
+    };
+
     try {
       const res = await fetch("/api/contactform", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify(formattedData),
         headers: {
           "Content-Type": "application/json",
         },
       });
+
       if (!res.ok) throw new Error("Failed to send message");
+
       setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 7000);
+      setTimeout(() => setIsSubmitted(false), 7000);
       form.reset();
     } catch (error) {
       setIsNotSubmitted(true);
-      setTimeout(() => {
-        setIsNotSubmitted(false);
-      }, 7000);
-      console.log(error);
+      setTimeout(() => setIsNotSubmitted(false), 7000);
+      console.error(error);
     } finally {
       setIsLoading(false);
     }
@@ -141,19 +143,15 @@ export default function ContactForm() {
   return (
     <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein">
       <Form {...form}>
-        <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
+        <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
           {/* Name */}
           <FormField
-            control={form.control}
+            control={control}
             name="name"
             render={({ field }) => (
               <FormItem className="required">
                 <FormControl>
-                  <Input
-                    placeholder="Name *"
-                    {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
-                  />
+                  <Input placeholder="Name *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -162,16 +160,12 @@ export default function ContactForm() {
 
           {/* Email */}
           <FormField
-            control={form.control}
+            control={control}
             name="email"
             render={({ field }) => (
               <FormItem className="required">
                 <FormControl>
-                  <Input
-                    placeholder="Email Address *"
-                    {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
-                  />
+                  <Input placeholder="Email Address*" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -180,17 +174,12 @@ export default function ContactForm() {
 
           {/* Phone Number */}
           <FormField
-            control={form.control}
+            control={control}
             name="number"
             render={({ field }) => (
               <FormItem className="required">
                 <FormControl>
-                  <Input
-                    placeholder="Phone number *"
-                    type="number"
-                    {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
-                  />
+                  <Input type="number" placeholder="Phone Number*" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -199,16 +188,12 @@ export default function ContactForm() {
 
           {/* Company */}
           <FormField
-            control={form.control}
+            control={control}
             name="company"
             render={({ field }) => (
               <FormItem className="required">
                 <FormControl>
-                  <Input
-                    placeholder="Company Name *"
-                    {...field}
-                    className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]"
-                  />
+                  <Input placeholder="Company Name*" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -216,76 +201,50 @@ export default function ContactForm() {
           />
 
           {/* Services */}
-          <FormField
-            control={form.control}
+          <Controller
+            control={control}
             name="services"
-            render={({ field }) => (
-              <FormItem className="required">
-                <Select onValueChange={field.onChange} value={field.value}>
-                  <FormControl>
-                    <SelectTrigger
-                      aria-label="services dropdown"
-                      className="w-full h-[4vw] drop-shadow-none border shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw] tablet:h-[8vw] tablet:rounded-[1.5vw]"
-                    >
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel><b>Services Offered</b></SelectLabel>
-                      <SelectItem value="performance-marketing">Performance Marketing</SelectItem>
-                      <SelectItem value="retail-marketing">Retail Marketing</SelectItem>
-                      <SelectItem value="seo">Search Engine Optimization</SelectItem>
-                      <SelectItem value="orm">Online Reputation Management</SelectItem>
-                      <SelectItem value="content-management-creative">Content Management & Creative</SelectItem>
-                      <SelectItem value="consumer-insights">Consumer Insights</SelectItem>
-                      <SelectItem value="influencer-marketing">Influencer Marketing</SelectItem>
-                      <SelectItem value="affiliate-marketing">Affiliate Marketing</SelectItem>
-                      <SelectItem value="social-media-marketing">Social Media Marketing</SelectItem>
-                      <SelectItem value="data-analytics">Data & Analytics</SelectItem>
-                      <SelectItem value="branding">Branding Services</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
+            render={({ field: { onChange, value }, fieldState: { error } }) => (
+              <FormItem>
+                <MultiSelect
+                  variant="default"
+                  options={servicesList}
+                  value={value}
+                  onValueChange={(selected) => onChange(selected)}
+                  placeholder="Select Services"
+                  animation={2}
+                  maxCount={2}
+                />
+                {error && <FormMessage>{error.message}</FormMessage>}
               </FormItem>
             )}
           />
 
           {/* Message */}
           <FormField
-            control={form.control}
+            control={control}
             name="message"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Textarea
-                    placeholder="Message"
-                    {...field}
-                    className="h-[6vw] rounded-[0.5vw] px-[1vw] placeholder:text-[#111111] placeholder:text-[1vw] bg-white drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:placeholder:text-[1.8vw] tablet:px-[5vw] tablet:h-[12vw] tablet:py-[2vw] tablet:rounded-[1.5vw]"
-                  />
+                  <Textarea placeholder="Message" {...field} className="h-[6vw] rounded-[0.5vw] px-[1vw] placeholder:text-[#111111] placeholder:text-[1vw] bg-white drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:placeholder:text-[1.8vw] tablet:px-[2vw] tablet:h-[12vw] tablet:py-[2vw] tablet:rounded-[1.5vw]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
-          {/* Checkbox */}
-          <div className="w-full flex gap-[1vw] justify-center mobile:justify-start mobile:items-start mobile:gap-3 tablet:block tablet:w-4/5 ">
+          {/* Terms & Conditions */}
+          <div className="w-full flex gap-[1vw] justify-start mobile:justify-start mobile:items-start mobile:gap-3 tablet:block tablet:w-4/5 ">
             <FormField
-              control={form.control}
+              control={control}
               name="terms"
               render={({ field }) => (
-                <FormItem className="flex items-start gap-3 tablet:gap-1">
-                  <Checkbox
-                    aria-label="checkbox"
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    className="mobile:mt-[2vw] tablet:mt-[2vw]"
-                  />
-                  <span className="text-[1.1vw] text-black/70 capitalize mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">
-                    Sign me up to receive future marketing communications regarding Hiveminds.
-                  </span>
+                <FormItem className="space-y-2">
+                  <div className="flex items-start justify-start gap-3 tablet:gap-1">
+                    <Checkbox aria-label="checkbox" checked={field.value} onCheckedChange={field.onChange} className="mobile:mt-[2vw] tablet:mt-[2vw]" />
+                    <FormLabel className="text-[1.1vw] text-black/70 capitalize mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">Sign me up to receive future marketing communications regarding Hiveminds.</FormLabel>
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}

@@ -28,13 +28,13 @@ const GetinTouch = () => {
                 className="text-[1.2vw] leading-[1] fadein"
               />
               <LinkButton
-                btnLink={"mailto:hivemindssupport@hiveminds.in"}
-                btnText={"hivemindssupport@hiveminds.in"}
+                btnLink={"mailto:sales@hiveminds.in"}
+                btnText={"sales@hiveminds.in"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
               <LinkButton
-                btnLink={"mailto:sales@hiveminds.in"}
-                btnText={"sales@hiveminds.in"}
+                btnLink={"mailto:hivemindssupport@hiveminds.in"}
+                btnText={"hivemindssupport@hiveminds.in"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
             </div>
