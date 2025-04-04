@@ -1,26 +1,16 @@
-"use client";
 import "@/styles/globals.css";
-import { ReactLenis, useLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
+import { ReactLenis, useLenis } from "lenis/react";
 import { DefaultSeo } from "next-seo";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import nextSeoConfig from "../../next-seo.config";
-import { 
-  AnimatePresence, 
-  LazyMotion, 
-  domAnimation ,
-  m
-} from "framer-motion"; 
-import {
-  ImageObjectJsonLd,
-  LocalBusiness,
-  OrganizationJsonLd,
-  WebsiteJsonLd,
-} from "@/lib/json-ld";
-import gsap from "gsap";
+import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"; 
+import { ImageObjectJsonLd, LocalBusiness, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleTagManager } from '@next/third-parties/google'
+import gsap from "gsap";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -89,6 +79,7 @@ export default function App({ Component, pageProps }) {
                 transition={{ duration: 0.5 }}
               >
                 <Component {...pageProps} />
+                <GoogleTagManager gtmId="GTM-MWWTXV3W" />
               </m.div>
             </AnimatePresence>
           </LazyMotion>
