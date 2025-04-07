@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="flex items-start justify-between w-full tablet:gap-4">
               <div className="space-y-[1.5vw]">
                 <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal tablet:text-[3.2vw]">
-                  Expertise
+                  Services
                 </p>
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {expertiseLinks.links.map((item, index) => (

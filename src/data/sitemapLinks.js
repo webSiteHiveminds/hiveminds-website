@@ -1,5 +1,5 @@
 export const expertiseLinks = {
-    title: "Expertise",
+    title: "Services",
     links: [
         { label: "Performance Marketing", href: "/services/performance-marketing" },
         { label: "Retail Marketing", href: "/services/retail-marketing" },
@@ -41,8 +41,5 @@ export const industriesLinks = {
         { label: "Telecom", href: "/industry#telecom" },
         { label: "Automobiles", href: "/industry#automobiles" },
         { label: "Travel & Tourism", href: "/industry#travel-and-tourism" },
-       
-       
-
     ]
 }

@@ -29,36 +29,36 @@ const categories = [
     value: "travel-tourism",
     label:"to travel-tourism"
   },
-  {
-    btnName: "Healthcare",
-    value: "Healthcare",
-    label:"to healthcare"
-  },
+  // {
+  //   btnName: "Healthcare",
+  //   value: "Healthcare",
+  //   label:"to healthcare"
+  // },
   {
     btnName: "BFSI",
     value: "bfsi-fintech",
     label:"to bfsi"
   },
-  {
-    btnName: "Automobiles",
-    value: "Automobiles",
-    label:"to automobiles"
-  },
-  {
-    btnName: "Wearables",
-    value: "Wearables",
-    label:"to wearables"
-  },
-  {
-    btnName: "NBFC",
-    value: "NBFC",
-    label:"to nbfc"
-  },
-  {
-    btnName: "CDIT",
-    value: "cdit",
-    label:"to cdit"
-  },
+  // {
+  //   btnName: "Automobiles",
+  //   value: "Automobiles",
+  //   label:"to automobiles"
+  // },
+  // {
+  //   btnName: "Wearables",
+  //   value: "Wearables",
+  //   label:"to wearables"
+  // },
+  // {
+  //   btnName: "NBFC",
+  //   value: "NBFC",
+  //   label:"to nbfc"
+  // },
+  // {
+  //   btnName: "CDIT",
+  //   value: "cdit",
+  //   label:"to cdit"
+  // },
 ];
 
 const CaseStudies= ({ caseStudies }) => {

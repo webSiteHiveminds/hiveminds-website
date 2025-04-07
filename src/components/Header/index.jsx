@@ -21,14 +21,14 @@ const Header = ({ isOpen }) => {
     { name: "Performance Marketing", href: "/services/performance-marketing" },
     { name: "Retail Marketing", href: "/services/retail-marketing" },
     { name: "Search Engine Optimization", href: "/services/search-engine-optimization" },
-    { name: "Creative & Content", href: "/services/creative-content-management" },
+    { text: "Content Management & Creative", href: "/services/creative-content-management" },
     { name: "Online Reputation Management", href: "/services/online-reputation-management" },
     { name: "Consumer Insights", href: "/services/consumer-insights" },
     { name: "Influencer Marketing", href: "/services/influencer-marketing" },
     { name: "Affiliate Marketing", href: "/services/affiliate-marketing" },
     { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-    { name: "Data Analysis", href: "/services/data-analytic" },
-    { name: "Branding & Programatic Ads", href: "/services/branding" },
+    { name: "Data & Analytics", href: "/services/data-analytic" },
+    { name: "Branding Services", href: "/services/branding" },
   ];
   const industries = [
     { name: "FMCG & Beauty", href: "/industry#fmcg-and-beauty" },
