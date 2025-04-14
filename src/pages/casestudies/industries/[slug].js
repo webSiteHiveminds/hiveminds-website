@@ -4,12 +4,9 @@ import {
   headingAnim,
   paraAnim,
 } from "@/components/gsapAnimations";
-import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import { getAllIndustries, getIndustryBySlug } from "@/lib/industries";
-import img from "../../../../public/assets/images/services/hero.png";
 import IndustryCsListing from "@/components/CaseStudy/IndustryCSListing";
-import { notFound } from "next/navigation";
 import MoreCs from "@/components/CaseStudyDetail/MoreCs";
 import Metadata from "@/components/Metadata";
 import { WebpageJsonLd } from "@/lib/json-ld";

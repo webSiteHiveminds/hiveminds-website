@@ -198,7 +198,7 @@ const Header = ({ isOpen }) => {
                             ))}
                           </ul>
                         </div>
-                        <span className="bg-black h-[32vw] w-[1px] " />
+                        <span className="bg-black h-[26vw] w-[1px]" />
                         <div>
                           <Link
                             href="/industries"
@@ -235,7 +235,7 @@ const Header = ({ isOpen }) => {
                                 src={link.imgSrc}
                                 placeholder="blur"
                                 alt={link.text}
-                                className="hover:scale-[1.2] object-cover h-full w-full transition-all duration-500 ease-in-out"
+                                className="hover:scale-110 object-cover h-full w-full transition-all duration-500 ease-in-out"
                               />
                             </Link>
                             <Link href={link.href} className="w-fit">

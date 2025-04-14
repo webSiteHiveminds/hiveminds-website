@@ -47,7 +47,7 @@ const careers = () => {
             <Layout>
                 <Hero title1={"Careers"} title2={"With Us"} para={"Join HiveMinds, a unit of Madison World, where creativity, data, and innovation converge. Our collaborative team drives digital transformation with passion and purpose, offering dynamic careers that empower you to shape the future of marketing."} img={img} />
                 <Culture />
-                <section className='relative py-[5vw] w-screen h-full overflow-hidden mobile:pb-[10%]'>
+                <section className='relative py-[5vw] w-screen h-full overflow-hidden mobile:pb-[10%]' id='job-openings'>
                     <div className='w-full h-full container-lg'>
                         <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start tablet:items-start tablet:gap-[3vw] mobile:gap-[4vw]">
                             <h2 data-heading-anim className="heading-2 headingAnim">

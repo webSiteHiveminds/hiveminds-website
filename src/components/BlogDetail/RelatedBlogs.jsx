@@ -87,7 +87,7 @@ const RelatedBlogs = () => {
                   <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{blog.category}</p>
                   <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{blog.date}</p>
                 </div>
-                <Link href="#">
+                <Link href={blog.link}>
                   <div className="w-fit">
                     <div
                       className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5vw] `}
