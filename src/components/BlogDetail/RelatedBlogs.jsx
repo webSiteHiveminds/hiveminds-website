@@ -11,27 +11,27 @@ gsap.registerPlugin(ScrollTrigger);
 const relatedBlogsData = [
   {
     id: 1,
-    title: "How to Find Your Dream Digital Marketing Job",
+    title: "Decoding Attribution Windows: Finding the Perfect Fit for Your Marketing Strategy",
     category: "Digital Marketing",
-    date: "9 June, 2024",
-    imgSrc: "/assets/images/blogs/blog-img3.png",
-    link: "#",
+    date: "6 June, 2024",
+    imgSrc: "/assets/images/blogpage/decoding-attribution-windows.webp",
+    link: "/blog/decoding-attribution-windows",
   },
   {
     id: 2,
-    title: "How to use ChatGPT for Keyword Research",
+    title: "2024 SEO Updates All Bundled Together for You to Glance",
     category: "SEO",
     date: "9 June, 2024",
-    imgSrc: "/assets/images/blogs/blog-img4.png",
-    link: "/",
+    imgSrc: "/assets/images/blogpage/2024-seo-updates.webp",
+    link: "/blog/2024-seo-updates-all-bundled-together-for-you-to-glance",
   },
   {
     id: 3,
-    title: "How to Use Wikipedia to Scale your Off-Page SEO",
-    category: "Digital Marketing",
-    date: "9 June, 2024",
-    imgSrc: "/assets/images/blogs/blog-img5.png",
-    link: "#",
+    title: "Top 9 SEO Trends in 2025",
+    category: "SEO",
+    date: "26 March, 2025",
+    imgSrc: "/assets/images/blogpage/top-seo-trends.webp",
+    link: "/blog/top-9-seo-trends-in-2025",
   },
 ];
 
@@ -71,15 +71,15 @@ const RelatedBlogs = () => {
         </div>
         <div className="w-full flex pt-[5vw] pb-[1vw] gap-[1vw] mobile:flex-col mobile:gap-[7vw] mobile:mt-[7vw] tablet:gap-[2vw]">
           {relatedBlogsData.map((blog) => (
-            <div key={blog.id} className={`blogs related-blog group blog-link ${blog.id%3==0?"tablet:hidden":""}`}>
-              <Link href={"#"} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw] tablet:w-[44vw] tablet:h-[30vw] tablet:rounded-[2.5vw]">
+            <div key={blog.id} className={`blogs related-blog group blog-link ${blog.id % 3 == 0 ? "tablet:hidden" : ""}`}>
+              <Link href={blog.link} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw] tablet:w-[44vw] tablet:h-[30vw] tablet:rounded-[2.5vw]">
                 <Image
                   src={blog.imgSrc}
                   height={390}
                   width={570}
                   alt={blog.title}
                   className="object-cover w-full h-full group-hover:scale-[1.1] transistion-all duration-500 ease-in-out"
-                /> 
+                />
               </Link>
               <div className="py-[1vw] w-[80%] mobile:w-full mobile:mt-[7vw] mobile:flex mobile:flex-col mobile:gap-[1.5vw] tablet:ml-[1vw]">
                 <p className="text-[1.5vw] font-medium mobile:text-[6vw] mobile:leading-[1.2] tablet:text-[3vw]">{blog.title}</p>
