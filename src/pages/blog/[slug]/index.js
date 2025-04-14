@@ -53,7 +53,7 @@ export default function BlogDetail({ post }) {
                 canonical={`${homepage}/${path}`}
                 languageAlternates={[{
                     hrefLang: 'x-default',
-                    href: `${homepage}${path}`,
+                    href: `${homepage}/${path}`,
                 }]}
             />
             <ArticleJsonLd post={post} />

@@ -33,13 +33,12 @@ export default function CaseStudyDetail({ caseStudy }) {
 
     const path = caseStudyPathBySlug(slug);
     const metadata = {
-        title:{title},
-        metaDescription:{metaDescription},
-        path: `${homepage}${path}`,
-        img:"homepage.png",
-    date_published: "2025-03-21T00:00",
-    date_modified: "2025-03-21T00:00",
-
+        title: { title },
+        metaDescription: { metaDescription },
+        path: `${path}`,
+        img: "homepage.png",
+        date_published: "2025-03-21T00:00",
+        date_modified: "2025-03-21T00:00",
     }
 
     return (
@@ -66,18 +65,17 @@ export default function CaseStudyDetail({ caseStudy }) {
                 canonical={`${homepage}/${path}`}
                 languageAlternates={[{
                     hrefLang: 'x-default',
-                    href: `${homepage}${path}`,
+                    href: `${homepage}/${path}`,
                 }]}
             />
-            <WebpageJsonLd metadata={metadata}/>
+            <WebpageJsonLd metadata={metadata} />
             <Layout>
                 <Hero
                     title1={title}
                     img={featuredImage.sourceUrl}
                 />
-                <Content date={date} slug={slug} content={content} categories={categories} industry={industries[0].name} services={services}/>
-                {/* <RelatedBlogs /> */}
-                <MoreCs/>
+                <Content date={date} slug={slug} content={content} categories={categories} industry={industries[0].name} services={services} />
+                <MoreCs />
             </Layout>
         </>
     )
