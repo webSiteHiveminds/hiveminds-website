@@ -201,13 +201,13 @@ const Testimonials = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden tablet:w-fit tablet:h-fit tablet:top-[20%]
-                ${activeButton === "next" ? " text-black" : "bg-transparent"
+          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-primary duration-500 transitiona-all ease cursor-pointer border border-black hover:border-primary mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden tablet:w-fit tablet:h-fit tablet:top-[20%] group
+                ${activeButton === "next" ? " text-black hover:text-white" : "bg-transparent"
             } transition-colors duration-300`}
           onClick={handleNext}
         >
-          <div className="w-[4vw] h-[4vw]  relative z-[6] mobile:w-[7.5vw] mobile:h-[7.5vw] tablet:w-[5.5vw] tablet:h-[5.5vw] flex justify-center items-center group transition-all duration-500">
-            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
+          <div className="w-[4vw] h-[4vw]  relative z-[6] mobile:w-[7.5vw] mobile:h-[7.5vw] tablet:w-[5.5vw] tablet:h-[5.5vw] flex justify-center items-center  transition-all duration-500">
+            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw] group-hover:text-white">
               <svg
                 width="16"
                 height="29"
@@ -217,8 +217,8 @@ const Testimonials = () => {
               >
                 <path
                   d="M14.9769 14.2073L14.9771 14.2074C15.0572 14.2866 15.1004 14.3919 15.1004 14.4997C15.1004 14.6073 15.0572 14.7126 14.9771 14.7918L14.9769 14.792L1.64366 27.9741L1.64356 27.9742C1.5595 28.0573 1.44901 28.1004 1.3333 28.1004C1.21755 28.1004 1.10707 28.0573 1.02314 27.9743L1.02303 27.9742C0.858507 27.8115 0.858492 27.5522 1.02295 27.3895C8.19902 20.2949 8.1993 8.70514 1.02303 1.61059C0.858491 1.44792 0.858492 1.18853 1.02299 1.02587C1.19326 0.857514 1.47343 0.85759 1.64352 1.02578L1.64359 1.02585L14.9769 14.2073Z"
-                  fill="#111111"
-                  stroke="#111111"
+                  fill="currentColor"
+                  stroke="currentColor"
                   className=""
                   strokeWidth="1.79924"
                 />
@@ -227,15 +227,15 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden tablet:w-fit tablet:h-fit tablet:right-[12%] tablet:top-[20%]
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden tablet:w-fit tablet:h-fit tablet:right-[12%] tablet:top-[20%] hover:text-white hover:bg-primary hover:border-primary group ease
                 ${activeButton === "prev"
-              ? " text-black"
+              ? " text-black group-hover:text-white"
               : "bg-transparent "
             } transition-colors duration-300`}
           onClick={handlePrev}
         >
           <div className="w-[4vw] h-[4vw]  mobile:w-[7.5vw] mobile:h-[7.5vw] relative z-[6] tablet:w-[5.5vw] tablet:h-[5.5vw] flex justify-center items-center ">
-            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
+            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw] group-hover:text-white">
             <svg
             className='rotate-180'
                 width="16"
@@ -246,8 +246,8 @@ const Testimonials = () => {
               >
                 <path
                   d="M14.9769 14.2073L14.9771 14.2074C15.0572 14.2866 15.1004 14.3919 15.1004 14.4997C15.1004 14.6073 15.0572 14.7126 14.9771 14.7918L14.9769 14.792L1.64366 27.9741L1.64356 27.9742C1.5595 28.0573 1.44901 28.1004 1.3333 28.1004C1.21755 28.1004 1.10707 28.0573 1.02314 27.9743L1.02303 27.9742C0.858507 27.8115 0.858492 27.5522 1.02295 27.3895C8.19902 20.2949 8.1993 8.70514 1.02303 1.61059C0.858491 1.44792 0.858492 1.18853 1.02299 1.02587C1.19326 0.857514 1.47343 0.85759 1.64352 1.02578L1.64359 1.02585L14.9769 14.2073Z"
-                  fill="#111111"
-                  stroke="#111111"
+                  fill="currentColor"
+                  stroke="currentColor"
                   className=""
                   strokeWidth="1.79924"
                 />
