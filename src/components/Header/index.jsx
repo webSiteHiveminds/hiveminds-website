@@ -31,16 +31,16 @@ const Header = ({ isOpen }) => {
     { name: "Branding Services", href: "/services/branding" },
   ];
   const industries = [
-    { name: "FMCG & Beauty", href: "/industry#fmcg-and-beauty" },
-    { name: "Health & Wellness", href: "/industry#health-and-wellness" },
-    { name: "BFSI - Fintech", href: "/industry#bfsi-fintech" },
-    { name: "E-Commerce", href: "/industry#e-commerce" },
-    { name: "Fashion & Lifestyle", href: "/industry#fashion-and-lifestyle" },
-    { name: "Electronics ", href: "/industry#electronics" },
-    { name: "Consumer Durables", href: "/industry#consumer-durables" },
-    { name: "Telecom", href: "/industry#telecom" },
-    { name: "Automobiles", href: "/industry#automobiles" },
-    { name: "Travel & Tourism", href: "/industry#travel-and-tourism" },
+    { name: "FMCG & Beauty", href: "/industries/fmcg-and-beauty" },
+    { name: "Health & Wellness", href: "/industries/health-and-wellness" },
+    { name: "BFSI - Fintech", href: "/industries/bfsi-fintech" },
+    { name: "E-Commerce", href: "/industries/e-commerce" },
+    { name: "Fashion & Lifestyle", href: "/industries/fashion-and-lifestyle" },
+    { name: "Electronics ", href: "/industries/electronics" },
+    { name: "Consumer Durables", href: "/industries/consumer-durables" },
+    { name: "Telecom", href: "/industries/telecom" },
+    { name: "Automobiles", href: "/industries/automobiles" },
+    { name: "Travel & Tourism", href: "/industries/travel-and-tourism" },
   ];
   const links = [
     {
@@ -201,7 +201,7 @@ const Header = ({ isOpen }) => {
                         <span className="bg-black h-[32vw] w-[1px] " />
                         <div>
                           <Link
-                            href="/industry"
+                            href="/industries"
                             prefetch={false}
                             className="uppercase text-primary link-line text-[1.2vw] font-avenir"
                           >

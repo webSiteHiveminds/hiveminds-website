@@ -4,9 +4,10 @@ import React from 'react'
 import { fadeUp, headingAnim, paraAnim, routeChangeTop } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
-import img from '../../public/assets/images/industry/industry-hero-img.png';
+import img from '../../../public/assets/images/industry/industry-hero-img.png'
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
+import PrimaryButton from '@/components/Button/PrimaryButton';
 
 const metadata={
   title:"HiveMinds: Digital Marketing for Diverse Industries",
@@ -59,6 +60,9 @@ const industry = () => {
                     </h2>
 
                     <p className='content tracking-wide para py-[1vw]' dangerouslySetInnerHTML={{ __html: item.para }} />
+                    <div className='fadeup mt-[2vw]'>
+                      <PrimaryButton href={item.link} text={"View Details"}/>
+                      </div>
                   </div>
                 </div>
               ))}
@@ -80,6 +84,7 @@ const industries = [
     title1: " FMCG & ",
     title2: "Beauty",
     para: "In the fast-paced FMCG and beauty sector, HiveMinds delivers tailored digital strategies that drive consumer engagement and brand loyalty. Leveraging deep market insights, creative content, and data-driven tactics, we empower numerous leading brands to optimize visibility, foster growth, and thrive globally in a competitive marketplace.",
+    link:"/industries/fmcg-and-beauty"
    
   },
   {
@@ -88,6 +93,8 @@ const industries = [
     title1: " Health and",
     title2: "Wellness",
     para: "We pioneer digital transformation in the health and wellness industry, delivering innovative, data-backed solutions for brands. By merging creative strategy with analytical rigor, we boost brand visibility, enhance patient engagement, and drive measurable, sustainable growth for lasting success remarkably.",
+    link:"/industries/health-and-wellness"
+
    
   },
   {
@@ -96,6 +103,8 @@ const industries = [
     title1: " BFSI -",
     title2: "Fintech",
     para: "For BSFI-Fintech brands, we offer full-funnel digital marketing solutions that power growth at every stage. By merging data-driven strategies with innovative creative execution, we optimize customer journeys, boost product adoption, and secure long-term success in a rapidly evolving digital ecosystem.",
+    link:"/industries/bfsi-fintech"
+
    
   },
   {
@@ -104,6 +113,8 @@ const industries = [
     title1: " E-",
     title2: "commerce",
     para: "In the competitive e-commerce landscape, we drive digital growth through paid and organic strategies. Our data-driven, creative approach optimizes customer journeys, boosts conversions, and expands market share for leading brands, delivering measurable success and sustainable revenue growth.",
+    link:"/industries/e-commerce"
+
    
   },
   {
@@ -112,6 +123,8 @@ const industries = [
     title1: " Fashion & ",
     title2: " Lifestyle",
     para: "In the ever-evolving world of fashion and lifestyle, we craft cutting-edge digital campaigns through full-spectrum programmatic ads and marketplace activations. Our strategies amplify brand appeal, spark consumer engagement, and deliver measurable growth, positioning your brand as a leader in style and innovation",
+    link:"/industries/fashion-and-lifestyle"
+
    
   },
   {
@@ -120,6 +133,8 @@ const industries = [
     title1: " Electronics",
     title2: "",
     para: "For electronics brands, HiveMinds delivers dynamic digital strategies that optimize every touchpoint—from discovery to conversion. Our advanced analytics and creative prowess drive superior engagement, ensuring brands stand out and achieve robust growth in the fast-paced electronics market.",
+    link:"/industries/electronics"
+
    
   }, {
     id:"consumer-durables",
@@ -127,6 +142,8 @@ const industries = [
     title1: " Consumer ",
     title2: " Durables",
     para: "In the consumer durables sector, we fuse creative innovation with data-driven strategies to build lasting brand impact. Our tailored campaigns enhance customer experiences, boost conversions, and foster loyalty, positioning brands for sustainable growth in a competitive marketplace.",
+    link:"/industries/consumer-durables"
+
   },
   {
     id:"telecom",
@@ -134,6 +151,8 @@ const industries = [
     title1: " Telecom",
     title2: " ",
     para: "We transform telecom marketing by integrating innovative performance strategies, targeted paid advertising, and dynamic social media campaigns. Our solutions boost customer acquisition and engagement, securing a dominant digital presence and driving superior ROI for telecom brands.",
+    link:"/industries/telecom"
+
   },
   {
     id:"automobiles",
@@ -141,12 +160,16 @@ const industries = [
     title1: " Automobiles",
     title2: " ",
     para: "In the automobile sector, we fuel brand performance with strategic paid advertising, performance marketing, and impactful social media boosting. Our tailored campaigns drive consumer engagement and conversions, enabling automotive brands to accelerate growth and dominate the digital arena.",
+    link:"/industries/automobiles"
+
   },
+
   {
     id:"travel-and-tourism",
     img: "/assets/images/industry/travel-and-tourism.png",
     title1: " Travel &",
     title2: " Tourism",
     para: "We transform travel brands into digital destinations. Our integrated strategies blend data-driven insights, creative storytelling, and performance optimization to elevate online visibility, drive bookings, and create memorable journeys that resonate with globetrotters.",
+    link:"/industries/travel-and-tourism"
   }
 ]
