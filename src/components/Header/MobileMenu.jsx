@@ -1,3 +1,4 @@
+import { expertiseLinks, industriesLinks } from "@/data/sitemapLinks";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -24,56 +25,31 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
 
           <div className="w-full h-[1px] bg-black/20"></div>
           <div>
-            {/* Sections */}
             {[
               {
                 title: "What We do",
                 links: [
                   {
                     href: "/solutions",
-                    text: "Solutions",
+                    label: "Solutions",
                   },
                   {
                     href: "/our-ips",
-                    text: "IPs",
+                    label: "IPs",
                   },
                   {
                     href: "/school-of-digital",
-                    text: "School of Digital",
+                    label: "School of Digital",
                   },
                 ],
               },
               {
-                title: "Services",
-                links: [
-                  { text: "Performance Marketing", href: "/services/performance-marketing" },
-                  { text: "Retail Marketing", href: "/services/retail-marketing" },
-                  { text: "Search Engine Optimization", href: "/services/search-engine-optimization" },
-                  { text: "Content Management & Creative", href: "/services/creative-content-management" },
-                  { text: "Online Reputation Management", href: "/services/online-reputation-management" },
-                  { text: "Consumer Insights", href: "/services/consumer-insights" },
-                  { text: "Influencer Marketing", href: "/services/influencer-marketing" },
-                  { text: "Affiliate Marketing", href: "/services/affiliate-marketing" },
-                  { text: "Social Media Marketing", href: "/services/social-media-marketing" },
-                  { text: "Data & Analytics", href: "/services/data-analytic" },
-                  { text: "Branding Services", href: "/services/branding" },
-                ],
+                title: expertiseLinks.title,
+                links: expertiseLinks.links,
               },
-
               {
-                title: "Industries",
-                links: [
-                  { text: "FMCG & Beauty", href: "/industries/fmcg-and-beauty" },
-                  { text: "Health & Wellness", href: "/industries/health-and-wellness" },
-                  { text: "BFSI - Fintech", href: "/industries/bfsi-fintech" },
-                  { text: "E-Commerce", href: "/industries/e-commerce" },
-                  { text: "Fashion & Lifestyle", href: "/industries/fashion-and-lifestyle" },
-                  { text: "Electronics ", href: "/industries/electronics" },
-                  { text: "Consumer Durables", href: "/industries/consumer-durables" },
-                  { text: "Telecom", href: "/industries/telecom" },
-                  { text: "Automobiles", href: "/industries/automobiles" },
-                  { text: "Travel & Tourism", href: "/industries/travel-and-tourism" },
-                ],
+                title: industriesLinks.title,
+                links: industriesLinks.links,
               },
             ].map((section, index) => (
               <div
@@ -121,7 +97,7 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
                     {section.links.map((link, idx) => (
                       <li key={idx}>
                         <a href={link.href} className="link-line" onClick={() => (setOpenMenu(false))}>
-                          {link.text}
+                          {link.label}
                         </a>
                       </li>
                     ))}

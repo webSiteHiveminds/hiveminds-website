@@ -28,18 +28,34 @@ export const solutionsLinks = {
     ]
 }
 
+// export const industriesLinks = {
+//     title: "Industries",
+//     links: [
+//         { label: "FMCG & Beauty", href: "/industries/fmcg-and-beauty" },
+//         { label: "Health & Wellness", href: "/industries/health-and-wellness" },
+//         { label: "BFSI - Fintech", href: "/industries/bfsi-fintech" },
+//         { label: "E-Commerce", href: "/industries/e-commerce" },
+//         { label: "Fashion & Lifestyle", href: "/industries/fashion-and-lifestyle" },
+//         { label: "Electronics ", href: "/industries/electronics" },
+//         { label: "Consumer Durables", href: "/industries/consumer-durables" },
+//         { label: "Telecom", href: "/industries/telecom" },
+//         { label: "Automobiles", href: "/industries/automobiles" },
+//         { label: "Travel & Tourism", href: "/industries/travel-and-tourism" },
+//     ]
+// }
+
 export const industriesLinks = {
     title: "Industries",
     links: [
-        { label: "FMCG & Beauty", href: "/industries/fmcg-and-beauty" },
-        { label: "Health & Wellness", href: "/industries/health-and-wellness" },
-        { label: "BFSI - Fintech", href: "/industries/bfsi-fintech" },
-        { label: "E-Commerce", href: "/industries/e-commerce" },
-        { label: "Fashion & Lifestyle", href: "/industries/fashion-and-lifestyle" },
-        { label: "Electronics ", href: "/industries/electronics" },
-        { label: "Consumer Durables", href: "/industries/consumer-durables" },
-        { label: "Telecom", href: "/industries/telecom" },
-        { label: "Automobiles", href: "/industries/automobiles" },
-        { label: "Travel & Tourism", href: "/industries/travel-and-tourism" },
+        { label: "FMCG & Beauty", href: "/industries#fmcg-and-beauty" },
+        { label: "Health & Wellness", href: "/industries#health-and-wellness" },
+        { label: "BFSI - Fintech", href: "/industries#bfsi-fintech" },
+        { label: "E-Commerce", href: "/industries#e-commerce" },
+        { label: "Fashion & Lifestyle", href: "/industries#fashion-and-lifestyle" },
+        { label: "Electronics ", href: "/industries#electronics" },
+        { label: "Consumer Durables", href: "/industries#consumer-durables" },
+        { label: "Telecom", href: "/industries#telecom" },
+        { label: "Automobiles", href: "/industries#automobiles" },
+        { label: "Travel & Tourism", href: "/industries#travel-and-tourism" },
     ]
 }

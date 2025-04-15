@@ -47,7 +47,6 @@ const industry = () => {
               {industries.map((item, index) => (
                 <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:justify-start mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[155vw] mobile:pb-[10vw] tablet:flex-col tablet:h-[75vw] tablet:px-[3vw] tablet:my-[6vw] " id={item.id}>
                   <div className='w-[45%] mobile:w-full tablet:w-3/5 relative'>
-
                     <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw] mobile:rounded-[3.5vw]' />
                   </div>
                   <div className='w-[50%] mobile:w-full mobile:mt-[7vw] tablet:w-full mobile:pl-[2vw] '>
@@ -55,11 +54,10 @@ const industry = () => {
                       {item.title1}
                       <span className='text-primary '> {item.title2} </span>
                     </h2>
-
                     <p className='content tracking-wide para py-[1vw]' dangerouslySetInnerHTML={{ __html: item.para }} />
-                    <div className='fadeup mt-[2vw]'>
+                    {/* <div className='fadeup mt-[2vw]'>
                       <PrimaryButton href={item.link} text={"View Details"} />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}
@@ -117,7 +115,7 @@ const industries = [
     id: "fashion-and-lifestyle",
     img: "/assets/images/industry/fashion-and-lifestyle.png",
     title1: " Fashion & ",
-    title2: " Lifestyle",
+    title2: "Lifestyle",
     para: "In the ever-evolving world of fashion and lifestyle, we craft cutting-edge digital campaigns through full-spectrum programmatic ads and marketplace activations. Our strategies amplify brand appeal, spark consumer engagement, and deliver measurable growth, positioning your brand as a leader in style and innovation",
     link: "/industries/fashion-and-lifestyle"
   },
