@@ -71,14 +71,18 @@ const team = [
   //   src: "/assets/images/about/mohit-grover.png",
   //   designation: "VP - Client Servicing",
   // },
-  
   {
     id: 11,
     name: "Sikha Agrawalla",
     src: "/assets/images/about/sikha-agrawalla.png",
     designation: "VP - People & Culture",
   },
-  
+  {
+    id: 12,
+    name: "Neha Pandey",
+    src: "/assets/images/about/neha-pandey.png",
+    designation: "VP - Growth",
+  },
 ];
 const Leadership = () => {
   return (

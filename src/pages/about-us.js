@@ -20,6 +20,7 @@ const metadata = {
   date_published: "2025-03-21T00:00",
   date_modified: "2025-03-21T00:00",
 }
+
 const contact = () => {
   headingAnim();
   paraAnim();
