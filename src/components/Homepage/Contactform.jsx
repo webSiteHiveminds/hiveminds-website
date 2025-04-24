@@ -14,7 +14,8 @@ import { useEffect, useState } from "react";
 import { MultiSelect } from "@/components/ui/multi-select";
 
 const formSchema = z.object({
-  name: z.string().min(3, { message: "Name must be at least 3 characters." }),
+  firstName: z.string().min(2, { message: "First name must be at least 2 characters." }),
+  lastName: z.string().min(2, { message: "Last name must be at least 2 characters." }),
   email: z.string().email({ message: "Invalid email address." }),
   number: z.string().regex(/^\d{10,15}$/, { message: "Phone number must be 10-15 digits." }),
   company: z.string().min(2, { message: "Company name is required." }),
@@ -42,7 +43,8 @@ export default function ContactForm() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      firstName: "",
+      lastName: "",
       email: "",
       number: "",
       company: "",
@@ -144,14 +146,28 @@ export default function ContactForm() {
     <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein">
       <Form {...form}>
         <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
-          {/* Name */}
+          {/* First Name */}
           <FormField
             control={control}
-            name="name"
+            name="firstName"
             render={({ field }) => (
               <FormItem className="required">
                 <FormControl>
-                  <Input placeholder="Name *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
+                  <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Last Name */}
+          <FormField
+            control={control}
+            name="lastName"
+            render={({ field }) => (
+              <FormItem className="required">
+                <FormControl>
+                  <Input placeholder="Last Name *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-3 mobile:rounded-xl tablet:h-[8vw] tablet:rounded-[1.5vw]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
