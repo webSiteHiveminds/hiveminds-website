@@ -29,7 +29,7 @@ const error = () => {
           </div>
           <div className='flex flex-col gap-[2.5vw] justify-center items-center tablet:gap-[5vw] mobile:gap-[7vw]'>
 
-            <p className='w-[80%] text-center tablet:text-[2.4vw]'>The page you are looking for doesn&apos;t exist or an other error occurred, Go Back to Homepage</p>
+            <p className='w-[80%] text-center tablet:text-[2.4vw]'>The page you are looking for doesn&apos;t exist OR some other error occurred, Go Back to Homepage</p>
             <PrimaryButton href={"/"} text={"Go Back"} />
           </div>
         </div>
