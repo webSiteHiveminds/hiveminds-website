@@ -9,11 +9,34 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, company, services, message, terms, number, pageURL } = req.body;
+    const { firstName, lastName, email, company, services, message, terms, number, pageURL } = req.body;
      
-    if (!name || !email || !company || !services) {
+    if (!firstName || !lastName || !email || !company || !services) {
       return res.status(400).json({ error: "Required fields missing" });
     }
+
+    // Send to Zoho Flow webhook
+    const webhookData = {
+      ...req.body,
+      form_identifier: "nextjs_contactform"
+    };
+
+    const webhookResponse = await fetch('https://flow.zoho.in/60033128304/flow/webhook/incoming?zapikey=1001.b9ab7c2889575145301f0aa4350d537c.6fd58aa9ad47e65bf649933afd270b29&isdebug=false', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(webhookData),
+    });
+
+    if (!webhookResponse.ok) {
+      console.error('Failed to send to Zoho Flow webhook');
+      // We don't throw an error here as we want to continue with the email sending
+    }
+    else {
+      console.log("Webhook sent successfully");
+    }
+
     const { data, error } = await resend.emails.send({
       // from: "Acme <onboarding@resend.dev>",
       // to: ["harshgoyalrss7@gmail.com"],
@@ -22,7 +45,7 @@ export default async function handler(req, res) {
       // to: ["hitesh@weareenigma.com"],
       subject: "New Contact Form Submission",
       react: ContactDetails({
-        userName: name,
+        userName: `${firstName} ${lastName}`,
         userEmail: email,
         userNumber:number,
         userCompany: company,
