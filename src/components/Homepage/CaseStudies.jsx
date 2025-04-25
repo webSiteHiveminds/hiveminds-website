@@ -29,43 +29,42 @@ const categories = [
     value: "travel-tourism",
     label: "to travel-tourism"
   },
-  // {
-  //   btnName: "Healthcare",
-  //   value: "Healthcare",
-  //   label:"to healthcare"
-  // },
   {
     btnName: "BFSI",
     value: "bfsi-fintech",
     label: "to bfsi"
   },
+  {
+    btnName:"Electronics",
+    value:"electronics-consumer-durables",
+    label:"to electronic"
+  },
+  {
+    btnName:"Fashion",
+    value:"fashion-lifestyle",
+    label:"to fashion"
+  },
   // {
-  //   btnName: "Automobiles",
-  //   value: "Automobiles",
-  //   label:"to automobiles"
+  //   btnName:"International",
+  //   value:"international",
+  //   label:"to international"
   // },
-  // {
-  //   btnName: "Wearables",
-  //   value: "Wearables",
-  //   label:"to wearables"
-  // },
-  // {
-  //   btnName: "NBFC",
-  //   value: "NBFC",
-  //   label:"to nbfc"
-  // },
-  // {
-  //   btnName: "CDIT",
-  //   value: "cdit",
-  //   label:"to cdit"
-  // },
+  {
+    btnName:"FMCG & Beauty",
+    value:"fmcg-beauty",
+    label:"to fmcg"
+  },
+  {
+    btnName:"Health & Wellness",
+    value:"health-wellness",
+    label:"to health"
+  }
 ];
 
 const CaseStudies = ({ caseStudies }) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [slugValue, setslugValue] = useState("");
   const swiperRef = useRef(null);
-
 
   useEffect(() => {
     const ctx = gsap.context(() => {

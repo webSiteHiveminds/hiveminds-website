@@ -7,7 +7,7 @@ const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
     <Html>
       <Head />
       <Preview>
-        Someone just filled Contact Details on HiveMinds Website.
+        Someone just filled SOD Details on HiveMinds Website.
       </Preview>
       <Body style={main}>
         <Container style={container}>
@@ -53,7 +53,7 @@ const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
           
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://www.hiveminds.in/school-of-digital">Contact Page.</Link>
+            This form is submitted from <Link href="https://www.hiveminds.in/school-of-digital">School of digital Page.</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />

@@ -17,6 +17,7 @@ export default function CaseStudyDetail({ caseStudy }) {
     lineAnim();
     paraAnim();
     routeChangeTop();
+    // console.log(caseStudy)
 
     const {
         content,

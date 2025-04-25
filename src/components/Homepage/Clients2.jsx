@@ -65,7 +65,7 @@ export function Clients2() {
           </p>
         </div>
         <div className="  text-center mobile:text-left">
-          <p className=" text-[1.24vw] text-[#111111] montreal font-medium mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw]">
+          <p className=" text-[1.24vw] text-[#111111] montreal font-bold mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw]">
             Clients
           </p>
 
@@ -105,7 +105,7 @@ export function Clients2() {
             ))}
           </Marquee>
 
-          <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[2vw] mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw] tablet:py-[5vw]">
+          <p className="text-[1.24vw] text-[#111111] montreal font-bold py-[2vw] mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw] tablet:py-[5vw]">
             Platform & Media Partner
           </p>
 

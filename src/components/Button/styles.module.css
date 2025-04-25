@@ -335,7 +335,7 @@
     padding: 3vw 7vw;
    
     width: fit-content;
-    min-width: 15vw;
+    min-width: fit-content;
     max-width: 40vw;
    
   }
