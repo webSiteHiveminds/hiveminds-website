@@ -364,7 +364,7 @@ const Solutions = () => {
             <div className="w-screen h-full flex flex-col items-center justify-center container-lg pb-[4%] relative">
                 <div className="flex flex-col items-center justify-center gap-[1vw] py-[4vw] mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[2.5vw]">
                     <h2 className="heading-2 headingAnim">
-                        Your <span className="blue-text"> Goals </span>, Our Offerings
+                        Your <span className="blue-text"> Goals </span>, Our Impact
                     </h2>
                     <p className="content w-[70%] text-center fadeup mobile:text-left mobile:w-[90%] tablet:text-left tablet:w-[60%]">
                         See how our strategic partnerships and collaboration drive innovation and accelerate your business growth

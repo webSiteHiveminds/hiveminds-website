@@ -20,7 +20,7 @@ const BlogCard = ({ link, para, src, date  ,className}) => {
             src={src}
             fill
             alt="blogs-img"
-            className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
+            className="group-hover:scale-[1.1] transition-all ease-in-out duration-500 object-cover"
           />
         </div>
         <div className="px-[0.5vw] w-[90%] h-[40%] flex flex-col gap-[1vw] mt-[1vw] mobile:mt-[3vw] tablet:h-[20%] tablet:gap-[3vw]">
