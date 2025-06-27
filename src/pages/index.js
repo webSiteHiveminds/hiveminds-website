@@ -5,7 +5,7 @@ import Awards from '@/components/Homepage/Awards';
 import Story from '@/components/Homepage/Story';
 import TeamMembers from '@/components/Homepage/TeamMembers';
 import { Clients2 } from '@/components/Homepage/Clients2';
-import MobileHero from '@/components/Homepage/MobileHero';
+// import MobileHero from '@/components/Homepage/MobileHero';
 import Metadata from '@/components/Metadata';
 import { getHomePageCaseStudies } from '@/lib/casestudies';
 import { getAllIndustries } from '@/lib/industries';
@@ -21,6 +21,7 @@ import Solutions from '@/components/Homepage/Solutions';
 const BlogComponent = dynamic(() => import("@/components/Homepage/Blogs"));
 const CaseStudyComponent = dynamic(() => import("@/components/Homepage/CaseStudies"));
 const ContactComponent = dynamic(() => import("@/components/Homepage/Contact"));
+const MobileHeroComponent = dynamic(() => import("@/components/Homepage/MobileHero"));
 
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
@@ -66,8 +67,8 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
       <WebpageJsonLd metadata={metadata} />
       <LoaderHome />
       <Layout isOpen={isOpen}>
-        {!mobileWidth ? <Hero /> : <MobileHero />}
-        <Story isOpen={isOpen} setIsOpen={setIsOpen} />
+        {!mobileWidth ? <Hero /> : <MobileHeroComponent />}
+        <Story  setIsOpen={setIsOpen} />
         <Solutions />
         <Clients2 />
         <CaseStudyComponent caseStudies={stickyCaseStudies} />

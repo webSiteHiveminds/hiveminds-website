@@ -7,7 +7,6 @@ import Image from 'next/image';
 import img from '../../../public/assets/images/industry/industry-hero-img.png'
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
-import PrimaryButton from '@/components/Button/PrimaryButton';
 
 const metadata = {
   title: "HiveMinds: Digital Marketing for Diverse Industries",

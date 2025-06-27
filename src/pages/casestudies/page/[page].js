@@ -5,7 +5,17 @@ import Hero from '@/components/Hero';
 import { getAllCaseStudies, getPagesCount, getPaginatedCaseStudies } from '@/lib/casestudies';
 import { getAllIndustries } from '@/lib/industries';
 import CaseStudyListing from '@/components/CaseStudy/CaseStudyListing';
+import Metadata from '@/components/Metadata';
 
+
+const metadata={
+    title:" Hiveminds Case Studies – Retail, Fintech, Consumer Brands",
+    metaDescription:"Browse Hiveminds’ comprehensive case studies covering retail, fintech, consumer brands, healthcare and more—insights driven by data-first marketing.",
+    path:"casestudies",
+    img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
+  }
 export default function CaseStudyPage({ caseStudies, pagination, industries }) {
 
     headingAnim();
@@ -16,6 +26,7 @@ export default function CaseStudyPage({ caseStudies, pagination, industries }) {
 
     return (
         <>
+        <Metadata metadata={metadata} noindex={true}/>
             <Layout>
                 <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} />
                 <div className='tablet:pt-[12%] mobile:pt-[15%]'>

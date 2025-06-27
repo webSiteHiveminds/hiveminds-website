@@ -13,7 +13,7 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Affiliate Marketing Services | HiveMinds",
+  title:"Affiliate Marketing Services – Performance Growth | Hiveminds",
   metaDescription:"Boost revenue with HiveMinds' affiliate marketing services. We drive growth through strategic partnerships, data-driven campaigns, and performance tracking.",
   path:"services/affiliate-marketing",
   img:"homepage.png",

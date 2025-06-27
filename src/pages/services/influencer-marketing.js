@@ -13,7 +13,7 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Influencer Marketing Services | HiveMinds",
+  title:"Influencer Marketing Services – Reach & Engagement | Hiveminds",
   metaDescription:"Amplify your brand's voice with HiveMinds' influencer marketing. We partner with aligned influencers to create authentic campaigns that drive engagement and growth.",
   path:"services/influencer-marketing",
   img:"homepage.png",

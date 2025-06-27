@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
 const Hero = ({ title1, title2, para, img }) => {
+  
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(".image-cover", {
@@ -16,9 +17,8 @@ const Hero = ({ title1, title2, para, img }) => {
 
     })
     return () => ctx.revert()
+  }, []);
 
-
-  }, [])
   return (
     <section
       className="w-screen h-full overflow-hidden bg-[#F1F1F1] pt-[10%] pb-[4%] mobile:pb-8 mobile:bg-white1 mobile:pt-24 tablet:pb-[12vw]"

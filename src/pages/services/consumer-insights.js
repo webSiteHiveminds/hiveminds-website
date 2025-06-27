@@ -14,7 +14,7 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 
 
 const metadata={
-  title:"Consumer Insights Services | HiveMinds",
+  title:"Consumer Insights Services – Data-Driven Decisions | Hiveminds",
   metaDescription:"Gain actionable insights with HiveMinds. We analyze consumer behavior, market trends, and data to drive informed decisions and impactful brand strategies.",
   path:"services/consumer-insights",
   img:"homepage.png",

@@ -1,18 +1,16 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useEffect, useRef, useState } from "react";
 import PrimaryButton from "../Button/PrimaryButton";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ReelButton from "../Button/ReelButton";
 import { useLenis } from "lenis/react";
 import { initMagneticButton } from "../splitTextUtils";
 import dynamic from "next/dynamic";
 import LinkButton from "../Button/LinkButton";
 import styles from "../Button/styles.module.css";
-gsap.registerPlugin(ScrollTrigger);
+
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
-const StoryCopy = ({ isOpen, setIsOpen }) => {
+const StoryCopy = ({ setIsOpen }) => {
   
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -62,24 +60,7 @@ const StoryCopy = ({ isOpen, setIsOpen }) => {
     };
   }, [videoLoaded]);
 
-  useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      const ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#story",
-            scrub: true,
-            start: "top 90%",
-            end: "bottom 60%",
-          },
-        });
-        tl.from(".video", {
-          width: "100vw",
-        });
-      });
-      return () => ctx.revert();
-    }
-  });
+
   return (
     <>
       <section id="story" className="pt-[15vw] w-screen overflow-hidden ">

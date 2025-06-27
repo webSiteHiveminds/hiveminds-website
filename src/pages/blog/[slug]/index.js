@@ -9,12 +9,14 @@ import { ArticleJsonLd} from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 
 export default function BlogDetail({ post }) {
+    
     fadeIn();
     fadeUp();
     headingAnim();
     lineAnim();
     paraAnim();
     imgAnim()
+
     const {
         content,
         title,

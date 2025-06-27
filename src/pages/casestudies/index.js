@@ -10,8 +10,8 @@ import { WebpageJsonLd } from "@/lib/json-ld";
 
 
 const metadata={
-    title:" HiveMinds | Case Studies",
-    metaDescription:"Case Studies",
+    title:" Hiveminds Case Studies – Retail, Fintech, Consumer Brands",
+    metaDescription:"Browse Hiveminds’ comprehensive case studies covering retail, fintech, consumer brands, healthcare and more—insights driven by data-first marketing.",
     path:"casestudies",
     img:"homepage.png",
     date_published: "2025-03-21T00:00",
@@ -29,6 +29,9 @@ export default function Blogs({ caseStudies, pagination, industries }) {
         <WebpageJsonLd metadata={metadata}/>
             <Layout>
                 <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} />
+                <div className="container-lg pt-[5%]">
+                    <h2 className="heading-2 headingAnim">View All Case Studies</h2>
+                </div>
                 <CaseStudyListing caseStudies={caseStudies} industries={industries} pagination={pagination} />               
             </Layout>
         </>

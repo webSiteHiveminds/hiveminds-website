@@ -13,7 +13,7 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Data Analytics Services | HiveMinds",
+  title:"Data Analytics Services – Consumer & Retail Insights | Hiveminds",
   metaDescription:"Transform raw data into actionable intelligence with HiveMinds' data analytics services, empowering informed decisions and business growth.",
   path:"services/data-analytic",
   img:"homepage.png",

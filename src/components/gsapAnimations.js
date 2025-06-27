@@ -4,13 +4,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { SplitInLineWord, SplitInLine} from "./splitTextUtils";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-
 import {useLenis} from "lenis/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function headingAnim() {
+
   const router = useRouter();
+
   useEffect(()=>{
       const ctx = gsap.context(()=>{
           const headingAnim = document.querySelectorAll(".headingAnim");
@@ -29,17 +30,13 @@ export function headingAnim() {
                   scrollTrigger: {
                     trigger: headingWord,
                     start: 'top 85%', 
-                    
-                    
-            
                   },
-
               });
           })
       });
       
       return () => ctx.revert();
-  },[router.asPath]);
+  },[router.pathname]);
       
 }
 
@@ -115,7 +112,7 @@ export function paraAnim() {
         });
         return () => ctx.revert();
       }
-    }, [router.asPath]);
+    }, [router.pathname]);
   }
   export function fadeIn() {
     useEffect(() => {

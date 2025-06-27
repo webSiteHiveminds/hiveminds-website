@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo'
 import React from 'react'
 import { homepage } from '@/lib/util'
 
-const Metadata = ({metadata}) => {
+const Metadata = ({metadata, noindex = false}) => {
   return (
    <NextSeo
                    title={metadata.title}
@@ -28,6 +28,8 @@ const Metadata = ({metadata}) => {
                        hrefLang: 'x-default',
                        href: `${homepage}/${metadata.path}`,
                    }]}
+                   noindex={noindex}
+                   nofollow={noindex}
                />
   )
 }

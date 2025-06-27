@@ -13,7 +13,7 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Creative and Content Services | HiveMinds",
+  title:"Creative Content Management Services – Branding | Hiveminds",
   metaDescription:"Elevate your brand with HiveMinds' creative content solutions. We blend data-driven insights with storytelling to craft immersive experiences that drive engagement and growth.",
   path:"services/creative-content-management",
   img:"homepage.png",
