@@ -72,6 +72,33 @@ export const QUERY_POST_BY_SLUG = gql`
             sizes
           }
         }
+          relatedBlogs {
+        edges {
+          node {
+            ... on Post {
+              id
+              slug
+              title
+              blogFields {
+                heroImage {
+                  node {
+                    altText
+                    sourceUrl
+                  }
+                }
+              }
+                categories {
+                nodes {
+                  id
+                  name
+                  slug
+                }
+              }
+              date
+            }
+          }
+        }
+      }
         blogType
       }
       author{

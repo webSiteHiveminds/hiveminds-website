@@ -5,10 +5,9 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
-
 gsap.registerPlugin(ScrollTrigger);
 
-const relatedBlogsData = [
+const staticdata = [
   {
     id: 1,
     title: "Decoding Attribution Windows: Finding the Perfect Fit for Your Marketing Strategy",
@@ -34,26 +33,25 @@ const relatedBlogsData = [
     link: "/blog/top-9-seo-trends-in-2025",
   },
 ];
-
-const RelatedBlogs = () => {
+const RelatedBlogs = ({ blogs }) => {
+  const displayedBlogs = blogs?.length > 0 ? blogs.slice(0, 3) : staticdata;
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".related-blog", {
-        y: 100,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#related-blogs",
-          start: "top 60%",
-        },
+      const ctx = gsap.context(() => {
+        gsap.from(".related-blog", {
+          y: 100,
+          opacity: 0,
+          stagger: 0.2,
+          duration: 2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: "#related-blogs",
+            start: "top 60%",
+          },
+        });
       });
-    });
-
-    return () => ctx.revert();
-  }, []);
-
+  
+      return () => ctx.revert();
+    }, []);
   return (
     <section className="h-full w-screen pb-[5%] mobile:py-[10%]" id="related-blogs">
       <div className="py-[4vw] w-full container-lg">
@@ -70,24 +68,58 @@ const RelatedBlogs = () => {
           </div>
         </div>
         <div className="w-full flex pt-[5vw] pb-[1vw] gap-[1vw] mobile:flex-col mobile:gap-[7vw] mobile:mt-[7vw] tablet:gap-[2vw]">
-          {relatedBlogsData.map((blog) => (
-            <div key={blog.id} className={`blogs related-blog group blog-link ${blog.id % 3 == 0 ? "tablet:hidden" : ""}`}>
-              <Link href={blog.link} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw] tablet:w-[44vw] tablet:h-[30vw] tablet:rounded-[2.5vw]">
+        {displayedBlogs.map((blog, index) => {
+            const isStatic = !blog.heroImage;
+            const img = isStatic ? blog.imgSrc : blog.heroImage?.sourceUrl || "";
+            const alt = isStatic ? blog.title : blog.heroImage?.altText || blog.title;
+            const link = isStatic ? blog.link : `/blog/${blog.slug}`;
+            const category = isStatic ? blog.category : blog.category?.[0]?.name;
+            const date = new Date(blog.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            });
+
+            return (
+              <BlogCard
+                key={index}
+                img={img}
+                title={blog.title}
+                alt={alt}
+                link={link}
+                category={category}
+                date={date}
+              />
+            );
+          })}
+</div>
+
+      </div>
+    </section>
+  );
+};
+
+export default RelatedBlogs;
+
+const BlogCard=({key,img,title, alt,link, category,date})=>{
+  return(
+    <>
+     <div key={key} className={`blogs related-blog group blog-link`}>
+              <Link href={link} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw] tablet:w-[44vw] tablet:h-[30vw] tablet:rounded-[2.5vw]">
                 <Image
-                  src={blog.imgSrc}
-                  height={390}
+                   src={img} alt={alt}
                   width={570}
-                  alt={blog.title}
+                  height={500}
                   className="object-cover w-full h-full group-hover:scale-[1.1] transistion-all duration-500 ease-in-out"
                 />
               </Link>
-              <div className="py-[1vw] w-[80%] mobile:w-full mobile:mt-[7vw] mobile:flex mobile:flex-col mobile:gap-[1.5vw] tablet:ml-[1vw]">
-                <p className="text-[1.5vw] font-medium mobile:text-[6vw] mobile:leading-[1.2] tablet:text-[3vw]">{blog.title}</p>
+              <div className="py-[1vw] w-[90%] mobile:w-full mobile:mt-[7vw] mobile:flex mobile:flex-col mobile:gap-[1.5vw] tablet:ml-[1vw]">
+                <p className="text-[1.5vw] font-medium mobile:text-[6vw] mobile:leading-[1.2] tablet:text-[3vw]">{title}</p>
                 <div className="flex items-center gap-[3vw] w-[80%] py-[1vw] pb-[2vw] mobile:w-full mobile:justify-between tablet:w-full tablet:gap-[5vw] ">
-                  <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{blog.category}</p>
-                  <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{blog.date}</p>
+                  <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{category}</p>
+                  <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{date} </p>
                 </div>
-                <Link href={blog.link}>
+                <Link href={link}>
                   <div className="w-fit">
                     <div
                       className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5vw] `}
@@ -119,11 +151,6 @@ const RelatedBlogs = () => {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default RelatedBlogs;
+    </>
+  )
+}

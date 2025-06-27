@@ -89,6 +89,24 @@ export const QUERY_CASESTUDY_BY_SLUG = gql`
           }
         }
       }
+        caseStudyFields {
+      relatedCaseStudies {
+        nodes {
+          ... on CaseStudy {
+            id
+            featuredImage {
+              node {
+                altText
+                sourceUrl
+                srcSet
+              }
+            }
+            slug
+            title
+          }
+        }
+      }
+    }
       modified
       content
       date
