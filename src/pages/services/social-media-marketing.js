@@ -14,8 +14,8 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 
 
 const metadata={
-  title:"Social Media Marketing Services – Digital Presence | Hiveminds",
-  metaDescription:"Grow your brand with HiveMinds' social media marketing. We create data-driven strategies and engaging content to boost reach, engagement, and conversions.",
+  title:"Social Media Marketing Services | Hiveminds",
+  metaDescription:"Hiveminds provides expert social media marketing services to enhance brand visibility, boost engagement, and drive ROI across all major digital platforms.",
   path:"services/social-media-marketing",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

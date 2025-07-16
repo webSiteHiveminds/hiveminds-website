@@ -4,7 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
-const Hero = ({ title1,title2, img }) => {
+const Hero = ({ title1, img }) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(".image-cover", {
@@ -26,9 +26,8 @@ const Hero = ({ title1,title2, img }) => {
     >
       <div className="w-full h-full container-lg flex justify-between mobile:flex-col mobile:gap-10 tablet:flex-col tablet:gap-[10vw]">
         <div className="w-[50%] flex flex-col gap-[1vw] pt-[7vw] mobile:w-full mobile:gap-4 mobile:pt-0 tablet:w-full tablet:gap-[4vw]">
-        <h1 className="heading-1 leading-[1.2] headingAnim">
+          <h1 className="heading-1 leading-[1.2] headingAnim">
             {title1}
-            <span className="text-primary">{" "}{title2}</span>
           </h1>
         </div>
         <div className="w-[40%] h-[100%] relative rounded-[1.2vw] mobile:rounded-[1.2rem] overflow-hidden  mobile:w-full mobile:h-[90vw] tablet:w-3/5 tablet:rounded-3xl">

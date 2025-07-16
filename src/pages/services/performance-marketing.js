@@ -14,8 +14,8 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 
 
 const metadata={
-  title:"Performance Marketing Services – Optimized ROI | Hiveminds",
-  metaDescription:"Maximize ROI with HiveMinds' data-driven performance marketing. We optimize customer journeys using AI-driven strategies, precision targeting, and real-time analytics.",
+  title:"Performance Marketing Services | HiveMinds",
+  metaDescription:"HiveMinds drives ROI with performance marketing across paid search, social, and display—scalable strategies for growth-focused digital brands.",
   path:"services/performance-marketing",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

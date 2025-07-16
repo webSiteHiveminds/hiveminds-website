@@ -13,8 +13,8 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata = {
-  title: "HiveMinds: Innovating Digital Marketing with Data-Driven Solutions",
-  metaDescription: "Discover how HiveMinds' leadership and collaborative culture drive innovative, data-driven digital marketing strategies for brand transformation and growth.",
+  title: "HiveMinds: Delivering Data-Driven Digital Excellence",
+  metaDescription: "HiveMinds' leadership and collaborative spirit power data-driven marketing strategies that elevate brands and enable sustainable growth.",
   path: "about-us",
   img: "homepage.png",
   date_published: "2025-03-21T00:00",

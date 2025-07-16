@@ -11,8 +11,8 @@ import { WebpageJsonLd } from '@/lib/json-ld';
 import styles from '@/styles/jobs.module.css'
 
 const metadata = {
-    title: "HiveMinds Careers | Join Our Innovative Digital Team",
-    metaDescription: "Explore career opportunities at HiveMinds. Join our team to drive digital transformation, innovate in marketing, and grow your career in a collaborative environment.",
+    title: "HiveMinds Careers | Create Impact in the Digital Space",
+    metaDescription: "Discover career opportunities at HiveMinds. Be part of a collaborative team driving digital innovation, marketing excellence, and career growth.",
     path: "careers",
     img: "homepage.png",
     date_published: "2025-03-21T00:00",

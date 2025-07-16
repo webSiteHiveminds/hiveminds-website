@@ -13,8 +13,8 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Branding & Programmatic Advertising Services | HiveMinds",
-  metaDescription:"Build a powerful brand with HiveMinds. We craft compelling identities using creative storytelling, data-driven insights, and multi-channel strategies.",
+  title:"HiveMinds: Branding Excellence & Programmatic Expertise",
+  metaDescription:"Build a strong brand with HiveMinds through data-backed storytelling, creative identity design, and multi-channel strategies that drive lasting impact.",
   path:"services/branding",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

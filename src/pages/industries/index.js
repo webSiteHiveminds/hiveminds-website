@@ -9,8 +9,8 @@ import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
 
 const metadata = {
-  title: "HiveMinds: Digital Marketing for Diverse Industries",
-  metaDescription: "HiveMinds crafts data-driven strategies for FMCG, health, fintech, e-commerce, fashion, and more to drive brand growth and engagement.",
+  title: "HiveMinds: Tailored Digital Marketing Across Industries",
+  metaDescription: "HiveMinds builds data-led strategies for FMCG, health, fintech, fashion, and ecommerce brands to boost engagement, visibility, and business growth.",
   path: "industries",
   img: "homepage.png",
   date_published: "2025-03-21T00:00",

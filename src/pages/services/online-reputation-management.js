@@ -15,7 +15,7 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
   title:"Online Reputation Management Services | HiveMinds",
-  metaDescription:"Safeguard your brand with HiveMinds' ORM services. We monitor, manage, and enhance your online presence, building trust and loyalty through proactive strategies.",
+  metaDescription:"HiveMinds offers strategic online reputation management to protect, build, and enhance your brand presence across digital channels with measurable results.",
   path:"services/online-reputation-management",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

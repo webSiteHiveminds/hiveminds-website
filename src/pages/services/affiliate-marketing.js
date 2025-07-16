@@ -13,8 +13,8 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Affiliate Marketing Services – Performance Growth | Hiveminds",
-  metaDescription:"Boost revenue with HiveMinds' affiliate marketing services. We drive growth through strategic partnerships, data-driven campaigns, and performance tracking.",
+  title:"Affiliate Marketing Software for Sales & Brand Growth | Hiveminds",
+  metaDescription:"Power your business with Hiveminds’ affiliate marketing platform designed to connect brands with affiliates and boost sales through seamless tracking and payouts.",
   path:"services/affiliate-marketing",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

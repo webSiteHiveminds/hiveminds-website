@@ -12,8 +12,8 @@ import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
 
 const metadata = {
-  title: "HiveMinds School of Digital | Advanced Digital Marketing Courses",
-  metaDescription: "Join HiveMinds School of Digital for expert-led courses in SEO, Google Ads, and advanced digital marketing. Perfect for students and professionals looking to upskill.",
+  title: "HiveMinds School of Digital | Master Digital Marketing",
+  metaDescription: "Upskill with HiveMinds School of Digital through expert-led courses in SEO, Google Ads, and advanced marketing—ideal for students and professionals alike.",
   path: "school-of-digital",
   img: "homepage.png",
   date_published: "2025-03-21T00:00",

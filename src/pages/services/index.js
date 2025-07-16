@@ -11,8 +11,8 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 import Loader from '@/components/Loader'
 
 const metadata={
-  title:"HiveMinds Digital Marketing Services for Business Growth",
-  metaDescription:"HiveMinds offers SEO, performance marketing, content, ORM, and analytics to help brands grow digitally with data-driven strategies.",
+  title:"HiveMinds Marketing Services That Fuel Business Success",
+  metaDescription:"HiveMinds provides SEO, performance marketing, content, ORM, and analytics services that empower brands to grow digitally through data-driven strategies.",
   path:"services",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

@@ -11,8 +11,8 @@ import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
 
 const metadata = {
-    title: "HiveMinds | Digital Growth Solutions for Brands",
-    metaDescription: "Explore HiveMinds' expert digital strategies for e-commerce growth, demand generation, customer retention, app marketing, and brand identity.",
+    title: "Digital Marketing Solutions for Growth | Hiveminds",
+    metaDescription: "Hiveminds offers ROI-driven digital marketing solutions including SEO, paid ads, analytics, and automation to accelerate business growth across sectors.",
     path: "solutions",
     img: "homepage.png",
     date_published: "2025-03-21T00:00",

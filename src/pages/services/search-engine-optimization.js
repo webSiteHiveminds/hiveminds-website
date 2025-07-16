@@ -14,8 +14,8 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 
 
 const metadata={
-  title:"Search Engine Optimization Services | HiveMinds",
-  metaDescription:"Boost your online presence with HiveMinds' SEO services. We offer technical audits, content creation, link building, and analytics to drive sustainable growth.",
+  title:"SEO Services to Boost Visibility | HiveMinds",
+  metaDescription:"HiveMinds offers data-driven SEO services to increase search visibility, organic traffic, and rankings across Google and other major search engines.",
   path:"services/search-engine-optimization",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",

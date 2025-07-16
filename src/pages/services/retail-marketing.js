@@ -13,8 +13,8 @@ import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
-  title:"Retail Marketing Services – Strategy & Execution | Hiveminds",
-  metaDescription:"  Elevate your e-commerce presence with HiveMinds' data-driven retail strategies, optimizing every touchpoint from discovery to conversion for sustainable growth.",
+  title:"Retail Marketing Solutions to Grow Your Customer Base | Hiveminds",
+  metaDescription:"Customized retail marketing services that increase customer acquisition, boost sales, and strengthen your brand in competitive retail markets.",
   path:"services/retail-marketing",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",
