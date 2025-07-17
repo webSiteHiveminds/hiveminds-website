@@ -7,8 +7,8 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 import React from 'react'
 
 const metadata={
-    title:"BFSI & Fintech Digital Marketing | HiveMinds",
-    metaDescription:"HiveMinds offers full-funnel digital marketing for BFSI & fintech—boosting product adoption, customer journey optimization, CRM loyalty, performance ads & innovation.",
+    title:"HiveMinds Case Studies | Scaling Success in BFSI & Fintech",
+    metaDescription:"HiveMinds showcases success in BFSI and Fintech with case studies featuring data-driven strategies that improve growth, engagement, and ROI for top brands.",
     path:"industries/bfsi-fintech",
     img:"homepage.png",
       date_published: "2025-07-16T00:00",

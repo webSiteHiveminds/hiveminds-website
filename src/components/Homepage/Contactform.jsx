@@ -75,7 +75,7 @@ export default function ContactForm() {
         }).filter(Boolean);
         setBlockedDomains(domains);
       } catch (err) {
-        console.error("Error loading blocked domains:", err);
+        // console.error("Error loading blocked domains:", err);
       } finally {
         setDomainsLoaded(true);
       }
@@ -119,7 +119,7 @@ export default function ContactForm() {
     } catch (error) {
       setIsNotSubmitted(true);
       setTimeout(() => setIsNotSubmitted(false), 7000);
-      console.error(error);
+      // console.error(error);
     } finally {
       setIsLoading(false);
     }

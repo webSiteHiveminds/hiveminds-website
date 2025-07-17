@@ -8,8 +8,8 @@ import React from 'react'
 
 
 const metadata={
-    title:"Consumer Durables Digital Marketing | HiveMinds",
-    metaDescription:"HiveMinds combines creative strategy and data to drive growth for consumer durables—enhancing customer experience, boosting conversions and brand loyalty.",
+    title:"HiveMinds Case Studies | Growth in Electronics & Durables",
+    metaDescription:"HiveMinds showcases success in electronics and consumer durables through case studies featuring data-led strategies that enhance reach, sales, and ROI.",
     path:"industries/consumer-durables",
     img:"homepage.png",
       date_published: "2025-07-16T00:00",

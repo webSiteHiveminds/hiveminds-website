@@ -8,8 +8,8 @@ import React from 'react'
 
 
 const metadata={
-    title:"FMCG & Beauty Digital Marketing | HiveMinds",
-    metaDescription:"Data-driven digital marketing for FMCG & beauty brands—creative content, consumer engagement, brand loyalty, performance campaigns to grow visibility & global reach.",
+    title:"HiveMinds Case Studies | Driving FMCG & Beauty Growth",
+    metaDescription:"HiveMinds drives success in FMCG and Beauty with case studies highlighting data-led marketing strategies that elevate growth, engagement, and ROI.",
     path:"industries/fmcg-and-beauty",
     img:"homepage.png",
       date_published: "2025-07-16T00:00",

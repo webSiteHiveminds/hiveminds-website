@@ -16,7 +16,7 @@ export default function Blogs({ industry, industries }) {
   fadeUp();
   fadeIn();
 
-  console.log(industry);
+  // console.log(industry);
 
   const metadata = {
     title: `${industry.seo.title}`,

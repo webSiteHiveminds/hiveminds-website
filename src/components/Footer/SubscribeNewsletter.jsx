@@ -21,7 +21,7 @@ const SubscribeNewsletter = () => {
         }).filter(Boolean);
         setBlockedDomains(domains);
       } catch (err) {
-        console.error("Error loading blocked domains:", err);
+        // console.error("Error loading blocked domains:", err);
       } finally {
         setDomainsLoaded(true);
       }
@@ -52,7 +52,7 @@ const SubscribeNewsletter = () => {
 
     // Extract domain from email and convert to lowercase
     const emailDomain = email.split("@")[1]?.toLowerCase();
-    console.log("Entered Email Domain:", emailDomain);
+    // console.log("Entered Email Domain:", emailDomain);
 
     // Check if email domain is in the blocked list
     if (!emailDomain || blockedDomains.includes(emailDomain)) {

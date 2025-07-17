@@ -71,7 +71,7 @@ export default function BrochureForm() {
       setTimeout(() => {
         setisNotSubmitted(false);
       }, 7000);
-      console.log(error);
+      // console.log(error);
     } finally {
       setIsLoading(false);
     }

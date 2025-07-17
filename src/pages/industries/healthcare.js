@@ -8,8 +8,8 @@ import React from 'react'
 
 
 const metadata={
-    title:"Healthcare Digital Marketing | HiveMinds",
-    metaDescription:"HiveMinds delivers full‑funnel digital marketing for healthcare brands—boosting app installs, patient engagement, telehealth growth, CRM and performance campaigns.",
+    title:"HiveMinds Case Studies | Scaling Health & Wellness Brands",
+    metaDescription:"HiveMinds showcases Health & Wellness success with case studies featuring data-driven marketing strategies that enhance growth, engagement, and ROI.",
     path:"industries/healthcare",
     img:"homepage.png",
       date_published: "2025-07-16T00:00",
