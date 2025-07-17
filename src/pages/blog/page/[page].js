@@ -32,7 +32,7 @@ export default function Blog({ posts, pagination }) {
 
   return (
     <>
-      <Metadata metadata={metadata} noindex={true} />
+      <Metadata metadata={metadata} noindex={true}/>
       <Layout>
         <Hero
           title1={"What's"}

@@ -29,13 +29,14 @@ export default function CaseStudyDetail({ caseStudy }) {
         slug,
         featuredImage,
         metaImage,
+        metaTitle,
         metaDescription,
         caseStudyFields
     } = caseStudy;
 
     const path = caseStudyPathBySlug(slug);
     const metadata = {
-        title: { title },
+        title: { metaTitle },
         metaDescription: { metaDescription },
         path: `${path}`,
         img: "homepage.png",
@@ -51,12 +52,12 @@ export default function CaseStudyDetail({ caseStudy }) {
     return (
         <>
             <NextSeo
-                title={title}
+                title={metaTitle}
                 description={metaDescription}
                 openGraph={{
                     type: 'webpage',
                     url: `${homepage}/${path}`,
-                    title: title,
+                    title: metaTitle,
                     "description": metaDescription,
                     images: [
                         {

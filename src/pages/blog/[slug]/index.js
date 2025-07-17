@@ -24,6 +24,7 @@ export default function BlogDetail({ post }) {
         categories,
         slug,
         excerpt,
+        metaTitle,
         metaImage,
         metaDescription,
         blogFields,
@@ -42,12 +43,12 @@ export default function BlogDetail({ post }) {
     return (
         <>
             <NextSeo
-                title={title}
+                title={metaTitle}
                 description={metaDescription}
                 openGraph={{
                     type: 'article',
                     url: `${homepage}/${path}`,
-                    title: title,
+                    title: metaTitle,
                     "description": metaDescription,
                     images: [
                         {

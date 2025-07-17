@@ -22,6 +22,18 @@ export const QUERY_INDUSTRY_BY_SLUG = gql`
       id
       name
       slug
+       seo {
+      title
+      opengraphImage {
+        altText
+        sourceUrl
+        mediaDetails {
+          height
+          width
+        }
+      }
+      metaDesc
+    }
       caseStudies(first: 1000) {
         edges {
           node {

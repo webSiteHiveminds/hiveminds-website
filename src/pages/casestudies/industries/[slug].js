@@ -16,9 +16,11 @@ export default function Blogs({ industry, industries }) {
   fadeUp();
   fadeIn();
 
+  console.log(industry);
+
   const metadata = {
-    title: `HiveMinds Case Studies | Transforming Growth in ${industry.name}`,
-    metaDescription: `Discover how HiveMinds drives success in the ${industry.name} sector. Explore case studies showcasing data-driven marketing strategies that boost growth, engagement, and ROI for leading brands.`,
+    title: `${industry.seo.title}`,
+    metaDescription: `${industry.seo.metaDesc}`,
     path: `casestudies/industries/${industry.slug}`,
     img: "homepage.png",
     date_published: "2025-03-21T00:00",
