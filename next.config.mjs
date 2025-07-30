@@ -11,11 +11,24 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: `
       default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live https://va.vercel-scripts.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src 'self' https://fonts.gstatic.com data:;
+      script-src 
+        'self' 
+        'unsafe-inline' 
+        'unsafe-eval' 
+        https://www.googletagmanager.com 
+        https://www.google-analytics.com 
+        https://vercel.live 
+        https://va.vercel-scripts.com 
+        https://hiveminds.keka.com;
+      style-src 'self' 
+        'unsafe-inline' https://fonts.googleapis.com https://cdn.keka.com;
+      font-src 'self' https://fonts.gstatic.com data: https://cdn.keka.com;
       img-src 'self' data: https:;
-      connect-src 'self' https://www.google-analytics.com https://vercel.live https://va.vercel-scripts.com;
+      connect-src 'self'
+        https://www.google-analytics.com
+        https://vercel.live
+        https://va.vercel-scripts.com
+        https://hiveminds.keka.com;
       frame-src 'self' https://snazzymaps.com;
     `.replace(/\s{2,}/g, ' ').trim()
   },
