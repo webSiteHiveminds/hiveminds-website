@@ -56,26 +56,11 @@ const team = [
     src: "/assets/images/about/vinod-monubol.png",
     designation: "VP - Client Success",
   },
-  
- 
   {
     id: 10,
     name: "Aayush Arora",
     src: "/assets/images/about/aayush-arora.png",
     designation: "VP - Client Success",
-  },
- 
-  // {
-  //   id: 11,
-  //   name: "Mohit Grover",
-  //   src: "/assets/images/about/mohit-grover.png",
-  //   designation: "VP - Client Servicing",
-  // },
-  {
-    id: 11,
-    name: "Sikha Agrawalla",
-    src: "/assets/images/about/sikha-agrawalla.png",
-    designation: "VP - People & Culture",
   },
   {
     id: 12,
