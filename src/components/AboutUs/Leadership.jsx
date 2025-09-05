@@ -100,26 +100,61 @@ const Leadership = () => {
             </div>
 
             <div className="mobile:w-screen mobile:overflow-hidden">
-              <div className="flex gap-[1.5vw] flex-wrap w-full h-full py-[2vw] mobile:flex-nowrap mobile:overflow-x-auto mobile:gap-[5vw] tablet:gap-[2.5vw]">
-                {team.map((team, id) => (
-                  <div className="flex flex-col mb-[2vw] gap-[0.5vw] py-[1vw] fadeup mobile:first:pl-[5vw] mobile:last-of-type:pr-[5vw] mobile:gap-4 tablet:gap-[1.5vw]" key={id}>
-                    <div className="w-[29.5vw] h-[33vw] rounded-[1.4vw] overflow-hidden bg-black mobile:w-[80vw] mobile:h-[90vw] mobile:rounded-[1.2rem] tablet:w-[43vw] tablet:h-[50vw]">
-                      <Image
-                        src={team.src}
-                        alt={`${team.name} image`}
-                        width={500}
-                        height={700}
-                        className="w-full h-full object-cover hover:scale-[1.07] transition-all duration-500 ease-in-out"
-                      />
+              <div className="flex flex-col w-full h-full py-[2vw]">
+                {/* First Row → Only first 2 members */}
+                <div className="flex gap-[1.5vw] justify-center mobile:mb-10 mobile:justify-normal flex-wrap w-full mb-[2vw] mobile:flex-nowrap mobile:overflow-x-auto mobile:gap-[5vw] tablet:gap-[2.5vw]">
+                  {team.slice(0, 2).map((member, id) => (
+                    <div
+                      className="flex flex-col gap-[0.5vw] py-[1vw] fadeup mobile:first:pl-[5vw] mobile:last-of-type:pr-[5vw] mobile:gap-4 tablet:gap-[1.5vw]"
+                      key={id}
+                    >
+                      <div className="w-[29.5vw] h-[33vw] rounded-[1.4vw] overflow-hidden bg-black mobile:w-[80vw] mobile:h-[90vw] mobile:rounded-[1.2rem] tablet:w-[43vw] tablet:h-[50vw]">
+                        <Image
+                          src={member.src}
+                          alt={`${member.name} image`}
+                          width={500}
+                          height={700}
+                          className="w-full h-full object-cover hover:scale-[1.07] transition-all duration-500 ease-in-out"
+                        />
+                      </div>
+                      <div className="flex flex-col mobile:pl-2 tablet:pl-2">
+                        <h4 className="text-[1.6vw] pt-[1vw] mobile:text-lg leading-[1.2] tablet:text-[3.5vw]">
+                          {member.name}
+                        </h4>
+                        <p className="content">{member.designation}</p>
+                      </div>
                     </div>
-                    <div className="flex flex-col mobile:pl-2 tablet:pl-2">
-                      <h4 className="text-[1.6vw] pt-[1vw] mobile:text-lg leading-[1.2] tablet:text-[3.5vw]">{team.name}</h4>
-                      <p className="content">{team.designation}</p>
+                  ))}
+                </div>
+
+                {/* Second Row → Rest of team */}
+                <div className="flex gap-[1.5vw] flex-wrap w-full mobile:flex-nowrap mobile:overflow-x-auto mobile:gap-[5vw] tablet:gap-[2.5vw]">
+                  {team.slice(2).map((member, id) => (
+                    <div
+                      className="flex flex-col mb-[2vw] gap-[0.5vw] py-[1vw] fadeup mobile:first:pl-[5vw] mobile:last-of-type:pr-[5vw] mobile:gap-4 tablet:gap-[1.5vw]"
+                      key={id}
+                    >
+                      <div className="w-[29.5vw] h-[33vw] rounded-[1.4vw] overflow-hidden bg-black mobile:w-[80vw] mobile:h-[90vw] mobile:rounded-[1.2rem] tablet:w-[43vw] tablet:h-[50vw]">
+                        <Image
+                          src={member.src}
+                          alt={`${member.name} image`}
+                          width={500}
+                          height={700}
+                          className="w-full h-full object-cover hover:scale-[1.07] transition-all duration-500 ease-in-out"
+                        />
+                      </div>
+                      <div className="flex flex-col mobile:pl-2 tablet:pl-2">
+                        <h4 className="text-[1.6vw] pt-[1vw] mobile:text-lg leading-[1.2] tablet:text-[3.5vw]">
+                          {member.name}
+                        </h4>
+                        <p className="content">{member.designation}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
