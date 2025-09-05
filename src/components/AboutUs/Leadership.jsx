@@ -69,6 +69,7 @@ const team = [
     designation: "VP - Growth",
   },
 ];
+
 const Leadership = () => {
   return (
     <>
