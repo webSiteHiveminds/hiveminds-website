@@ -8,7 +8,7 @@ export default function ShareDetails({ slug, date }) {
 
     return (
         <>
-            <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw] sticky top-[8vw] tablet:static mobile:static tablet:w-full'>
+            <div className='blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw] sticky top-[8vw] tablet:static mobile:static tablet:w-full'>
                 <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] tablet:text-[2.5vw] tablet:mb-[1vw] fadeup'>Posted On:</p>
                 <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw] tablet:text-[3.5vw] fadeup'>{formattedDate}</p>
                 <div className='py-[2vw]'>
