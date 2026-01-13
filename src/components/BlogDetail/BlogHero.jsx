@@ -15,7 +15,7 @@ const BlogHero = ({ title, excerpt, featuredImg, category }) => {
             {title}
           </h1>
           <ul className="list-disc py-[1vw] px-[1vw] mobile:px-[4vw]">
-            <li data-para-anim className="content">{category}</li>   
+            <li data-para-anim className="content">{category}</li>
           </ul>
           <div
             dangerouslySetInnerHTML={{ __html: excerpt }}
@@ -23,9 +23,9 @@ const BlogHero = ({ title, excerpt, featuredImg, category }) => {
           />
         </div>
         <div className="w-[40%] h-[40vw] relative rounded-[1.2vw] overflow-hidden  mobile:w-full mobile:rounded-[4.5vw] mobile:h-[85vw] tablet:w-full tablet:h-[60vw] tablet:rounded-[3vw]">
-        <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-[#f1f1f1] mobile:bg-white1 imgAnim origin-bottom">
+          <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-[#f1f1f1] mobile:bg-white1 imgAnim origin-bottom">
 
-</div>
+          </div>
           <Image
             src={featuredImg.sourceUrl}
             sizes={featuredImg.sizes}
