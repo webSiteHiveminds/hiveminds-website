@@ -92,12 +92,12 @@ const FooterMobile = () => {
                 <div className="mt-[7vw]">
                     <span className="w-[92vw] h-[1px] bg-white block"></span>
                     <div className="w-full flex justify-between mt-[5vw] mobile:flex-col-reverse mobile:justify-start mobile:gap-[5vw]">
-                        <Link href="https://weareenigma.com/">
+                        {/* <Link href="https://weareenigma.com/">
                             <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3.5vw] hover:underline">
                                 By: Enigma
                             </p>
-                        </Link>
-                        <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3.5vw] mobile:w-[70%]">
+                        </Link> */}
+                        <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3.5vw] text-center">
                             © 2025 HiveMinds Innovative Market Solutions Pvt. Ltd. All rights reserved.
                         </p>
                     </div>

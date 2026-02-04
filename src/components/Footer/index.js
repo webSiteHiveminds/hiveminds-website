@@ -121,13 +121,13 @@ const Footer = () => {
         </div>
         <div className="mt-[3vw] tablet:mt-[8vw] tablet:w-[92%] tablet:mx-auto">
           <span className="w-[95vw] h-[1px] bg-white block tablet:w-full"></span>
-          <div className="w-full flex items-center justify-between mt-[2vw] tablet:items-start">
-            <Link href="https://weareenigma.com/">
+          <div className="w-full flex items-center justify-center mt-[2vw] tablet:items-start">
+            {/* <Link href="https://weareenigma.com/">
               <p className="text-white text-[0.94vw] tracking-wide tablet:text-xl hover:underline">
                 By: Enigma
               </p>
-            </Link>
-            <p className="text-white text-[0.94vw] tracking-wide tablet:text-xl tablet:w-[60%] pr-[5vw] tablet:pr-[8vw]">
+            </Link> */}
+            <p className="text-white text-[0.94vw] tracking-wide tablet:text-xl tablet:w-[80%] text-center pr-[5vw] tablet:pr-[8vw]">
               © 2025 HiveMinds Innovative Market Solutions Pvt. Ltd. All rights reserved.
             </p>
           </div>
