@@ -65,11 +65,11 @@ export function Clients2() {
           </p>
         </div>
         <div className="  text-center mobile:text-left">
-          <p className=" text-[1.24vw] text-[#111111] montreal font-bold mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw]">
+          {/* <p className=" text-[1.24vw] text-[#111111] montreal font-bold mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw]">
             Clients
-          </p>
+          </p> */}
 
-          <Marquee pauseOnHover="true" speed={40}>
+          {/* <Marquee pauseOnHover="true" speed={40}>
             {clients1.map((logoSrc, index) => (
               <div
                 key={index}
@@ -85,9 +85,9 @@ export function Clients2() {
                 />
               </div>
             ))}
-          </Marquee>
+          </Marquee> */}
 
-          <Marquee pauseOnHover="true" speed={40} direction="right">
+          {/* <Marquee pauseOnHover="true" speed={40} direction="right">
             {clients2.map((logoSrc, index) => (
               <div
                 key={index}
@@ -103,7 +103,7 @@ export function Clients2() {
                 />
               </div>
             ))}
-          </Marquee>
+          </Marquee> */}
 
           <p className="text-[1.24vw] text-[#111111] montreal font-bold py-[2vw] mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw] tablet:py-[5vw]">
             Platform & Media Partner

@@ -93,14 +93,14 @@ const Card = ({img, title, link, alt}) => {
   return (
     <>
       <Link href={link} className={"tablet:last:hidden"}>
-        <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.2vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw] tablet:h-[45vw] tablet:w-[45vw] tablet:rounded-[3vw]">
-          <Image
+        <div className="relative bg-gradient-to-r from-blue-400 to-blue-600 casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.2vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw] tablet:h-[45vw] tablet:w-[45vw] tablet:rounded-[3vw]">
+          {/* <Image
             src={img}
             height={450}
             width={450}
             alt={alt}
             className="hover:scale-[1.1] transition-all ease-in-out duration-500 hover:brightness-75 w-full h-full object-fit"
-          />
+          /> */}
           <div className="absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[1vw] mobile:gap-[2.5vw] mobile:left-[5%]">
             <p className="text-white text-[2.5vw] font-medium montreal mobile:text-[6.5vw]">
               {title}

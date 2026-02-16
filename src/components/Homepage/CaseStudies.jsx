@@ -177,7 +177,10 @@ const CaseStudies = ({ caseStudies }) => {
                     <SwiperSlide key={index}>
                       <Link href={`/${caseStudyPathBySlug(item.slug)}`}>
                         <div className="relative w-[25vw] h-[30.5vw] group mobile:w-full mobile:h-[90vw] tablet:w-[55vw] tablet:h-[70vw]">
-                          <Image
+                          <div 
+                            className="w-full h-full border border-primary rounded-2xl bg-gradient-to-r from-blue-400 to-blue-600"
+                          />
+                          {/* <Image
                             src={item.caseStudyFields.homepageListing.listingImage.node.sourceUrl}
                             fill
                             sizes={item.caseStudyFields.homepageListing.listingImage.node.sizes}
@@ -186,7 +189,7 @@ const CaseStudies = ({ caseStudies }) => {
                               "case study image"
                             }
                             className="object-contain group-hover:brightness-75 transistion-all duration-500 ease-in-out"
-                          />
+                          /> */}
                           <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px] mobile:right-[8%] mobile:top-[4%] mobile:w-[25vw] tablet:w-[30vw] tablet:right-[-5%] tablet:top-[5%]">
                             <div className="flex flex-col justify-center  w-[70%] mobile:w-full">
                               <p className="font-medium text-[2vw] leading-[1] mobile:text-[5vw] tablet:text-[3vw]">

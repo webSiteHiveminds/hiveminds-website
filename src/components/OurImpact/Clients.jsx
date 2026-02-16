@@ -93,7 +93,7 @@ export function Clients() {
   return (
     <section id="clients" className="tablet:py-[7%]">
       <div className="w-screen h-full flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:pl-[3.8vw] mobile:gap-[4vw] tablet:items-start tablet:px-[6vw]">
+        {/* <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:pl-[3.8vw] mobile:gap-[4vw] tablet:items-start tablet:px-[6vw]">
           <h2 className="heading-2 headingAnim">
             Our
             <span className="blue-text"> Clients</span>
@@ -102,9 +102,9 @@ export function Clients() {
             Our diverse & growing portfolio spanning from lean startups to
             household brands - and everything in between
           </p>
-        </div>
+        </div> */}
         <div className="  text-center">
-          <Marquee pauseOnHover="true" speed={40}>
+          {/* <Marquee pauseOnHover="true" speed={40}>
             {clients1.map((logoSrc, index) => (
               <div
                 key={index}
@@ -120,9 +120,9 @@ export function Clients() {
                 />
               </div>
             ))}
-          </Marquee>
+          </Marquee> */}
 
-          <Marquee pauseOnHover="true" speed={40} direction="right">
+          {/* <Marquee pauseOnHover="true" speed={40} direction="right">
             {clients2.map((logoSrc, index) => (
               <div
                 key={index}
@@ -136,8 +136,8 @@ export function Clients() {
                 />
               </div>
             ))}
-          </Marquee>
-          <Marquee pauseOnHover="true" speed={40} direction="left">
+          </Marquee> */}
+          {/* <Marquee pauseOnHover="true" speed={40} direction="left">
             {clients3.map((logoSrc, index) => (
               <div
                 key={index}
@@ -151,8 +151,8 @@ export function Clients() {
                 />
               </div>
             ))}
-          </Marquee>
-          <Marquee pauseOnHover="true" speed={40} direction="right">
+          </Marquee> */}
+          {/* <Marquee pauseOnHover="true" speed={40} direction="right">
             {clients4.map((logoSrc, index) => (
               <div
                 key={index}
@@ -166,7 +166,7 @@ export function Clients() {
                 />
               </div>
             ))}
-          </Marquee>
+          </Marquee> */}
 
           <div className="flex flex-col items-center justify-center gap-[1vw] pt-[7vw] pb-[5vw] mobile:items-start mobile:ml-[3.8vw] mobile:gap-[4vw] mobile:pt-[10vw] tablet:items-start tablet:justify-start tablet:px-[6vw] tablet:py-[10%]">
             <h2 className="heading-2 headingAnim">
