@@ -196,6 +196,15 @@ export function mapPostData(post = {}) {
     data.featuredImage = data.featuredImage.node;
   }
 
+  // Clean up tags for easier access
+
+  if (data.tags) {
+    data.tags = data.tags.nodes.map(({ name, slug }) => ({
+      name,
+      slug,
+    }));
+  }
+
   return data;
 }
 

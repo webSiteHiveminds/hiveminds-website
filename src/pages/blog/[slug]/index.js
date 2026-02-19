@@ -6,7 +6,7 @@ import Content from "@/components/BlogDetail/Content";
 import BlogHero from "@/components/BlogDetail/BlogHero";
 import { NextSeo } from "next-seo";
 import { ArticleJsonLd} from "@/lib/json-ld";
-import { homepage } from "@/lib/util";
+import { getTextPreview, homepage } from "@/lib/util";
 
 export default function BlogDetail({ post }) {
     
@@ -28,9 +28,12 @@ export default function BlogDetail({ post }) {
         metaImage,
         metaDescription,
         blogFields,
+        tags,
+        preview,
     } = post;
 
     const path = postPathBySlug(slug);
+    const isGated = Array.isArray(tags) && tags.some((tag) => tag?.slug === "gated");
     
     const relatedBlogsData = blogFields?.relatedBlogs?.edges?.map(edge => ({
         id: edge.node.id,
@@ -75,7 +78,13 @@ export default function BlogDetail({ post }) {
                     featuredImg={blogFields.heroImage.node}
                     category={categories[0].name}
                 />
-                <Content date={date} slug={slug} content={content} />
+                <Content
+                    date={date}
+                    slug={slug}
+                    content={content}
+                    isGated={isGated}
+                    preview={preview}
+                />
                 <RelatedBlogs blogs={relatedBlogsData}/>
             </Layout>
         </>
@@ -93,8 +102,12 @@ export async function getStaticProps({ params = {} }) {
         };
     }
 
+    const isGated = Array.isArray(post.tags) && post.tags.some((tag) => tag?.slug === "gated");
+    const preview = isGated ? getTextPreview(post.content, 400) : null;
+    const gatedPost = isGated ? { ...post, content: null, preview } : post;
+
     const props = {
-        post,
+        post: gatedPost,
     }
 
     return {

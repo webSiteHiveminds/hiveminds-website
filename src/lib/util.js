@@ -32,5 +32,18 @@ export function removeExtraSpaces(text) {
   return text.replace(/\s+/g, ' ').trim();
 }
 
+export function stripHtml(html) {
+  if (typeof html !== 'string') return '';
+  const withoutTags = html.replace(/<[^>]*>/g, ' ');
+  const withoutNbsp = withoutTags.replace(/&nbsp;/g, ' ');
+  return removeExtraSpaces(decodeHtmlEntities(withoutNbsp));
+}
+
+export function getTextPreview(html, maxLength = 400) {
+  const text = stripHtml(html);
+  if (!text) return '';
+  return text.length > maxLength ? `${text.slice(0, maxLength)}` : text;
+}
+
 export const homepage = process.env.NEXT_FRONTEND_URL;
 export const faviconPath = 'favicon.ico';
