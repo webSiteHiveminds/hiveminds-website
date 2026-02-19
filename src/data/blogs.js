@@ -25,6 +25,12 @@ export const POST_FIELDS = gql`
     blogFields {
       blogType
     }
+    tags {
+      nodes {
+        name
+        slug
+      }
+    }
     date
     isSticky
     slug
@@ -100,6 +106,12 @@ export const QUERY_POST_BY_SLUG = gql`
         }
       }
         blogType
+      }
+      tags {
+        nodes {
+          name
+          slug
+        }
       }
       author{
         node{
