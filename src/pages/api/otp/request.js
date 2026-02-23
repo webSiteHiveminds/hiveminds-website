@@ -36,6 +36,24 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Failed to send OTP' });
     }
 
+    const { error: leadError } = await resend.emails.send({
+      from: 'HiveMinds <no-reply@hiveminds.in>',
+      to: ['sales.lead@hiveminds.in'],
+      subject: 'New gated blog OTP request',
+      html: `
+        <div style="font-family:Arial,sans-serif;line-height:1.5">
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Slug:</strong> ${slug}</p>
+          <p><strong>Requested at:</strong> ${new Date().toISOString()}</p>
+        </div>
+      `,
+    });
+
+    if (leadError) {
+      console.error('Resend Lead Error:', leadError);
+      // Do not fail the request if the lead email fails
+    }
+
     return res.status(200).json({ success: true });
   } catch (err) {
     console.error('API Error:', err.message);
