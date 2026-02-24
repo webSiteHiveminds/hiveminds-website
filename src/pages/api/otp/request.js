@@ -38,7 +38,7 @@ export default async function handler(req, res) {
 
     const { error: leadError } = await resend.emails.send({
       from: 'HiveMinds <no-reply@hiveminds.in>',
-      to: ['sales.lead@hiveminds.in'],
+      to: ['sales@hiveminds.in'],
       subject: 'New gated blog OTP request',
       html: `
         <div style="font-family:Arial,sans-serif;line-height:1.5">
