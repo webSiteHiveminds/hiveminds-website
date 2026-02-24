@@ -10,7 +10,7 @@ const BlogCard = ({ imgSrc, title, description, link, category, date }) => {
     const formattedDate = formatDate(date);
     
     // make description of 100 words 
-    const descriptionTrimmed = description.substring(0, 95) + '...';
+    const descriptionTrimmed = `${(description || '').substring(0, 95)}...`;
 
     return (
         <div className="w-[30vw] h-fit pl-[0.5vw] pb-[3vw] fadeup group blog-link tablet:w-[44vw] tablet:h-[70vw] mobile:w-[92vw] mobile:h-full">
