@@ -169,7 +169,7 @@ const Content = ({ slug, date, content, isGated = false, preview = "" }) => {
                         ) : (
                             <div
                                 className={`${styles.blogContent}`}
-                                dangerouslySetInnerHTML={{ __html: fullContent || content }}
+                                dangerouslySetInnerHTML={{ __html: fullContent || content || '' }}
                             />
                         )}
                     </div>

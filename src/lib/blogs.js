@@ -2,6 +2,7 @@ import { getApolloClient } from './apollo-client';
 
 import { updateUserAvatar } from './users';
 import { sortObjectsByDate } from './datetime';
+import { normalizeHtmlEntities } from './util';
 
 import {
   QUERY_ALL_POSTS,
@@ -203,6 +204,14 @@ export function mapPostData(post = {}) {
       name,
       slug,
     }));
+  }
+
+  if (typeof data.excerpt === 'string') {
+    data.excerpt = normalizeHtmlEntities(data.excerpt);
+  }
+
+  if (typeof data.content === 'string') {
+    data.content = normalizeHtmlEntities(data.content);
   }
 
   return data;
