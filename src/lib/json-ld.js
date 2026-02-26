@@ -1,7 +1,7 @@
 import { postPathBySlug } from './blogs';
 import { homepage, faviconPath } from './util';
 
-export function ArticleJsonLd({ post = {} }) {
+export function ArticleJsonLd({ post = {}, isAccessibleForFree = true } = {}) {
   const { title, slug, date, author, categories, modified, featuredImage, metaDescription } = post;
   const path = postPathBySlug(slug);
   const datePublished = !!date && new Date(date);
@@ -10,6 +10,7 @@ export function ArticleJsonLd({ post = {} }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    isAccessibleForFree: !!isAccessibleForFree,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${homepage}/${path}`,

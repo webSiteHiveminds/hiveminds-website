@@ -70,7 +70,7 @@ export default function BlogDetail({ post }) {
                     href: `${homepage}/${path}`,
                 }]}
             />
-            <ArticleJsonLd post={post} />
+            <ArticleJsonLd post={post} isAccessibleForFree={!isGated} />
             <Layout>
                 <BlogHero
                     title={title}
