@@ -49,7 +49,7 @@ const ips = () => {
                   Unlock the full potential of your data with HiveMinds&apos;
                   innovative tools. FeedX offers seamless catalog management for
                   D2C brands, handling millions of SKUs daily without ad
-                  rejections. Vizual employs AI and ML to extract rapid image
+                  rejections. Wizual employs AI and ML to extract rapid image
                   insights, and OptiMMMix optimizes media spend using
                   Meta&apos;s Robyn technology.
                 </p>
@@ -109,8 +109,8 @@ const ip = [
   },
   {
     img: "/assets/images/ip/wizual-img.png",
-    title: " Vizual",
-    para: "Vizual is an advanced image analysis solution by HiveMinds that leverages Machine Learning and Artificial Intelligence to transform visual data. By automating image scrutiny, Vizual rapidly extracts critical insights, eliminating manual review. This innovative tool provides actionable intelligence for optimizing creative strategies and enhancing campaign precision, enabling brands to quickly understand visual trends, optimize content, and gain a competitive edge in today’s dynamic digital marketplace.",
+    title: " Wizual",
+    para: "Wizual is an advanced image analysis solution by HiveMinds that leverages Machine Learning and Artificial Intelligence to transform visual data. By automating image scrutiny, Wizual rapidly extracts critical insights, eliminating manual review. This innovative tool provides actionable intelligence for optimizing creative strategies and enhancing campaign precision, enabling brands to quickly understand visual trends, optimize content, and gain a competitive edge in today’s dynamic digital marketplace.",
   },
   {
     img: "/assets/images/ip/optimmmix-img.png",
