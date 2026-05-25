@@ -62,12 +62,12 @@ const Awards = () => {
       date: "2024",
       type:"3 (Gold) "
     },
-    {
-      imgSrc: "/assets/images/impact/awards/amazon-ads.png",
-      awardTitle: "Amazon Ads",
-      date: "2023",
-      type:"2 (Bronze)"
-    },
+    // {
+    //   imgSrc: "/assets/images/impact/awards/amazon-ads.png",
+    //   awardTitle: "Amazon Ads",
+    //   date: "2023",
+    //   type:"2 (Bronze)"
+    // },
     {
       imgSrc: "/assets/images/impact/awards/premier.png",
       awardTitle: "Google Premier",
