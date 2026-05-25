@@ -6,6 +6,7 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
@@ -52,7 +53,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'wordpress-1435946-5364580.cloudwaysapps.com',
+        hostname: 'wordpress-1629591-6442843.cloudwaysapps.com',
       }
     ]
   },
