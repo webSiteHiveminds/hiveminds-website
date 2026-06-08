@@ -81,7 +81,7 @@ const FooterMobile = () => {
                     </div>
                     <div className="order-5" onClick={() => setLocation("Gurgaon")}>
                         <p className="content-white mobile:!text-[4vw]">
-                            GURGAON : Spring House Coworking, 4th Floor, JMD Regent Arcade, Haryana 122002
+                            GURGAON : UNITECH CYBER PARK,Durga Colony, Sector 39, Gurugram, Haryana 122003
                         </p>
                     </div>
                     <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden ">
