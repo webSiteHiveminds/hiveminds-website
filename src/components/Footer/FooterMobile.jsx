@@ -76,12 +76,12 @@ const FooterMobile = () => {
                     </div>
                     <div className="order-4" onClick={() => setLocation("Mumbai")}>
                         <p className="content-white mobile:!text-[4vw]">
-                            MUMBAI : Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047
+                            MUMBAI : B-502/503 Kanakia Wall Street, Chakala, Andheri, East Mumbai 400093
                         </p>
                     </div>
                     <div className="order-5" onClick={() => setLocation("Gurgaon")}>
                         <p className="content-white mobile:!text-[4vw]">
-                            GURGAON : UNITECH CYBER PARK,Durga Colony, Sector 39, Gurugram, Haryana 122003
+                            GURGAON : 8th F Tower-B,Plot No. 806, UNITECH CYBER PARK,Durga Colony, Sector 39, Gurugram, Haryana 122003
                         </p>
                     </div>
                     <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden ">
