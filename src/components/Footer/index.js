@@ -20,13 +20,13 @@ const addresses = [
     location: "Mumbai",
     label: "MUMBAI",
     address:
-      "Office no 301 & 302, 3rd Floor , The Eagle's Flight Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047",
+      "B-502/503 Kanakia Wall Street, Chakala, Andheri, East Mumbai 400093",
   },
   {
     location: "Gurgaon",
     label: "GURGAON",
     address:
-      "Spring House Coworking, 4th Floor, JMD Regent Arcade, Haryana 122002",
+      "8th F Tower-B,Plot No. 806, UNITECH CYBER PARK,Durga Colony, Sector 39, Gurugram, Haryana 122003",
   },
 ];
 
