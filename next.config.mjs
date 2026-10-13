@@ -53,7 +53,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'wordpress-1638224-6496925.cloudwaysapps.com',
+        hostname: 'wordpress-1651657-6566130.cloudwaysapps.com',
       }
     ]
   },
