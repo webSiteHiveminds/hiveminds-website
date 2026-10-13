@@ -23,8 +23,8 @@ const GetinTouch = () => {
             </p>
             <div className="flex flex-col gap-[1vw] mobile:gap-[4vw] tablet:gap-[2vw]">
               <LinkButton
-                btnLink={"tel:+91 080-46801708"}
-                btnText={"+91-080-46801708"}
+                btnLink={"tel:+91 080-47108400"}
+                btnText={"+91-080-47108400"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
               <LinkButton
